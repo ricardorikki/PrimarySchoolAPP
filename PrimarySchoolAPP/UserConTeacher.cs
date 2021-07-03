@@ -183,11 +183,7 @@ namespace PrimarySchoolAPP
             try {
 
                 byte[] img = null;
-                //FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
-                //BinaryReader br = new BinaryReader(fs);
-                //img = br.ReadBytes((int)fs.Length);
-
-
+              
                 if (TeacherPhoto.Image != null)
                 {
                     MemoryStream ms = new MemoryStream();
