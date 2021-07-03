@@ -61,7 +61,7 @@ namespace PrimarySchoolAPP
 
         }
 
-
+        //*****************************************Clear RECORD*****************************************
         private void ClearData()
         {
             FnameTB.Text = "";
@@ -122,7 +122,7 @@ namespace PrimarySchoolAPP
 
 
         }
-
+        //**************populate the textbox from specific value of the coordinates of column and row.*******************************
         private void dataGridViewTeachers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -133,14 +133,11 @@ namespace PrimarySchoolAPP
                 {
                     con.Open();
                 }
-
                 
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = this.dataGridViewTeachers.Rows[e.RowIndex];
-                    //populate the textbox from specific value of the coordinates of column and row.
-                    
-
+                    IDtb.Text = row.Cells[0].Value.ToString();
                     FnameTB.Text = row.Cells[1].Value.ToString();
                     MiddnameTB.Text = row.Cells[2].Value.ToString();
                     LastNameTB.Text = row.Cells[3].Value.ToString();
@@ -156,8 +153,7 @@ namespace PrimarySchoolAPP
                     NOKconTB.Text = row.Cells[13].Value.ToString();
                     var data = (Byte[])(row.Cells[14].Value);
                     var stream = new MemoryStream(data);
-                    TeacherPhoto.Image = Image.FromStream(stream);
-                    
+                    TeacherPhoto.Image = Image.FromStream(stream);          
                 }
 
             }
@@ -170,16 +166,11 @@ namespace PrimarySchoolAPP
             {
                 con.Close();
             }
-
-
         }
-
+        //********************INSERT*********************************************************************
         private void SaveBNT_Click(object sender, EventArgs e)
         {
-            //********************INSERT*********************************************************************
 
-
-          
             try {
 
                 byte[] img = null;
@@ -210,9 +201,6 @@ namespace PrimarySchoolAPP
                 displayDataTeachers();
                 ClearData();
                 MessageBox.Show(x.ToString() + " Record inserted successfully");
-
-
-                
             }
           
             catch (Exception ex)
@@ -222,7 +210,7 @@ namespace PrimarySchoolAPP
             }
 
         }
-
+        //*****************************************Browse for Pic*****************************************
         private void browseBnt_Click(object sender, EventArgs e)
         {
             try
@@ -236,9 +224,7 @@ namespace PrimarySchoolAPP
                 {
                     imgLoc = dlg.FileName.ToString();
                     TeacherPhoto.ImageLocation = imgLoc;
-                
                 }
-
             }
 
             catch (Exception ex)
@@ -250,9 +236,219 @@ namespace PrimarySchoolAPP
                 con.Close();
             }
 
+        }
+
+        //*****************************************NEW RECORD*****************************************
+        private void NewBNT_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+        
+        //*****************************************Search*****************************************
+        private void TeacherSearTB_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TeacherSearCBO.Text == "First Name")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "select * from Teachers where [FirstName] like'" + TeacherSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewTeachers.DataSource = dt;
+                }
+                else if (TeacherSearCBO.Text == "Last Name")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "select * from Teachers where [LastName] like'" + TeacherSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewTeachers.DataSource = dt;
+                }
+
+                else if (TeacherSearCBO.Text == "Rank")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "select * from Teachers where [Rank] like'" + TeacherSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewTeachers.DataSource = dt;
+                }
+
+                else if (TeacherSearCBO.Text == "Gender")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "select * from Teachers where [Gender] like'" + TeacherSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewTeachers.DataSource = dt;
+                }
+                else if (TeacherSearCBO.Text == "Status")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "select * from Teachers where [Status] like'" + TeacherSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewTeachers.DataSource = dt;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        //********************UPDATE*********************************************************************
+        private void UpdateBNT_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+
+                byte[] img = null;
+
+                if (TeacherPhoto.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    TeacherPhoto.Image.Save(ms, TeacherPhoto.Image.RawFormat);
+                    img = ms.GetBuffer();
+                    ms.Close();
+                }
+
+                if (TeacherPhoto.Image == null)
+                {
+                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
 
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                          
+                              
+                //FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                //BinaryReader br = new BinaryReader(fs);
+                //img = br.ReadBytes((int)fs.Length);
+                SqlCommand cmd = con.CreateCommand();
+                string Sql = "UPDATE Teachers SET FirstName='" + FnameTB.Text + "',MiddleName='" + MiddnameTB.Text + "',LastName='" + LastNameTB.Text + "',DOB='" + DOBdt.Text + "',Gender='" + GenderComBx.Text + "',DateAppointment='" + DateAppointmentdt.Text + "',Email='" + EmailTB.Text + "',Status='" + StatcomboBx.Text + "',Rank='" + RankcomboBx.Text + "',House='" + HousecomboBx.Text + "',Club='" + ClubcomboBx.Text + "',NextKin='" +NOKnameTB.Text + "',NextKinCon='" +NOKconTB.Text + "',Photo=@img WHERE ID='" + IDtb.Text + "'";
+                cmd = new SqlCommand(Sql, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                displayDataTeachers();
+                MessageBox.Show("Record(s) updated successfully");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+            //    cmd.Parameters.AddWithValue("@Gender", GenderComBx.Text);
+            //    cmd.Parameters.AddWithValue("@DateAppointment", DateAppointmentdt.Text);
+            //    cmd.Parameters.AddWithValue("@Email", EmailTB.Text);
+            //    cmd.Parameters.AddWithValue("@Status", StatcomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@Rank", RankcomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@House", HousecomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@Club", ClubcomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@NextKin", NOKnameTB.Text);
+            //    cmd.Parameters.AddWithValue("@NextKinCon", NOKconTB.Text);
+
+            //try
+            //{
+
+            //    byte[] img = null;
+
+            //    if (TeacherPhoto.Image != null)
+            //    {
+            //        MemoryStream ms = new MemoryStream();
+            //        TeacherPhoto.Image.Save(ms, TeacherPhoto.Image.RawFormat);
+            //        img = ms.GetBuffer();
+            //        ms.Close();
+            //    }
+
+            //    if (TeacherPhoto.Image == null)
+            //    {
+            //        MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+
+            //    cmd = new SqlCommand("UPDATE Teachers SET FirstName=@FirstName,MiddleName=@MiddleName,LastName=@LastName,DOB=@DOB,Gender=@Gender,DateAppointment=@DateAppointment,Email=@Email,Status=@Status,Rank=@Rank,House=@House,Club=@Club,NextKin=@NextKin,NextKinCon=@NextKinCon,img=@img WHERE id=@id", con);
+
+            //    if (con.State != ConnectionState.Open)
+            //    {
+            //        con.Open();
+            //    }
+
+            //    cmd.Parameters.Add(new SqlParameter("@img", img));
+            //    cmd.Parameters.AddWithValue("@id",IDtb.Text);
+            //    cmd.Parameters.AddWithValue("@FirstName",FnameTB.Text);
+            //    cmd.Parameters.AddWithValue("@MiddleName", MiddnameTB.Text);
+            //    cmd.Parameters.AddWithValue("@LastName", LastNameTB.Text);
+            //    cmd.Parameters.AddWithValue("@DOB", DOBdt.Text);
+            //    cmd.Parameters.AddWithValue("@Gender", GenderComBx.Text);
+            //    cmd.Parameters.AddWithValue("@DateAppointment", DateAppointmentdt.Text);
+            //    cmd.Parameters.AddWithValue("@Email", EmailTB.Text);
+            //    cmd.Parameters.AddWithValue("@Status", StatcomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@Rank", RankcomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@House", HousecomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@Club", ClubcomboBx.Text);
+            //    cmd.Parameters.AddWithValue("@NextKin", NOKnameTB.Text);
+            //    cmd.Parameters.AddWithValue("@NextKinCon", NOKconTB.Text);
+            //    int x = cmd.ExecuteNonQuery();
+            //    con.Close();
+            //    displayDataTeachers();
+            //    ClearData();
+            //    MessageBox.Show(x.ToString() + " Record updated successfully");
+            //}
+
+            //catch (Exception ex)
+            //{
+            //    con.Close();
+            //    MessageBox.Show(ex.Message);
+            //}
         }
     }
 }
