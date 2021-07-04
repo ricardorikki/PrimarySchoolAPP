@@ -29,8 +29,9 @@ namespace PrimarySchoolAPP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ClubcomboBx = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.HousecomboBx = new System.Windows.Forms.ComboBox();
@@ -71,16 +72,20 @@ namespace PrimarySchoolAPP
             this.TeacherSearCBO = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.IDtb = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeacherPhoto)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ClubcomboBx
             // 
+            this.ClubcomboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClubcomboBx.FormattingEnabled = true;
             this.ClubcomboBx.Location = new System.Drawing.Point(714, 62);
             this.ClubcomboBx.Name = "ClubcomboBx";
@@ -100,6 +105,7 @@ namespace PrimarySchoolAPP
             // 
             // HousecomboBx
             // 
+            this.HousecomboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HousecomboBx.FormattingEnabled = true;
             this.HousecomboBx.Location = new System.Drawing.Point(542, 62);
             this.HousecomboBx.Name = "HousecomboBx";
@@ -119,6 +125,7 @@ namespace PrimarySchoolAPP
             // 
             // RankcomboBx
             // 
+            this.RankcomboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RankcomboBx.FormattingEnabled = true;
             this.RankcomboBx.Location = new System.Drawing.Point(442, 103);
             this.RankcomboBx.Name = "RankcomboBx";
@@ -138,6 +145,7 @@ namespace PrimarySchoolAPP
             // 
             // StatcomboBx
             // 
+            this.StatcomboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.StatcomboBx.FormattingEnabled = true;
             this.StatcomboBx.Location = new System.Drawing.Point(231, 103);
             this.StatcomboBx.Name = "StatcomboBx";
@@ -178,7 +186,7 @@ namespace PrimarySchoolAPP
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label10.Location = new System.Drawing.Point(539, 39);
+            this.label10.Location = new System.Drawing.Point(611, 39);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 13);
             this.label10.TabIndex = 84;
@@ -187,7 +195,7 @@ namespace PrimarySchoolAPP
             // DateAppointmentdt
             // 
             this.DateAppointmentdt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateAppointmentdt.Location = new System.Drawing.Point(679, 33);
+            this.DateAppointmentdt.Location = new System.Drawing.Point(751, 33);
             this.DateAppointmentdt.Name = "DateAppointmentdt";
             this.DateAppointmentdt.Size = new System.Drawing.Size(103, 20);
             this.DateAppointmentdt.TabIndex = 83;
@@ -197,7 +205,7 @@ namespace PrimarySchoolAPP
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(181, 42);
+            this.label8.Location = new System.Drawing.Point(253, 42);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 13);
             this.label8.TabIndex = 82;
@@ -206,7 +214,7 @@ namespace PrimarySchoolAPP
             // DOBdt
             // 
             this.DOBdt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DOBdt.Location = new System.Drawing.Point(262, 35);
+            this.DOBdt.Location = new System.Drawing.Point(334, 35);
             this.DOBdt.Name = "DOBdt";
             this.DOBdt.Size = new System.Drawing.Size(96, 20);
             this.DOBdt.TabIndex = 81;
@@ -259,8 +267,9 @@ namespace PrimarySchoolAPP
             // 
             // GenderComBx
             // 
+            this.GenderComBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GenderComBx.FormattingEnabled = true;
-            this.GenderComBx.Location = new System.Drawing.Point(437, 35);
+            this.GenderComBx.Location = new System.Drawing.Point(509, 35);
             this.GenderComBx.Name = "GenderComBx";
             this.GenderComBx.Size = new System.Drawing.Size(84, 21);
             this.GenderComBx.TabIndex = 68;
@@ -270,7 +279,7 @@ namespace PrimarySchoolAPP
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(383, 42);
+            this.label9.Location = new System.Drawing.Point(455, 42);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 67;
@@ -332,19 +341,19 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewTeachers
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewTeachers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewTeachers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTeachers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewTeachers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewTeachers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeachers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTeachers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTeachers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTeachers.EnableHeadersVisualStyles = false;
             this.dataGridViewTeachers.Location = new System.Drawing.Point(13, 16);
@@ -364,7 +373,9 @@ namespace PrimarySchoolAPP
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.NewBNT);
+            this.panel1.Controls.Add(this.IDtb);
             this.panel1.Controls.Add(this.DeleteBNT);
             this.panel1.Controls.Add(this.UpdateBNT);
             this.panel1.Controls.Add(this.NOKconTB);
@@ -423,6 +434,7 @@ namespace PrimarySchoolAPP
             this.DeleteBNT.TabIndex = 80;
             this.DeleteBNT.Text = "   Delete";
             this.DeleteBNT.UseVisualStyleBackColor = true;
+            this.DeleteBNT.Click += new System.EventHandler(this.DeleteBNT_Click);
             // 
             // UpdateBNT
             // 
@@ -480,6 +492,7 @@ namespace PrimarySchoolAPP
             // 
             // TeacherSearCBO
             // 
+            this.TeacherSearCBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TeacherSearCBO.FormattingEnabled = true;
             this.TeacherSearCBO.Items.AddRange(new object[] {
             "First Name",
@@ -505,17 +518,32 @@ namespace PrimarySchoolAPP
             // 
             // IDtb
             // 
-            this.IDtb.Location = new System.Drawing.Point(423, 310);
+            this.IDtb.Location = new System.Drawing.Point(208, 36);
             this.IDtb.Name = "IDtb";
-            this.IDtb.Size = new System.Drawing.Size(130, 20);
+            this.IDtb.ReadOnly = true;
+            this.IDtb.Size = new System.Drawing.Size(22, 20);
             this.IDtb.TabIndex = 96;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.Location = new System.Drawing.Point(182, 43);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(20, 13);
+            this.label14.TabIndex = 97;
+            this.label14.Text = "ID";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // userConTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.IDtb);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -531,8 +559,8 @@ namespace PrimarySchoolAPP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -578,5 +606,7 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.ComboBox TeacherSearCBO;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox IDtb;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

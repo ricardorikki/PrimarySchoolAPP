@@ -35,10 +35,10 @@ namespace PrimarySchoolAPP
         public Dashboard()
         {
             InitializeComponent();
-           
+
         }
 
-       private void Dashboard_Load(object sender, EventArgs e)
+        private void Dashboard_Load(object sender, EventArgs e)
         {
             //**************************Removing the Max button***************************************
             MaximizeBox = false;
@@ -52,9 +52,9 @@ namespace PrimarySchoolAPP
 
             //teacherStatlab.Text = dataGridView1.RowCount.ToString();
             displayDataTeachers();
-            
+
         }
-        
+
 
 
 
@@ -110,29 +110,30 @@ namespace PrimarySchoolAPP
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            
+
             btnHome.BackColor = Color.White;
             btnHome.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DeepSkyBlue;
-            teaBtn.BackColor = Color.DeepSkyBlue;
+            stuBtn.BackColor = Color.DodgerBlue;
+            teaBtn.BackColor = Color.DodgerBlue;
             userConTeacher1.Hide();   //Users
+            displayDataTeachers();
         }
 
         private void stuBtn_Click(object sender, EventArgs e)
         {
-           
+
             stuBtn.BackColor = Color.White;
             stuBtn.ForeColor = Color.Black;
-            btnHome.BackColor = Color.DeepSkyBlue;
-            teaBtn.BackColor = Color.DeepSkyBlue;
+            btnHome.BackColor = Color.DodgerBlue;
+            teaBtn.BackColor = Color.DodgerBlue;
         }
 
         private void teaBtn_Click(object sender, EventArgs e)
         {
             teaBtn.BackColor = Color.White;
             teaBtn.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DeepSkyBlue;
-            btnHome.BackColor = Color.DeepSkyBlue;
+            stuBtn.BackColor = Color.DodgerBlue;
+            btnHome.BackColor = Color.DodgerBlue;
             userConTeacher1.Show();
         }
 
@@ -140,8 +141,8 @@ namespace PrimarySchoolAPP
         {
             teaBtn.BackColor = Color.White;
             teaBtn.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DeepSkyBlue;
-            btnHome.BackColor = Color.DeepSkyBlue;
+            stuBtn.BackColor = Color.DodgerBlue;
+            btnHome.BackColor = Color.DodgerBlue;
             userConTeacher1.Show();
         }
 
@@ -149,15 +150,32 @@ namespace PrimarySchoolAPP
         {
             teaBtn.BackColor = Color.White;
             teaBtn.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DeepSkyBlue;
-            btnHome.BackColor = Color.DeepSkyBlue;
+            stuBtn.BackColor = Color.DodgerBlue;
+            btnHome.BackColor = Color.DodgerBlue;
             userConTeacher1.Show();
         }
+        bool close = true;
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (close)
+            {
+                DialogResult result = MessageBox.Show("You are about to Exit the application, Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        
+                if (result == DialogResult.Yes)
+                {
+                    close = false;
+                    Application.Exit();
+                }
+
+                else
+                {
+                    e.Cancel = true;
+
+                }
+            }
+        }
+
     }
-
-
 
 
 }

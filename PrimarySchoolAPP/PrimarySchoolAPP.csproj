@@ -171,6 +171,14 @@
     <None Include="Resources\search-346-16.png" />
     <None Include="Resources\wallpaper.png" />
     <None Include="Resources\add-41-32.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\teacher.png" />
+    <None Include="Resources\student-with-graduation-cap.png" />
+    <None Include="Resources\user-avatar-with-check-mark.png" />
+    <None Include="Resources\guard.png" />
+    <None Include="Resources\information-button.png" />
+    <None Include="Resources\output-onlinepngtools.png" />
+    <None Include="Resources\johns-removebg-preview.png" />
     <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />

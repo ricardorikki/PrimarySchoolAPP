@@ -14,15 +14,15 @@ namespace PrimarySchoolAPP
 {
     public partial class userConTeacher : UserControl
     {
-        SqlConnection con = new SqlConnection ("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
 
-       // (@"Data Source=DESKTOP-SINTN8E\SQLEXPRESS;Initial Catalog=EdHardware;Integrated Security=True");
+        // (@"Data Source=DESKTOP-SINTN8E\SQLEXPRESS;Initial Catalog=EdHardware;Integrated Security=True");
         SqlCommand cmd;
         string imgLoc = "";
         public userConTeacher()
         {
             InitializeComponent();
-            //TeacherPhoto.Image = Properties.Resources.user;
+
         }
 
 
@@ -77,6 +77,7 @@ namespace PrimarySchoolAPP
             ClubcomboBx.Text = "";
             NOKnameTB.Text = "";
             NOKconTB.Text = "";
+            IDtb.Text = "";
             TeacherPhoto.Image = Properties.Resources.user;
         }
 
@@ -84,19 +85,19 @@ namespace PrimarySchoolAPP
 
         private void userConTeacher_Load(object sender, EventArgs e)
         {
-            GenderComBx.Items.Add("--Select--");
+
             GenderComBx.Items.Add("Male");
             GenderComBx.Items.Add("Female");
-            GenderComBx.Items.Add("Other");
 
 
-            StatcomboBx.Items.Add("--Select--");
+
+
             StatcomboBx.Items.Add("Temp");
             StatcomboBx.Items.Add("Permanent");
-            
-           
 
-            RankcomboBx.Items.Add("--Select--");
+
+
+
             RankcomboBx.Items.Add("Junior Teacher");
             RankcomboBx.Items.Add("Senior Teacher");
             RankcomboBx.Items.Add("Vice Principal");
@@ -104,14 +105,14 @@ namespace PrimarySchoolAPP
             RankcomboBx.Items.Add("Librarian");
             RankcomboBx.Items.Add("Guidance Counselor");
 
-            ClubcomboBx.Items.Add("--Select--");
+
             ClubcomboBx.Items.Add("Computer");
             ClubcomboBx.Items.Add("4H");
             ClubcomboBx.Items.Add("Builders");
             ClubcomboBx.Items.Add("Cub Scouth");
             ClubcomboBx.Items.Add("Girls Guide");
 
-            HousecomboBx.Items.Add("--Select--");
+
             HousecomboBx.Items.Add("Red-Fullerton");
             HousecomboBx.Items.Add("Blue-McLoud");
             HousecomboBx.Items.Add("Yellow-Dalass");
@@ -119,7 +120,6 @@ namespace PrimarySchoolAPP
             displayDataTeachers();
 
             TeacherPhoto.Image = Properties.Resources.user;
-
 
         }
         //**************populate the textbox from specific value of the coordinates of column and row.*******************************
@@ -133,7 +133,7 @@ namespace PrimarySchoolAPP
                 {
                     con.Open();
                 }
-                
+
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = this.dataGridViewTeachers.Rows[e.RowIndex];
@@ -153,7 +153,7 @@ namespace PrimarySchoolAPP
                     NOKconTB.Text = row.Cells[13].Value.ToString();
                     var data = (Byte[])(row.Cells[14].Value);
                     var stream = new MemoryStream(data);
-                    TeacherPhoto.Image = Image.FromStream(stream);          
+                    TeacherPhoto.Image = Image.FromStream(stream);
                 }
 
             }
@@ -174,12 +174,12 @@ namespace PrimarySchoolAPP
             try {
 
                 byte[] img = null;
-              
+
                 if (TeacherPhoto.Image != null)
                 {
                     MemoryStream ms = new MemoryStream();
                     TeacherPhoto.Image.Save(ms, TeacherPhoto.Image.RawFormat);
-                   img = ms.GetBuffer();
+                    img = ms.GetBuffer();
                     ms.Close();
                 }
 
@@ -188,26 +188,98 @@ namespace PrimarySchoolAPP
                     MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                string sql = "INSERT INTO Teachers(FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,Rank,House,Club,NextKin,NextKinCon,Photo) values('" + FnameTB.Text + "','" + MiddnameTB.Text + "', '" + LastNameTB.Text + "','" + DOBdt.Text + "','" + GenderComBx.Text + "','" + DateAppointmentdt.Text + "','" + EmailTB.Text + "','" + StatcomboBx.Text + "','" + RankcomboBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + NOKnameTB.Text + "','" + NOKconTB.Text + "',@img)";
 
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
+
+                if (FnameTB.Text != "" && MiddnameTB.Text != "" && LastNameTB.Text != "" && DOBdt.Text != "" && GenderComBx.Text != "" && DateAppointmentdt.Text != "" && EmailTB.Text != "" && StatcomboBx.Text != "" && RankcomboBx.Text != "" && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && NOKnameTB.Text != "" && NOKconTB.Text != "")
+ {
+                    string sql = "INSERT INTO Teachers(FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,Rank,House,Club,NextKin,NextKinCon,Photo) values('" + FnameTB.Text + "','" + MiddnameTB.Text + "', '" + LastNameTB.Text + "','" + DOBdt.Text + "','" + GenderComBx.Text + "','" + DateAppointmentdt.Text + "','" + EmailTB.Text + "','" + StatcomboBx.Text + "','" + RankcomboBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + NOKnameTB.Text + "','" + NOKconTB.Text + "',@img)";
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    cmd = new SqlCommand(sql, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    displayDataTeachers();
+                    ClearData();
+                    MessageBox.Show(x.ToString() + " Record inserted successfully");
                 }
-                cmd = new SqlCommand(sql, con);
-                cmd.Parameters.Add(new SqlParameter("@img", img));
-                int x = cmd.ExecuteNonQuery();
-                con.Close(); 
-                displayDataTeachers();
-                ClearData();
-                MessageBox.Show(x.ToString() + " Record inserted successfully");
+
+                else
+                {
+                    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
             }
-          
+
             catch (Exception ex)
             {
                 con.Close();
                 MessageBox.Show(ex.Message);
             }
+
+
+
+
+
+            if (string.IsNullOrEmpty(FnameTB.Text))
+            {
+                FnameTB.Focus();
+                errorProvider1.SetError(FnameTB, "Please Enter First Name");
+            }
+            if (string.IsNullOrEmpty(MiddnameTB.Text))
+            {
+               MiddnameTB.Focus();
+                errorProvider1.SetError(MiddnameTB, "Please Enter Middle Name");
+            }
+            if (string.IsNullOrEmpty(LastNameTB.Text))
+            {
+                LastNameTB.Focus();
+                errorProvider1.SetError(LastNameTB, "Please Enter Last Name");
+            }
+            
+            if (string.IsNullOrEmpty(EmailTB.Text))
+            {
+                EmailTB.Focus();
+                errorProvider1.SetError(EmailTB, "Please Enter Email Address");
+            }
+           
+            if (string.IsNullOrEmpty(StatcomboBx.Text))
+            {
+                StatcomboBx.Focus();
+                errorProvider1.SetError(StatcomboBx, "Please select a Status");
+            }
+            if (string.IsNullOrEmpty(RankcomboBx.Text))
+            {
+                RankcomboBx.Focus();
+                errorProvider1.SetError(RankcomboBx, "Please select a Rank");
+            }
+            if (string.IsNullOrEmpty(NOKnameTB.Text))
+            {
+                NOKnameTB.Focus();
+                errorProvider1.SetError(NOKnameTB, "Please Enter Next of Kin Name");
+            }
+            if (string.IsNullOrEmpty(NOKconTB.Text))
+            {
+                NOKconTB.Focus();
+                errorProvider1.SetError(NOKconTB, "Please Enter Next of Kin Contact");
+            }
+            if (string.IsNullOrEmpty(GenderComBx.Text))
+            {
+                GenderComBx.Focus();
+                errorProvider1.SetError(GenderComBx, "Please select your gender");
+            }
+
+
+
+
+
+
+
+
 
         }
         //*****************************************Browse for Pic*****************************************
@@ -364,11 +436,8 @@ namespace PrimarySchoolAPP
                     con.Open();
                 }
 
-                          
-                              
-                //FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
-                //BinaryReader br = new BinaryReader(fs);
-                //img = br.ReadBytes((int)fs.Length);
+                ClearData();
+
                 SqlCommand cmd = con.CreateCommand();
                 string Sql = "UPDATE Teachers SET FirstName='" + FnameTB.Text + "',MiddleName='" + MiddnameTB.Text + "',LastName='" + LastNameTB.Text + "',DOB='" + DOBdt.Text + "',Gender='" + GenderComBx.Text + "',DateAppointment='" + DateAppointmentdt.Text + "',Email='" + EmailTB.Text + "',Status='" + StatcomboBx.Text + "',Rank='" + RankcomboBx.Text + "',House='" + HousecomboBx.Text + "',Club='" + ClubcomboBx.Text + "',NextKin='" +NOKnameTB.Text + "',NextKinCon='" +NOKconTB.Text + "',Photo=@img WHERE ID='" + IDtb.Text + "'";
                 cmd = new SqlCommand(Sql, con);
@@ -387,68 +456,38 @@ namespace PrimarySchoolAPP
             {
                 con.Close();
             }
-            //    cmd.Parameters.AddWithValue("@Gender", GenderComBx.Text);
-            //    cmd.Parameters.AddWithValue("@DateAppointment", DateAppointmentdt.Text);
-            //    cmd.Parameters.AddWithValue("@Email", EmailTB.Text);
-            //    cmd.Parameters.AddWithValue("@Status", StatcomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@Rank", RankcomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@House", HousecomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@Club", ClubcomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@NextKin", NOKnameTB.Text);
-            //    cmd.Parameters.AddWithValue("@NextKinCon", NOKconTB.Text);
+                    }
 
-            //try
-            //{
+        private void DeleteBNT_Click(object sender, EventArgs e)
+        {
+            ClearData();
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from Teachers where ID ='" + IDtb.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Update(dt);
+                dataGridViewTeachers.DataSource = dt;
+                displayDataTeachers();
+                MessageBox.Show("Record Deleted successfully");
+            }
+            catch (Exception ex)
+            {
 
-            //    byte[] img = null;
-
-            //    if (TeacherPhoto.Image != null)
-            //    {
-            //        MemoryStream ms = new MemoryStream();
-            //        TeacherPhoto.Image.Save(ms, TeacherPhoto.Image.RawFormat);
-            //        img = ms.GetBuffer();
-            //        ms.Close();
-            //    }
-
-            //    if (TeacherPhoto.Image == null)
-            //    {
-            //        MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-
-            //    cmd = new SqlCommand("UPDATE Teachers SET FirstName=@FirstName,MiddleName=@MiddleName,LastName=@LastName,DOB=@DOB,Gender=@Gender,DateAppointment=@DateAppointment,Email=@Email,Status=@Status,Rank=@Rank,House=@House,Club=@Club,NextKin=@NextKin,NextKinCon=@NextKinCon,img=@img WHERE id=@id", con);
-
-            //    if (con.State != ConnectionState.Open)
-            //    {
-            //        con.Open();
-            //    }
-
-            //    cmd.Parameters.Add(new SqlParameter("@img", img));
-            //    cmd.Parameters.AddWithValue("@id",IDtb.Text);
-            //    cmd.Parameters.AddWithValue("@FirstName",FnameTB.Text);
-            //    cmd.Parameters.AddWithValue("@MiddleName", MiddnameTB.Text);
-            //    cmd.Parameters.AddWithValue("@LastName", LastNameTB.Text);
-            //    cmd.Parameters.AddWithValue("@DOB", DOBdt.Text);
-            //    cmd.Parameters.AddWithValue("@Gender", GenderComBx.Text);
-            //    cmd.Parameters.AddWithValue("@DateAppointment", DateAppointmentdt.Text);
-            //    cmd.Parameters.AddWithValue("@Email", EmailTB.Text);
-            //    cmd.Parameters.AddWithValue("@Status", StatcomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@Rank", RankcomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@House", HousecomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@Club", ClubcomboBx.Text);
-            //    cmd.Parameters.AddWithValue("@NextKin", NOKnameTB.Text);
-            //    cmd.Parameters.AddWithValue("@NextKinCon", NOKconTB.Text);
-            //    int x = cmd.ExecuteNonQuery();
-            //    con.Close();
-            //    displayDataTeachers();
-            //    ClearData();
-            //    MessageBox.Show(x.ToString() + " Record updated successfully");
-            //}
-
-            //catch (Exception ex)
-            //{
-            //    con.Close();
-            //    MessageBox.Show(ex.Message);
-            //}
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }
