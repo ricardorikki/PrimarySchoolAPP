@@ -179,6 +179,7 @@
     <None Include="Resources\information-button.png" />
     <None Include="Resources\output-onlinepngtools.png" />
     <None Include="Resources\johns-removebg-preview.png" />
+    <None Include="Resources\log.jpg" />
     <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />

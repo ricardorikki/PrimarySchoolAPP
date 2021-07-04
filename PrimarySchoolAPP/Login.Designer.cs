@@ -42,17 +42,17 @@ namespace PrimarySchoolAPP
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.labSMS = new System.Windows.Forms.Label();
+            this.labSch = new System.Windows.Forms.Label();
             this.picBoxBG = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.labSMS = new System.Windows.Forms.Label();
-            this.labSch = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -178,15 +178,28 @@ namespace PrimarySchoolAPP
             this.label8.TabIndex = 29;
             this.label8.Text = "A product of group 3 VTDI";
             // 
-            // pictureBox6
+            // labSMS
             // 
-            this.pictureBox6.Image = global::PrimarySchoolAPP.Properties.Resources.bbd7cd62c9f1f6778e91b11a71874ab6;
-            this.pictureBox6.Location = new System.Drawing.Point(-2, 122);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(503, 320);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 46;
-            this.pictureBox6.TabStop = false;
+            this.labSMS.AutoSize = true;
+            this.labSMS.Font = new System.Drawing.Font("Cooper Black", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSMS.ForeColor = System.Drawing.Color.Black;
+            this.labSMS.Location = new System.Drawing.Point(124, 20);
+            this.labSMS.Name = "labSMS";
+            this.labSMS.Size = new System.Drawing.Size(256, 110);
+            this.labSMS.TabIndex = 50;
+            this.labSMS.Text = "SMS";
+            // 
+            // labSch
+            // 
+            this.labSch.AutoSize = true;
+            this.labSch.BackColor = System.Drawing.Color.Transparent;
+            this.labSch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSch.ForeColor = System.Drawing.Color.Black;
+            this.labSch.Location = new System.Drawing.Point(56, 445);
+            this.labSch.Name = "labSch";
+            this.labSch.Size = new System.Drawing.Size(387, 31);
+            this.labSch.TabIndex = 48;
+            this.labSch.Text = "School | Management | System";
             // 
             // picBoxBG
             // 
@@ -225,28 +238,15 @@ namespace PrimarySchoolAPP
             this.label6.Size = new System.Drawing.Size(30, 33);
             this.label6.TabIndex = 34;
             // 
-            // labSMS
+            // pictureBox6
             // 
-            this.labSMS.AutoSize = true;
-            this.labSMS.Font = new System.Drawing.Font("Cooper Black", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labSMS.ForeColor = System.Drawing.Color.Black;
-            this.labSMS.Location = new System.Drawing.Point(124, 20);
-            this.labSMS.Name = "labSMS";
-            this.labSMS.Size = new System.Drawing.Size(256, 110);
-            this.labSMS.TabIndex = 50;
-            this.labSMS.Text = "SMS";
-            // 
-            // labSch
-            // 
-            this.labSch.AutoSize = true;
-            this.labSch.BackColor = System.Drawing.Color.Transparent;
-            this.labSch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labSch.ForeColor = System.Drawing.Color.Black;
-            this.labSch.Location = new System.Drawing.Point(56, 445);
-            this.labSch.Name = "labSch";
-            this.labSch.Size = new System.Drawing.Size(387, 31);
-            this.labSch.TabIndex = 48;
-            this.labSch.Text = "School | Management | System";
+            this.pictureBox6.Image = global::PrimarySchoolAPP.Properties.Resources.bbd7cd62c9f1f6778e91b11a71874ab6;
+            this.pictureBox6.Location = new System.Drawing.Point(-2, 122);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(503, 320);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 46;
+            this.pictureBox6.TabStop = false;
             // 
             // Login
             // 
@@ -279,9 +279,9 @@ namespace PrimarySchoolAPP
             this.Load += new System.EventHandler(this.Login_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,8 +306,8 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox picBoxBG;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label labSMS;
         private System.Windows.Forms.Label labSch;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

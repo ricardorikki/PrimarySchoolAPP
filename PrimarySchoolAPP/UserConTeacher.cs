@@ -436,7 +436,7 @@ namespace PrimarySchoolAPP
                     con.Open();
                 }
 
-                ClearData();
+                
 
                 SqlCommand cmd = con.CreateCommand();
                 string Sql = "UPDATE Teachers SET FirstName='" + FnameTB.Text + "',MiddleName='" + MiddnameTB.Text + "',LastName='" + LastNameTB.Text + "',DOB='" + DOBdt.Text + "',Gender='" + GenderComBx.Text + "',DateAppointment='" + DateAppointmentdt.Text + "',Email='" + EmailTB.Text + "',Status='" + StatcomboBx.Text + "',Rank='" + RankcomboBx.Text + "',House='" + HousecomboBx.Text + "',Club='" + ClubcomboBx.Text + "',NextKin='" +NOKnameTB.Text + "',NextKinCon='" +NOKconTB.Text + "',Photo=@img WHERE ID='" + IDtb.Text + "'";
@@ -445,6 +445,7 @@ namespace PrimarySchoolAPP
                 int x = cmd.ExecuteNonQuery();
                 displayDataTeachers();
                 MessageBox.Show("Record(s) updated successfully");
+                ClearData();
             }
             catch (Exception ex)
             {
@@ -460,7 +461,7 @@ namespace PrimarySchoolAPP
 
         private void DeleteBNT_Click(object sender, EventArgs e)
         {
-            ClearData();
+           
             try
             {
                 if (con.State != ConnectionState.Open)
@@ -477,7 +478,8 @@ namespace PrimarySchoolAPP
                 da.Update(dt);
                 dataGridViewTeachers.DataSource = dt;
                 displayDataTeachers();
-                MessageBox.Show("Record Deleted successfully");
+                MessageBox.Show("Record Deleted successfully"); 
+                ClearData();
             }
             catch (Exception ex)
             {
