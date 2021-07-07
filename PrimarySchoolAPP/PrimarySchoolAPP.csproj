@@ -48,9 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.1.8, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.8\lib\net40\Guna.UI2.dll</HintPath>
-    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -61,6 +58,7 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -85,6 +83,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyConnection.cs" />
     <Compile Include="Programe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserConTeacher.cs">
@@ -92,6 +91,12 @@
     </Compile>
     <Compile Include="UserConTeacher.Designer.cs">
       <DependentUpon>UserConTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserConUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserConUser.Designer.cs">
+      <DependentUpon>UserConUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -111,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="UserConTeacher.resx">
       <DependentUpon>UserConTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserConUser.resx">
+      <DependentUpon>UserConUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -180,6 +188,8 @@
     <None Include="Resources\output-onlinepngtools.png" />
     <None Include="Resources\johns-removebg-preview.png" />
     <None Include="Resources\log.jpg" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\2013826.png" />
     <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />

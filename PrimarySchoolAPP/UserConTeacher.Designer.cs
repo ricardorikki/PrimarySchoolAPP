@@ -30,8 +30,8 @@ namespace PrimarySchoolAPP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ClubcomboBx = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.HousecomboBx = new System.Windows.Forms.ComboBox();
@@ -62,7 +62,9 @@ namespace PrimarySchoolAPP
             this.dataGridViewTeachers = new System.Windows.Forms.DataGridView();
             this.TeacherSearTB = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.NewBNT = new System.Windows.Forms.Button();
+            this.IDtb = new System.Windows.Forms.TextBox();
             this.DeleteBNT = new System.Windows.Forms.Button();
             this.UpdateBNT = new System.Windows.Forms.Button();
             this.SaveBNT = new System.Windows.Forms.Button();
@@ -71,8 +73,6 @@ namespace PrimarySchoolAPP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TeacherSearCBO = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.IDtb = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).BeginInit();
             this.panel1.SuspendLayout();
@@ -341,19 +341,19 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewTeachers
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewTeachers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewTeachers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTeachers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewTeachers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewTeachers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTeachers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTeachers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTeachers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTeachers.EnableHeadersVisualStyles = false;
             this.dataGridViewTeachers.Location = new System.Drawing.Point(13, 16);
@@ -412,6 +412,17 @@ namespace PrimarySchoolAPP
             this.panel1.Size = new System.Drawing.Size(873, 237);
             this.panel1.TabIndex = 68;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label14.Location = new System.Drawing.Point(182, 43);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(20, 13);
+            this.label14.TabIndex = 97;
+            this.label14.Text = "ID";
+            // 
             // NewBNT
             // 
             this.NewBNT.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
@@ -423,6 +434,14 @@ namespace PrimarySchoolAPP
             this.NewBNT.Text = "New";
             this.NewBNT.UseVisualStyleBackColor = true;
             this.NewBNT.Click += new System.EventHandler(this.NewBNT_Click);
+            // 
+            // IDtb
+            // 
+            this.IDtb.Location = new System.Drawing.Point(208, 36);
+            this.IDtb.Name = "IDtb";
+            this.IDtb.ReadOnly = true;
+            this.IDtb.Size = new System.Drawing.Size(22, 20);
+            this.IDtb.TabIndex = 96;
             // 
             // DeleteBNT
             // 
@@ -515,25 +534,6 @@ namespace PrimarySchoolAPP
             this.groupBox1.TabIndex = 97;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
-            // 
-            // IDtb
-            // 
-            this.IDtb.Location = new System.Drawing.Point(208, 36);
-            this.IDtb.Name = "IDtb";
-            this.IDtb.ReadOnly = true;
-            this.IDtb.Size = new System.Drawing.Size(22, 20);
-            this.IDtb.TabIndex = 96;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label14.Location = new System.Drawing.Point(182, 43);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(20, 13);
-            this.label14.TabIndex = 97;
-            this.label14.Text = "ID";
             // 
             // errorProvider1
             // 

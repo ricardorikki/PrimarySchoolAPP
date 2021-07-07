@@ -23,35 +23,71 @@ namespace PrimarySchoolAPP
 
 
 
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
+        //public const int WM_NCLBUTTONDOWN = 0xA1;
+        //public const int HT_CAPTION = 0x2;
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
+        //[System.Runtime.InteropServices.DllImport("user32.dll")]
+        //public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        //[System.Runtime.InteropServices.DllImport("user32.dll")]
+        //public static extern bool ReleaseCapture();
 
-
+        
         public Dashboard()
         {
             InitializeComponent();
-
+           
         }
 
+
+       
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            //Display Username
+                WELname.Text = Login.UserDisplayName.displayName;  
+
             //**************************Removing the Max button***************************************
             MaximizeBox = false;
             ControlBox = true;
-            btnHome.BackColor = Color.White;
-            btnHome.ForeColor = Color.Black;
+            
+            //btnHome.ForeColor = Color.Black;
+            //teaBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+            //button1.BackColor = Color.White;
 
-            userConTeacher1.Hide();   //Users
+            // metroButton1.FlatAppearance.BorderSize = 0;
+
+
+            
 
             //label2.Text = Environment.UserName.ToString();
 
             //teacherStatlab.Text = dataGridView1.RowCount.ToString();
             displayDataTeachers();
+
+
+
+            if (MyConnection.type == "A")
+            {
+               UsersBNT.Visible = true;
+               
+            }
+            else if (MyConnection.type == "U")
+            {
+                UsersBNT.Visible = false;
+               
+            }
+
+            userConTeacher1.Hide();   //Users
+            userConUser1.Hide();
+
+            //*****Menu Indicators*******
+            pnlHome.Show();
+            pnStu.Hide();
+            pnTea.Hide();
+            pnAd.Hide();
+            pnWat.Hide();
+            pnSet.Hide();
+            
+
 
         }
 
@@ -99,60 +135,41 @@ namespace PrimarySchoolAPP
 
         private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    ReleaseCapture();
+            //    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            //}
 
 
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
-            btnHome.BackColor = Color.White;
-            btnHome.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DodgerBlue;
-            teaBtn.BackColor = Color.DodgerBlue;
-            userConTeacher1.Hide();   //Users
-            displayDataTeachers();
+           
         }
 
         private void stuBtn_Click(object sender, EventArgs e)
         {
 
-            stuBtn.BackColor = Color.White;
-            stuBtn.ForeColor = Color.Black;
-            btnHome.BackColor = Color.DodgerBlue;
-            teaBtn.BackColor = Color.DodgerBlue;
         }
 
         private void teaBtn_Click(object sender, EventArgs e)
         {
-            teaBtn.BackColor = Color.White;
-            teaBtn.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DodgerBlue;
-            btnHome.BackColor = Color.DodgerBlue;
-            userConTeacher1.Show();
+            
         }
 
         private void AdminBtn_Click(object sender, EventArgs e)
         {
-            teaBtn.BackColor = Color.White;
-            teaBtn.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DodgerBlue;
-            btnHome.BackColor = Color.DodgerBlue;
-            userConTeacher1.Show();
+            
         }
-
+        private void UsersBNT_Click(object sender, EventArgs e)
+        {
+            
+        }
         private void WatchmenBtn_Click(object sender, EventArgs e)
         {
-            teaBtn.BackColor = Color.White;
-            teaBtn.ForeColor = Color.Black;
-            stuBtn.BackColor = Color.DodgerBlue;
-            btnHome.BackColor = Color.DodgerBlue;
-            userConTeacher1.Show();
+            
         }
         bool close = true;
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
@@ -175,6 +192,120 @@ namespace PrimarySchoolAPP
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Hide();
+        }
+
+        private void HomeBTN_Click(object sender, EventArgs e)
+        {
+            //btnHome.BackColor = System.Drawing.Color.White;
+            //this.btnHome1.BackColor = System.Drawing.Color.White;
+            // btnHome.BackColor = Color.White;
+            // btnHome.ForeColor = Color.Black;
+            // stuBtn.BackColor = Color.DodgerBlue;
+            // teaBtn.BackColor = Color.DodgerBlue;
+            //metroButton1.BackColor = Color.DodgerBlue;
+            userConTeacher1.Hide();   //Users
+            userConUser1.Hide();
+
+            //*****Menu Indicators*******
+            pnlHome.Show();
+            pnStu.Hide();
+            pnTea.Hide();
+            pnAd.Hide();
+            pnWat.Hide();
+            pnSet.Hide();
+
+
+            displayDataTeachers();
+        }
+
+        private void stuBTN_Click_1(object sender, EventArgs e)
+        {
+
+            //stuBtn.BackColor = Color.White;
+            //stuBtn.ForeColor = Color.Black;
+            //btnHome.BackColor = Color.DodgerBlue;
+            //teaBtn.BackColor = Color.DodgerBlue;
+            //*****Menu Indicators*******
+            pnlHome.Hide();
+            pnStu.Show();
+            pnTea.Hide();
+            pnAd.Hide();
+            pnWat.Hide();
+            pnSet.Hide();
+        }
+
+        private void TeacherBTN_Click(object sender, EventArgs e)
+        {
+            //teaBtn.BackColor = Color.White;
+            //teaBtn.ForeColor = Color.Black;
+            //stuBtn.BackColor = Color.DodgerBlue;
+            //btnHome.BackColor = Color.DodgerBlue;
+            userConTeacher1.Show();
+            //metroButton1.BackColor = Color.White;
+
+            pnlHome.Hide();
+            pnStu.Hide();
+            pnTea.Show();
+            pnAd.Hide();
+            pnWat.Hide();
+            pnSet.Hide();
+
+        }
+
+        private void AdminiBTN_Click(object sender, EventArgs e)
+        {
+            //teaBtn.BackColor = Color.White;
+            //teaBtn.ForeColor = Color.Black;
+            //stuBtn.BackColor = Color.DodgerBlue;
+            //btnHome.BackColor = Color.DodgerBlue;
+            userConTeacher1.Show();
+            pnlHome.Hide();
+            pnStu.Hide();
+            pnTea.Hide();
+            pnAd.Show();
+            pnWat.Hide();
+            pnSet.Hide();
+        }
+
+        private void WatchBTN_Click(object sender, EventArgs e)
+        {
+            //teaBtn.BackColor = Color.White;
+            //teaBtn.ForeColor = Color.Black;
+            //stuBtn.BackColor = Color.DodgerBlue;
+            //btnHome.BackColor = Color.DodgerBlue;
+            userConTeacher1.Show();
+            pnlHome.Hide();
+            pnStu.Hide();
+            pnTea.Hide();
+            pnAd.Hide();
+            pnWat.Show();
+            pnSet.Hide();
+        }
+
+        private void UsersBNT_Click_1(object sender, EventArgs e)
+        {
+            //teaBtn.BackColor = Color.White;
+            //teaBtn.ForeColor = Color.Black;
+            //stuBtn.BackColor = Color.DodgerBlue;
+            //btnHome.BackColor = Color.DodgerBlue;
+            userConUser1.Show();
+            pnlHome.Hide();
+            pnStu.Hide();
+            pnTea.Hide();
+            pnAd.Hide();
+            pnWat.Hide();
+            pnSet.Show();
+        }
     }
 
 
