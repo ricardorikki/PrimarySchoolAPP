@@ -63,7 +63,7 @@ namespace PrimarySchoolAPP
             //teacherStatlab.Text = dataGridView1.RowCount.ToString();
             displayDataTeachers();
             displayDataAdmin();
-
+            displayDataWatch();
 
             if (MyConnection.type == "A")
             {
@@ -77,7 +77,7 @@ namespace PrimarySchoolAPP
             }
 
             userConTeacher1.Hide();   //Users
-           
+            userConWatch1.Hide();
             userConUser1.Hide();
             userControlAdmin1.Hide();
 
@@ -129,7 +129,39 @@ namespace PrimarySchoolAPP
             }
 
         }
+        public void displayDataWatch()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Watchmen";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView3.DataSource = dt;
+                da.Update(dt);
+                WatchStatlab.Text = dt.Rows.Count.ToString();
 
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
         public void displayDataAdmin()
         {
             try
@@ -212,16 +244,12 @@ namespace PrimarySchoolAPP
 
         private void HomeBTN_Click(object sender, EventArgs e)
         {
-            //btnHome.BackColor = System.Drawing.Color.White;
-            //this.btnHome1.BackColor = System.Drawing.Color.White;
-            // btnHome.BackColor = Color.White;
-            // btnHome.ForeColor = Color.Black;
-            // stuBtn.BackColor = Color.DodgerBlue;
-            // teaBtn.BackColor = Color.DodgerBlue;
-            //metroButton1.BackColor = Color.DodgerBlue;
-            userConTeacher1.Hide();   //Users
+            //*****User Controls*******
+            userConTeacher1.Hide();   
             userConUser1.Hide();
             userControlAdmin1.Hide();
+            userConWatch1.Hide();
+            //userConStudent1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -230,21 +258,22 @@ namespace PrimarySchoolAPP
             pnAd.Hide();
             pnWat.Hide();
             pnSet.Hide();
-
+            //*****Display*******
             displayDataAdmin();
             displayDataTeachers();
+            displayDataWatch();
         }
 
         private void stuBTN_Click_1(object sender, EventArgs e)
         {
 
-            //stuBtn.BackColor = Color.White;
-            //stuBtn.ForeColor = Color.Black;
-            //btnHome.BackColor = Color.DodgerBlue;
-            //teaBtn.BackColor = Color.DodgerBlue;
-            userConTeacher1.Hide();   //Users
+            //*****User Controls*******
+            userConTeacher1.Hide();
             userConUser1.Hide();
             userControlAdmin1.Hide();
+            userConWatch1.Hide();
+            //userConStudent1.Show();
+
             //*****Menu Indicators*******
             pnlHome.Hide();
             pnStu.Show();
@@ -256,16 +285,14 @@ namespace PrimarySchoolAPP
 
         private void TeacherBTN_Click(object sender, EventArgs e)
         {
-            //teaBtn.BackColor = Color.White;
-            //teaBtn.ForeColor = Color.Black;
-            //stuBtn.BackColor = Color.DodgerBlue;
-            //btnHome.BackColor = Color.DodgerBlue;
+            //*****User Controls*******
             userConTeacher1.Show();
-             //Users
             userConUser1.Hide();
             userControlAdmin1.Hide();
-            //metroButton1.BackColor = Color.White;
+            userConWatch1.Hide();
+            //userConStudent1.Hide();
 
+            //*****Menu Indicators*******
             pnlHome.Hide();
             pnStu.Hide();
             pnTea.Show();
@@ -277,14 +304,16 @@ namespace PrimarySchoolAPP
 
         private void AdminiBTN_Click(object sender, EventArgs e)
         {
-            //teaBtn.BackColor = Color.White;
-            //teaBtn.ForeColor = Color.Black;
-            //stuBtn.BackColor = Color.DodgerBlue;
-            //btnHome.BackColor = Color.DodgerBlue;
-            userConTeacher1.Hide();   //Users
+            //*****User Controls*******
+            userConTeacher1.Hide();
             userConUser1.Hide();
-            userControlAdmin1.Hide();
             userControlAdmin1.Show();
+            userConWatch1.Hide();
+            //userConStudent1.Hide();
+
+            //*****Menu Indicators*******
+            
+
             pnlHome.Hide();
             pnStu.Hide();
             pnTea.Hide();
@@ -295,14 +324,15 @@ namespace PrimarySchoolAPP
 
         private void WatchBTN_Click(object sender, EventArgs e)
         {
-            //teaBtn.BackColor = Color.White;
-            //teaBtn.ForeColor = Color.Black;
-            //stuBtn.BackColor = Color.DodgerBlue;
-            //btnHome.BackColor = Color.DodgerBlue;
-            userConTeacher1.Hide();   //Users
+            //*****User Controls*******
+            userConTeacher1.Hide();
             userConUser1.Hide();
             userControlAdmin1.Hide();
-            userConTeacher1.Show();
+            userConWatch1.Show();
+            //userConStudent1.Hide();
+
+            //*****Menu Indicators*******
+
             pnlHome.Hide();
             pnStu.Hide();
             pnTea.Hide();
@@ -313,14 +343,15 @@ namespace PrimarySchoolAPP
 
         private void UsersBNT_Click_1(object sender, EventArgs e)
         {
-            //teaBtn.BackColor = Color.White;
-            //teaBtn.ForeColor = Color.Black;
-            //stuBtn.BackColor = Color.DodgerBlue;
-            //btnHome.BackColor = Color.DodgerBlue;
+            //*****User Controls*******
+            userConTeacher1.Hide();
             userConUser1.Show();
-            userConTeacher1.Hide();   //Users
-           
             userControlAdmin1.Hide();
+            userConWatch1.Hide();
+            //userConStudent1.Hide();
+
+            //*****Menu Indicators*******
+
             pnlHome.Hide();
             pnStu.Hide();
             pnTea.Hide();

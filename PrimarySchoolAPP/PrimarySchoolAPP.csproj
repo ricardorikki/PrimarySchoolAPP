@@ -122,6 +122,12 @@
     <Compile Include="UserConUser.Designer.cs">
       <DependentUpon>UserConUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserConWatch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserConWatch.Designer.cs">
+      <DependentUpon>UserConWatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="variable.cs" />
     <EmbeddedResource Include="about.resx">
       <DependentUpon>about.cs</DependentUpon>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserConUser.resx">
       <DependentUpon>UserConUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserConWatch.resx">
+      <DependentUpon>UserConWatch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

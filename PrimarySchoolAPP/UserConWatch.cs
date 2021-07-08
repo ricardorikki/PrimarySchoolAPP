@@ -12,19 +12,18 @@ using System.IO;
 
 namespace PrimarySchoolAPP
 {
-    public partial class UserControlAdmin : UserControl
+    public partial class UserConWatch : UserControl
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
 
         
         SqlCommand cmd;
         string imgLoc = "";
-        public UserControlAdmin()
+        public UserConWatch()
         {
             InitializeComponent();
         }
-
-        public void displayDataAdmin()
+        public void displayDataWatch()
         {
             try
             {
@@ -34,15 +33,14 @@ namespace PrimarySchoolAPP
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Administrative";
-                //cmd.CommandText ="SELECT id AS ID, FirstName AS [First Name], MiddleName AS [Middle Name], LastName AS [Last Name],DOB, Gender,DateAppointment AS [Date of Appointment],Email,Status,Rank,House,Club,NextKin AS [Next of Kin Name],NextKinCon AS [Next of Kin Contact] FROM Teachers ";
+                cmd.CommandText = "SELECT * FROM Watchmen";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
-                dataGridViewAdmin.DataSource = dt;
+                dataGridViewWatch.DataSource = dt;
                 da.Update(dt);
-                dataGridViewAdmin.AllowUserToAddRows = false;
+                dataGridViewWatch.AllowUserToAddRows = false;
 
 
 
@@ -58,53 +56,63 @@ namespace PrimarySchoolAPP
             }
 
         }
-        //*****************************************Clear RECORD*****************************************
+
         private void ClearData()
         {
-            FnameAdminTB.Text = "";
-            MiddnameAdminTB.Text = "";
-            LastNameAdminTB.Text = "";
-            DOBadminDT.Text = "";
-            GenderComAdminBx.Text = "";
-            DateAppointmentAdminDT.Text = "";
-            EmailAdminTB.Text = "";
-            StatcomboAdminBx.Text = "";
-            NOKnameAdminTB.Text = "";
-            NOKconAdminTB.Text = "";
-            IDAdminTB.Text = "";
-            AdminPhoto.Image = Properties.Resources.user;
+            FnameWatchTB.Text = "";
+            MiddnameWatchTB.Text = "";
+            LastNameWatchTB.Text = "";
+            DOBWatchDT.Text = "";
+            GenderComWatchBx.Text = "";
+            DateAppointmentWatchDT.Text = "";
+            EmailWatchTB.Text = "";
+            StatcomboWatchBx.Text = "";
+            NOKnameWatchTB.Text = "";
+            NOKconWatchTB.Text = "";
+            IDWatchTB.Text = "";
+            WatchPhoto.Image = Properties.Resources.user;
+        }
+        private void UserConWatch_Load(object sender, EventArgs e)
+        {
+            GenderComWatchBx.Items.Add("Male");
+            GenderComWatchBx.Items.Add("Female");
+            StatcomboWatchBx.Items.Add("Temp");
+            StatcomboWatchBx.Items.Add("Permanent");
+            displayDataWatch();
+
+            WatchPhoto.Image = Properties.Resources.user;
         }
 
-        private void NewAdminBNT_Click(object sender, EventArgs e)
+        private void NewWatchBNT_Click(object sender, EventArgs e)
         {
             ClearData();
         }
 
-        private void SaveAdminBNT_Click(object sender, EventArgs e)
+        private void SaveWatchBNT_Click(object sender, EventArgs e)
         {
             try
             {
 
                 byte[] img = null;
 
-                if (AdminPhoto.Image != null)
+                if (WatchPhoto.Image != null)
                 {
                     MemoryStream ms = new MemoryStream();
-                    AdminPhoto.Image.Save(ms, AdminPhoto.Image.RawFormat);
+                    WatchPhoto.Image.Save(ms, WatchPhoto.Image.RawFormat);
                     img = ms.GetBuffer();
                     ms.Close();
                 }
 
-                if (AdminPhoto.Image == null)
+                if (WatchPhoto.Image == null)
                 {
                     MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
 
-                if (FnameAdminTB.Text != "" && MiddnameAdminTB.Text != "" && LastNameAdminTB.Text != "" && DOBadminDT.Text != "" && GenderComAdminBx.Text != "" && DateAppointmentAdminDT.Text != "" && EmailAdminTB.Text != "" && StatcomboAdminBx.Text != ""  && NOKnameAdminTB.Text != "" && NOKconAdminTB.Text != "")
+                if (FnameWatchTB.Text != "" && MiddnameWatchTB.Text != "" && LastNameWatchTB.Text != "" && DOBWatchDT.Text != "" && GenderComWatchBx.Text != "" && DateAppointmentWatchDT.Text != "" && EmailWatchTB.Text != "" && StatcomboWatchBx.Text != "" && NOKnameWatchTB.Text != "" && NOKconWatchTB.Text != "")
                 {
-                    string sql = "INSERT INTO Administrative (FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,NextKin,NextKinCon,Photo) values('" + FnameAdminTB.Text + "','" + MiddnameAdminTB.Text + "', '" + LastNameAdminTB.Text + "','" + DOBadminDT.Text + "','" + GenderComAdminBx.Text + "','" + DateAppointmentAdminDT.Text + "','" + EmailAdminTB.Text + "','" + StatcomboAdminBx.Text + "','" + NOKnameAdminTB.Text + "','" + NOKconAdminTB.Text + "',@img)";
+                    string sql = "INSERT INTO Watchmen (FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,NextKin,NextKinCon,Photo) values('" + FnameWatchTB.Text + "','" + MiddnameWatchTB.Text + "', '" + LastNameWatchTB.Text + "','" + DOBWatchDT.Text + "','" + GenderComWatchBx.Text + "','" + DateAppointmentWatchDT.Text + "','" + EmailWatchTB.Text + "','" + StatcomboWatchBx.Text + "','" + NOKnameWatchTB.Text + "','" + NOKconWatchTB.Text + "',@img)";
 
                     if (con.State != ConnectionState.Open)
                     {
@@ -114,7 +122,7 @@ namespace PrimarySchoolAPP
                     cmd.Parameters.Add(new SqlParameter("@img", img));
                     int x = cmd.ExecuteNonQuery();
                     con.Close();
-                    displayDataAdmin();
+                    displayDataWatch();
                     //ClearData();
                     MessageBox.Show(x.ToString() + " Record inserted successfully");
                 }
@@ -137,56 +145,54 @@ namespace PrimarySchoolAPP
 
 
 
-            if (string.IsNullOrEmpty(FnameAdminTB.Text))
+            if (string.IsNullOrEmpty(FnameWatchTB.Text))
             {
-                FnameAdminTB.Focus();
-                errorProvider1.SetError(FnameAdminTB, "Please Enter First Name");
+                FnameWatchTB.Focus();
+                errorProvider1.SetError(FnameWatchTB, "Please Enter First Name");
             }
-            if (string.IsNullOrEmpty(MiddnameAdminTB.Text))
+            if (string.IsNullOrEmpty(MiddnameWatchTB.Text))
             {
-                MiddnameAdminTB.Focus();
-                errorProvider1.SetError(MiddnameAdminTB, "Please Enter Middle Name");
+                MiddnameWatchTB.Focus();
+                errorProvider1.SetError(MiddnameWatchTB, "Please Enter Middle Name");
             }
-            if (string.IsNullOrEmpty(LastNameAdminTB.Text))
+            if (string.IsNullOrEmpty(LastNameWatchTB.Text))
             {
-                LastNameAdminTB.Focus();
-                errorProvider1.SetError(LastNameAdminTB, "Please Enter Last Name");
-            }
-
-            if (string.IsNullOrEmpty(EmailAdminTB.Text))
-            {
-                EmailAdminTB.Focus();
-                errorProvider1.SetError(EmailAdminTB, "Please Enter Email Address");
+                LastNameWatchTB.Focus();
+                errorProvider1.SetError(LastNameWatchTB, "Please Enter Last Name");
             }
 
-            if (string.IsNullOrEmpty(StatcomboAdminBx.Text))
+            if (string.IsNullOrEmpty(EmailWatchTB.Text))
             {
-                StatcomboAdminBx.Focus();
-                errorProvider1.SetError(StatcomboAdminBx, "Please select a Status");
-            }
-            
-            if (string.IsNullOrEmpty(NOKnameAdminTB.Text))
-            {
-                NOKnameAdminTB.Focus();
-                errorProvider1.SetError(NOKnameAdminTB, "Please Enter Next of Kin Name");
-            }
-            if (string.IsNullOrEmpty(NOKconAdminTB.Text))
-            {
-                NOKconAdminTB.Focus();
-                errorProvider1.SetError(NOKconAdminTB, "Please Enter Next of Kin Contact");
-            }
-            if (string.IsNullOrEmpty(GenderComAdminBx.Text))
-            {
-                GenderComAdminBx.Focus();
-                errorProvider1.SetError(GenderComAdminBx, "Please select your gender");
+                EmailWatchTB.Focus();
+                errorProvider1.SetError(EmailWatchTB, "Please Enter Email Address");
             }
 
+            if (string.IsNullOrEmpty(StatcomboWatchBx.Text))
+            {
+                StatcomboWatchBx.Focus();
+                errorProvider1.SetError(StatcomboWatchBx, "Please select a Status");
+            }
 
+            if (string.IsNullOrEmpty(NOKnameWatchTB.Text))
+            {
+                NOKnameWatchTB.Focus();
+                errorProvider1.SetError(NOKnameWatchTB, "Please Enter Next of Kin Name");
+            }
+            if (string.IsNullOrEmpty(NOKconWatchTB.Text))
+            {
+                NOKconWatchTB.Focus();
+                errorProvider1.SetError(NOKconWatchTB, "Please Enter Next of Kin Contact");
+            }
+            if (string.IsNullOrEmpty(GenderComWatchBx.Text))
+            {
+                GenderComWatchBx.Focus();
+                errorProvider1.SetError(GenderComWatchBx, "Please select your gender");
+            }
 
 
         }
 
-        private void UpdateAdminBNT_Click(object sender, EventArgs e)
+        private void UpdateWatchBNT_Click(object sender, EventArgs e)
         {
             try
             {
@@ -194,15 +200,15 @@ namespace PrimarySchoolAPP
 
                 byte[] img = null;
 
-                if (AdminPhoto.Image != null)
+                if (WatchPhoto.Image != null)
                 {
                     MemoryStream ms = new MemoryStream();
-                    AdminPhoto.Image.Save(ms, AdminPhoto.Image.RawFormat);
+                    WatchPhoto.Image.Save(ms, WatchPhoto.Image.RawFormat);
                     img = ms.GetBuffer();
                     ms.Close();
                 }
 
-                if (AdminPhoto.Image == null)
+                if (WatchPhoto.Image == null)
                 {
                     MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -217,11 +223,11 @@ namespace PrimarySchoolAPP
 
 
                 SqlCommand cmd = con.CreateCommand();
-                string Sql = "UPDATE Administrative SET FirstName='" + FnameAdminTB.Text + "',MiddleName='" + MiddnameAdminTB.Text + "',LastName='" + LastNameAdminTB.Text + "',DOB='" + DOBadminDT.Text + "',Gender='" + GenderComAdminBx.Text + "',DateAppointment='" + DateAppointmentAdminDT.Text + "',Email='" + EmailAdminTB.Text + "',Status='" + StatcomboAdminBx.Text + "',NextKin='" + NOKnameAdminTB.Text + "',NextKinCon='" + NOKconAdminTB.Text + "',Photo=@img WHERE ID='" + IDAdminTB.Text + "'";
+                string Sql = "UPDATE Watchmen SET FirstName='" + FnameWatchTB.Text + "',MiddleName='" + MiddnameWatchTB.Text + "',LastName='" + LastNameWatchTB.Text + "',DOB='" + DOBWatchDT.Text + "',Gender='" + GenderComWatchBx.Text + "',DateAppointment='" + DateAppointmentWatchDT.Text + "',Email='" + EmailWatchTB.Text + "',Status='" + StatcomboWatchBx.Text + "',NextKin='" + NOKnameWatchTB.Text + "',NextKinCon='" + NOKconWatchTB.Text + "',Photo=@img WHERE ID='" + IDWatchTB.Text + "'";
                 cmd = new SqlCommand(Sql, con);
                 cmd.Parameters.Add(new SqlParameter("@img", img));
                 int x = cmd.ExecuteNonQuery();
-                displayDataAdmin();
+                displayDataWatch();
                 MessageBox.Show("Record(s) updated successfully");
                 ClearData();
             }
@@ -237,9 +243,8 @@ namespace PrimarySchoolAPP
             }
         }
 
-        private void DeleteAdminBNT_Click(object sender, EventArgs e)
+        private void DeleteWatchBNT_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (con.State != ConnectionState.Open)
@@ -248,14 +253,14 @@ namespace PrimarySchoolAPP
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "delete from Administrative where ID ='" + IDAdminTB.Text + "'";
+                cmd.CommandText = "delete from Watchmen where ID ='" + IDWatchTB.Text + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 da.Update(dt);
-                dataGridViewAdmin.DataSource = dt;
-                displayDataAdmin();
+                dataGridViewWatch.DataSource = dt;
+                displayDataWatch();
                 MessageBox.Show("Record Deleted successfully");
                 ClearData();
             }
@@ -270,19 +275,20 @@ namespace PrimarySchoolAPP
             }
         }
 
-        private void browseAdminBTN_Click(object sender, EventArgs e)
+        private void browseWatchBTN_Click(object sender, EventArgs e)
         {
+
             try
             {
                 OpenFileDialog dlg = new OpenFileDialog();
                 dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|ALL Files(*.*)|*.*";
-                dlg.Title = "Select Administrative Picture";
+                dlg.Title = "Select Watchman Picture";
 
 
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     imgLoc = dlg.FileName.ToString();
-                    AdminPhoto.ImageLocation = imgLoc;
+                    WatchPhoto.ImageLocation = imgLoc;
                 }
             }
 
@@ -296,20 +302,8 @@ namespace PrimarySchoolAPP
             }
         }
 
-        private void UserControlAdmin_Load(object sender, EventArgs e)
+        private void dataGridViewWatch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            GenderComAdminBx.Items.Add("Male");
-            GenderComAdminBx.Items.Add("Female");
-            StatcomboAdminBx.Items.Add("Temp");
-            StatcomboAdminBx.Items.Add("Permanent");
-            displayDataAdmin();
-
-            AdminPhoto.Image = Properties.Resources.user;
-        }
-
-        private void dataGridViewAdmin_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
             try
 
             {
@@ -321,21 +315,21 @@ namespace PrimarySchoolAPP
 
                 if (e.RowIndex >= 0)
                 {
-                    DataGridViewRow row = this.dataGridViewAdmin.Rows[e.RowIndex];
-                    IDAdminTB.Text = row.Cells[0].Value.ToString();
-                    FnameAdminTB.Text = row.Cells[1].Value.ToString();
-                    MiddnameAdminTB.Text = row.Cells[2].Value.ToString();
-                    LastNameAdminTB.Text = row.Cells[3].Value.ToString();
-                    DOBadminDT.Text = row.Cells[4].Value.ToString();
-                    GenderComAdminBx.Text = row.Cells[5].Value.ToString();
-                    DateAppointmentAdminDT.Text = row.Cells[6].Value.ToString();
-                    EmailAdminTB.Text = row.Cells[7].Value.ToString();
-                    StatcomboAdminBx.Text = row.Cells[8].Value.ToString();
-                    NOKnameAdminTB.Text = row.Cells[9].Value.ToString();
-                    NOKconAdminTB.Text = row.Cells[10].Value.ToString();
+                    DataGridViewRow row = this.dataGridViewWatch.Rows[e.RowIndex];
+                    IDWatchTB.Text = row.Cells[0].Value.ToString();
+                    FnameWatchTB.Text = row.Cells[1].Value.ToString();
+                    MiddnameWatchTB.Text = row.Cells[2].Value.ToString();
+                    LastNameWatchTB.Text = row.Cells[3].Value.ToString();
+                    DOBWatchDT.Text = row.Cells[4].Value.ToString();
+                    GenderComWatchBx.Text = row.Cells[5].Value.ToString();
+                    DateAppointmentWatchDT.Text = row.Cells[6].Value.ToString();
+                    EmailWatchTB.Text = row.Cells[7].Value.ToString();
+                    StatcomboWatchBx.Text = row.Cells[8].Value.ToString();
+                    NOKnameWatchTB.Text = row.Cells[9].Value.ToString();
+                    NOKconWatchTB.Text = row.Cells[10].Value.ToString();
                     var data = (Byte[])(row.Cells[11].Value);
                     var stream = new MemoryStream(data);
-                    AdminPhoto.Image = Image.FromStream(stream);
+                    WatchPhoto.Image = Image.FromStream(stream);
                 }
 
             }
@@ -350,67 +344,67 @@ namespace PrimarySchoolAPP
             }
         }
 
-        private void AdminSearTB_TextChanged(object sender, EventArgs e)
+        private void WatchSearTB_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                if (AdminSearCBO.Text == "First Name")
+                if (WatchSearCBO.Text == "First Name")
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select * from Administrative where [FirstName] like'" + AdminSearTB.Text + "%' ";
+                    cmd.CommandText = "select * from Watchmen where [FirstName] like'" + WatchSearTB.Text + "%' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
                     da.Update(dt);
 
-                    dataGridViewAdmin.DataSource = dt;
+                    dataGridViewWatch.DataSource = dt;
                 }
-                else if (AdminSearCBO.Text == "Last Name")
+                else if (WatchSearCBO.Text == "Last Name")
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select * from Administrative where [LastName] like'" + AdminSearTB.Text + "%' ";
+                    cmd.CommandText = "select * from Administrative where [LastName] like'" + WatchSearTB.Text + "%' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
                     da.Update(dt);
 
-                    dataGridViewAdmin.DataSource = dt;
+                    dataGridViewWatch.DataSource = dt;
                 }
 
-               
-                else if (AdminSearCBO.Text == "Gender")
+
+                else if (WatchSearCBO.Text == "Gender")
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select * from Administrative where [Gender] like'" + AdminSearTB.Text + "%' ";
+                    cmd.CommandText = "select * from Watchmen where [Gender] like'" + WatchSearTB.Text + "%' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
                     da.Update(dt);
 
-                    dataGridViewAdmin.DataSource = dt;
+                    dataGridViewWatch.DataSource = dt;
                 }
-                else if (AdminSearCBO.Text == "Status")
+                else if (WatchSearCBO.Text == "Status")
                 {
                     con.Open();
                     SqlCommand cmd = con.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "select * from Administrative where [Status] like'" + AdminSearTB.Text + "%' ";
+                    cmd.CommandText = "select * from Watchmen where [Status] like'" + WatchSearTB.Text + "%' ";
                     cmd.ExecuteNonQuery();
                     DataTable dt = new DataTable();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
                     da.Update(dt);
 
-                    dataGridViewAdmin.DataSource = dt;
+                    dataGridViewWatch.DataSource = dt;
                 }
 
             }
