@@ -331,6 +331,7 @@ namespace PrimarySchoolAPP
             this.AbtBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AbtBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AbtBtn.UseVisualStyleBackColor = false;
+            this.AbtBtn.Click += new System.EventHandler(this.AbtBtn_Click);
             // 
             // pictureBox3
             // 

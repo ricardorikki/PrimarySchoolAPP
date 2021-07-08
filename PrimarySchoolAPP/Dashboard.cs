@@ -328,6 +328,14 @@ namespace PrimarySchoolAPP
             pnWat.Hide();
             pnSet.Show();
         }
+
+        private void AbtBtn_Click(object sender, EventArgs e)
+        {
+            about about = new about();
+            this.Dispose(false);
+            about.Show();
+            this.Hide();
+        }
     }
 
 
