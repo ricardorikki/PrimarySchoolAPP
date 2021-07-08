@@ -92,6 +92,12 @@
     <Compile Include="UserConTeacher.Designer.cs">
       <DependentUpon>UserConTeacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAdmin.Designer.cs">
+      <DependentUpon>UserControlAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserConUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="UserConTeacher.resx">
       <DependentUpon>UserConTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAdmin.resx">
+      <DependentUpon>UserControlAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserConUser.resx">
       <DependentUpon>UserConUser.cs</DependentUpon>

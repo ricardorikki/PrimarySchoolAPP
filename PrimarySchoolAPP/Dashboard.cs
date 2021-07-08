@@ -62,7 +62,7 @@ namespace PrimarySchoolAPP
 
             //teacherStatlab.Text = dataGridView1.RowCount.ToString();
             displayDataTeachers();
-
+            displayDataAdmin();
 
 
             if (MyConnection.type == "A")
@@ -78,6 +78,7 @@ namespace PrimarySchoolAPP
 
             userConTeacher1.Hide();   //Users
             userConUser1.Hide();
+            userControlAdmin1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -129,7 +130,40 @@ namespace PrimarySchoolAPP
 
         }
 
+        public void displayDataAdmin()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Administrative";
+                //cmd.CommandText ="SELECT id AS ID, FirstName AS [First Name], MiddleName AS [Middle Name], LastName AS [Last Name],DOB, Gender,DateAppointment AS [Date of Appointment],Email,Status,Rank,House,Club,NextKin AS [Next of Kin Name],NextKinCon AS [Next of Kin Contact] FROM Teachers ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView2.DataSource = dt;
+                da.Update(dt);
+               AdminStatlab.Text = dt.Rows.Count.ToString();
 
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
 
 
 
@@ -215,6 +249,7 @@ namespace PrimarySchoolAPP
             //metroButton1.BackColor = Color.DodgerBlue;
             userConTeacher1.Hide();   //Users
             userConUser1.Hide();
+            userControlAdmin1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -235,6 +270,9 @@ namespace PrimarySchoolAPP
             //stuBtn.ForeColor = Color.Black;
             //btnHome.BackColor = Color.DodgerBlue;
             //teaBtn.BackColor = Color.DodgerBlue;
+            userConTeacher1.Hide();   //Users
+            userConUser1.Hide();
+            userControlAdmin1.Hide();
             //*****Menu Indicators*******
             pnlHome.Hide();
             pnStu.Show();
@@ -251,6 +289,9 @@ namespace PrimarySchoolAPP
             //stuBtn.BackColor = Color.DodgerBlue;
             //btnHome.BackColor = Color.DodgerBlue;
             userConTeacher1.Show();
+             //Users
+            userConUser1.Hide();
+            userControlAdmin1.Hide();
             //metroButton1.BackColor = Color.White;
 
             pnlHome.Hide();
@@ -268,7 +309,10 @@ namespace PrimarySchoolAPP
             //teaBtn.ForeColor = Color.Black;
             //stuBtn.BackColor = Color.DodgerBlue;
             //btnHome.BackColor = Color.DodgerBlue;
-            userConTeacher1.Show();
+            userConTeacher1.Hide();   //Users
+            userConUser1.Hide();
+            userControlAdmin1.Hide();
+            userControlAdmin1.Show();
             pnlHome.Hide();
             pnStu.Hide();
             pnTea.Hide();
@@ -283,6 +327,9 @@ namespace PrimarySchoolAPP
             //teaBtn.ForeColor = Color.Black;
             //stuBtn.BackColor = Color.DodgerBlue;
             //btnHome.BackColor = Color.DodgerBlue;
+            userConTeacher1.Hide();   //Users
+            userConUser1.Hide();
+            userControlAdmin1.Hide();
             userConTeacher1.Show();
             pnlHome.Hide();
             pnStu.Hide();
@@ -299,6 +346,9 @@ namespace PrimarySchoolAPP
             //stuBtn.BackColor = Color.DodgerBlue;
             //btnHome.BackColor = Color.DodgerBlue;
             userConUser1.Show();
+            userConTeacher1.Hide();   //Users
+           
+            userControlAdmin1.Hide();
             pnlHome.Hide();
             pnStu.Hide();
             pnTea.Hide();

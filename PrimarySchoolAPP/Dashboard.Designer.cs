@@ -43,20 +43,20 @@ namespace PrimarySchoolAPP
             this.TeacherBTN = new System.Windows.Forms.Button();
             this.stuBTN = new System.Windows.Forms.Button();
             this.HomeBTN = new System.Windows.Forms.Button();
-            this.Logout = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AbtBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.Logout = new System.Windows.Forms.Button();
             this.WELname = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.StudentStatlab = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -70,16 +70,18 @@ namespace PrimarySchoolAPP
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.WatchStatlab = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.AdminStatlab = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.userConTeacher1 = new PrimarySchoolAPP.userConTeacher();
             this.userConUser1 = new PrimarySchoolAPP.UserConUser();
+            this.userControlAdmin1 = new PrimarySchoolAPP.UserControlAdmin();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -96,6 +98,7 @@ namespace PrimarySchoolAPP
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -276,24 +279,6 @@ namespace PrimarySchoolAPP
             this.HomeBTN.UseVisualStyleBackColor = false;
             this.HomeBTN.Click += new System.EventHandler(this.HomeBTN_Click);
             // 
-            // Logout
-            // 
-            this.Logout.BackgroundImage = global::PrimarySchoolAPP.Properties.Resources.logout;
-            this.Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Logout.FlatAppearance.BorderSize = 0;
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout.Location = new System.Drawing.Point(979, 5);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(74, 24);
-            this.Logout.TabIndex = 25;
-            this.Logout.Text = " Logout";
-            this.Logout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Logout.UseVisualStyleBackColor = true;
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -368,6 +353,24 @@ namespace PrimarySchoolAPP
             this.label5.TabIndex = 8;
             this.label5.Text = "Management ";
             // 
+            // Logout
+            // 
+            this.Logout.BackgroundImage = global::PrimarySchoolAPP.Properties.Resources.logout;
+            this.Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Logout.FlatAppearance.BorderSize = 0;
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout.Location = new System.Drawing.Point(979, 5);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(74, 24);
+            this.Logout.TabIndex = 25;
+            this.Logout.Text = " Logout";
+            this.Logout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // WELname
             // 
             this.WELname.AutoSize = true;
@@ -397,6 +400,7 @@ namespace PrimarySchoolAPP
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel3.Controls.Add(this.userConUser1);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(516, 71);
@@ -408,7 +412,7 @@ namespace PrimarySchoolAPP
             // 
             this.panel6.BackColor = System.Drawing.Color.Olive;
             this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.StudentStatlab);
             this.panel6.Controls.Add(this.label10);
             this.panel6.Location = new System.Drawing.Point(304, 21);
             this.panel6.Name = "panel6";
@@ -426,16 +430,16 @@ namespace PrimarySchoolAPP
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // label4
+            // StudentStatlab
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(20, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 86);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "1";
+            this.StudentStatlab.AutoSize = true;
+            this.StudentStatlab.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentStatlab.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.StudentStatlab.Location = new System.Drawing.Point(20, 38);
+            this.StudentStatlab.Name = "StudentStatlab";
+            this.StudentStatlab.Size = new System.Drawing.Size(74, 86);
+            this.StudentStatlab.TabIndex = 4;
+            this.StudentStatlab.Text = "1";
             // 
             // label10
             // 
@@ -504,6 +508,7 @@ namespace PrimarySchoolAPP
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel7.Controls.Add(this.dataGridView2);
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.label12);
@@ -558,7 +563,7 @@ namespace PrimarySchoolAPP
             // 
             this.panel9.BackColor = System.Drawing.Color.OrangeRed;
             this.panel9.Controls.Add(this.pictureBox4);
-            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.WatchStatlab);
             this.panel9.Controls.Add(this.label14);
             this.panel9.Location = new System.Drawing.Point(18, 179);
             this.panel9.Name = "panel9";
@@ -576,16 +581,16 @@ namespace PrimarySchoolAPP
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             // 
-            // label13
+            // WatchStatlab
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Location = new System.Drawing.Point(20, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 86);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "1";
+            this.WatchStatlab.AutoSize = true;
+            this.WatchStatlab.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WatchStatlab.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.WatchStatlab.Location = new System.Drawing.Point(20, 38);
+            this.WatchStatlab.Name = "WatchStatlab";
+            this.WatchStatlab.Size = new System.Drawing.Size(74, 86);
+            this.WatchStatlab.TabIndex = 4;
+            this.WatchStatlab.Text = "1";
             // 
             // label14
             // 
@@ -602,7 +607,7 @@ namespace PrimarySchoolAPP
             // 
             this.panel11.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel11.Controls.Add(this.pictureBox7);
-            this.panel11.Controls.Add(this.label17);
+            this.panel11.Controls.Add(this.AdminStatlab);
             this.panel11.Controls.Add(this.label18);
             this.panel11.Location = new System.Drawing.Point(18, 20);
             this.panel11.Name = "panel11";
@@ -620,16 +625,16 @@ namespace PrimarySchoolAPP
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
-            // label17
+            // AdminStatlab
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(133, 30);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 86);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "1";
+            this.AdminStatlab.AutoSize = true;
+            this.AdminStatlab.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminStatlab.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.AdminStatlab.Location = new System.Drawing.Point(133, 30);
+            this.AdminStatlab.Name = "AdminStatlab";
+            this.AdminStatlab.Size = new System.Drawing.Size(74, 86);
+            this.AdminStatlab.TabIndex = 4;
+            this.AdminStatlab.Text = "1";
             // 
             // label18
             // 
@@ -662,31 +667,47 @@ namespace PrimarySchoolAPP
             this.label2.TabIndex = 30;
             this.label2.Text = "Welcome:";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(151, 309);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(52, 34);
+            this.dataGridView2.TabIndex = 32;
+            this.dataGridView2.Visible = false;
+            // 
             // userConTeacher1
             // 
             this.userConTeacher1.BackColor = System.Drawing.Color.White;
-            this.userConTeacher1.Location = new System.Drawing.Point(203, 35);
+            this.userConTeacher1.Location = new System.Drawing.Point(197, 50);
             this.userConTeacher1.Name = "userConTeacher1";
-            this.userConTeacher1.Size = new System.Drawing.Size(936, 656);
-            this.userConTeacher1.TabIndex = 21;
+            this.userConTeacher1.Size = new System.Drawing.Size(937, 598);
+            this.userConTeacher1.TabIndex = 31;
             // 
             // userConUser1
             // 
             this.userConUser1.BackColor = System.Drawing.Color.White;
-            this.userConUser1.Location = new System.Drawing.Point(203, 32);
+            this.userConUser1.Location = new System.Drawing.Point(-313, -20);
             this.userConUser1.Name = "userConUser1";
-            this.userConUser1.Size = new System.Drawing.Size(933, 621);
-            this.userConUser1.TabIndex = 23;
+            this.userConUser1.Size = new System.Drawing.Size(979, 573);
+            this.userConUser1.TabIndex = 32;
+            // 
+            // userControlAdmin1
+            // 
+            this.userControlAdmin1.Location = new System.Drawing.Point(197, 49);
+            this.userControlAdmin1.Name = "userControlAdmin1";
+            this.userControlAdmin1.Size = new System.Drawing.Size(980, 598);
+            this.userControlAdmin1.TabIndex = 32;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 650);
+            this.Controls.Add(this.userControlAdmin1);
+            this.Controls.Add(this.userConTeacher1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.WELname);
-            this.Controls.Add(this.userConTeacher1);
-            this.Controls.Add(this.userConUser1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel5);
@@ -725,6 +746,7 @@ namespace PrimarySchoolAPP
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -740,7 +762,7 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label StudentStatlab;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -754,19 +776,17 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label WatchStatlab;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label AdminStatlab;
         private System.Windows.Forms.Label label18;
-        private userConTeacher userConTeacher1;
         private System.Windows.Forms.Button AbtBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private UserConUser userConUser1;
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Label WELname;
         private System.Windows.Forms.Label label2;
@@ -782,5 +802,9 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Panel pnTea;
         private System.Windows.Forms.Panel pnStu;
         private System.Windows.Forms.Panel pnlHome;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private UserConUser userConUser1;
+        private userConTeacher userConTeacher1;
+        private UserControlAdmin userControlAdmin1;
     }
 }
