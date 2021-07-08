@@ -77,6 +77,7 @@ namespace PrimarySchoolAPP
             }
 
             userConTeacher1.Hide();   //Users
+           
             userConUser1.Hide();
             userControlAdmin1.Hide();
 
@@ -106,7 +107,6 @@ namespace PrimarySchoolAPP
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "SELECT * FROM Teachers";
-                //cmd.CommandText ="SELECT id AS ID, FirstName AS [First Name], MiddleName AS [Middle Name], LastName AS [Last Name],DOB, Gender,DateAppointment AS [Date of Appointment],Email,Status,Rank,House,Club,NextKin AS [Next of Kin Name],NextKinCon AS [Next of Kin Contact] FROM Teachers ";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -141,7 +141,6 @@ namespace PrimarySchoolAPP
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "SELECT * FROM Administrative";
-                //cmd.CommandText ="SELECT id AS ID, FirstName AS [First Name], MiddleName AS [Middle Name], LastName AS [Last Name],DOB, Gender,DateAppointment AS [Date of Appointment],Email,Status,Rank,House,Club,NextKin AS [Next of Kin Name],NextKinCon AS [Next of Kin Contact] FROM Teachers ";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -178,33 +177,6 @@ namespace PrimarySchoolAPP
 
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void stuBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void teaBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void AdminBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void UsersBNT_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void WatchmenBtn_Click(object sender, EventArgs e)
-        {
-            
-        }
         bool close = true;
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -259,7 +231,7 @@ namespace PrimarySchoolAPP
             pnWat.Hide();
             pnSet.Hide();
 
-
+            displayDataAdmin();
             displayDataTeachers();
         }
 

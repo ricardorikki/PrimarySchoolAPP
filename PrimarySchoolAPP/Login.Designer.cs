@@ -49,6 +49,7 @@ namespace PrimarySchoolAPP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lkbForgetPassword = new System.Windows.Forms.LinkLabel();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -248,11 +249,23 @@ namespace PrimarySchoolAPP
             this.pictureBox6.TabIndex = 46;
             this.pictureBox6.TabStop = false;
             // 
+            // lkbForgetPassword
+            // 
+            this.lkbForgetPassword.AutoSize = true;
+            this.lkbForgetPassword.Location = new System.Drawing.Point(635, 463);
+            this.lkbForgetPassword.Name = "lkbForgetPassword";
+            this.lkbForgetPassword.Size = new System.Drawing.Size(86, 13);
+            this.lkbForgetPassword.TabIndex = 51;
+            this.lkbForgetPassword.TabStop = true;
+            this.lkbForgetPassword.Text = "Forget Password";
+            this.lkbForgetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkbForgetPassword_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 535);
+            this.Controls.Add(this.lkbForgetPassword);
             this.Controls.Add(this.labSMS);
             this.Controls.Add(this.labSch);
             this.Controls.Add(this.pictureBox6);
@@ -309,5 +322,6 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Label labSMS;
         private System.Windows.Forms.Label labSch;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.LinkLabel lkbForgetPassword;
     }
 }

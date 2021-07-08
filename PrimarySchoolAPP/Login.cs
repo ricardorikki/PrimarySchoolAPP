@@ -178,7 +178,12 @@ namespace PrimarySchoolAPP
 
         }
 
-       
-
+        private void lkbForgetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgetPassword fp = new ForgetPassword();
+            this.Dispose(false);
+            fp.Show();
+            this.Hide();
+        }
     }
 }

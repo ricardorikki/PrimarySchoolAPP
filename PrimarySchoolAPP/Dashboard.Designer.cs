@@ -64,6 +64,7 @@ namespace PrimarySchoolAPP
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -78,10 +79,9 @@ namespace PrimarySchoolAPP
             this.label18 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.userConTeacher1 = new PrimarySchoolAPP.userConTeacher();
             this.userConUser1 = new PrimarySchoolAPP.UserConUser();
             this.userControlAdmin1 = new PrimarySchoolAPP.UserControlAdmin();
+            this.userConTeacher1 = new PrimarySchoolAPP.userConTeacher();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
@@ -92,13 +92,13 @@ namespace PrimarySchoolAPP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -400,7 +400,6 @@ namespace PrimarySchoolAPP
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel3.Controls.Add(this.userConUser1);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(516, 71);
@@ -516,6 +515,15 @@ namespace PrimarySchoolAPP
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(537, 304);
             this.panel7.TabIndex = 19;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(151, 309);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(52, 34);
+            this.dataGridView2.TabIndex = 32;
+            this.dataGridView2.Visible = false;
             // 
             // label11
             // 
@@ -650,7 +658,7 @@ namespace PrimarySchoolAPP
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 619);
+            this.dataGridView1.Location = new System.Drawing.Point(187, 619);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(33, 31);
             this.dataGridView1.TabIndex = 22;
@@ -667,45 +675,37 @@ namespace PrimarySchoolAPP
             this.label2.TabIndex = 30;
             this.label2.Text = "Welcome:";
             // 
-            // dataGridView2
+            // userConUser1
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(151, 309);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(52, 34);
-            this.dataGridView2.TabIndex = 32;
-            this.dataGridView2.Visible = false;
+            this.userConUser1.BackColor = System.Drawing.Color.White;
+            this.userConUser1.Location = new System.Drawing.Point(197, 50);
+            this.userConUser1.Name = "userConUser1";
+            this.userConUser1.Size = new System.Drawing.Size(979, 603);
+            this.userConUser1.TabIndex = 38;
+            // 
+            // userControlAdmin1
+            // 
+            this.userControlAdmin1.Location = new System.Drawing.Point(196, 52);
+            this.userControlAdmin1.Name = "userControlAdmin1";
+            this.userControlAdmin1.Size = new System.Drawing.Size(980, 598);
+            this.userControlAdmin1.TabIndex = 39;
             // 
             // userConTeacher1
             // 
             this.userConTeacher1.BackColor = System.Drawing.Color.White;
-            this.userConTeacher1.Location = new System.Drawing.Point(197, 50);
+            this.userConTeacher1.Location = new System.Drawing.Point(196, 50);
             this.userConTeacher1.Name = "userConTeacher1";
             this.userConTeacher1.Size = new System.Drawing.Size(937, 598);
-            this.userConTeacher1.TabIndex = 31;
-            // 
-            // userConUser1
-            // 
-            this.userConUser1.BackColor = System.Drawing.Color.White;
-            this.userConUser1.Location = new System.Drawing.Point(-313, -20);
-            this.userConUser1.Name = "userConUser1";
-            this.userConUser1.Size = new System.Drawing.Size(979, 573);
-            this.userConUser1.TabIndex = 32;
-            // 
-            // userControlAdmin1
-            // 
-            this.userControlAdmin1.Location = new System.Drawing.Point(197, 49);
-            this.userControlAdmin1.Name = "userControlAdmin1";
-            this.userControlAdmin1.Size = new System.Drawing.Size(980, 598);
-            this.userControlAdmin1.TabIndex = 32;
+            this.userConTeacher1.TabIndex = 40;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 650);
-            this.Controls.Add(this.userControlAdmin1);
             this.Controls.Add(this.userConTeacher1);
+            this.Controls.Add(this.userControlAdmin1);
+            this.Controls.Add(this.userConUser1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.WELname);
             this.Controls.Add(this.dataGridView1);
@@ -738,6 +738,7 @@ namespace PrimarySchoolAPP
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -746,7 +747,6 @@ namespace PrimarySchoolAPP
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,7 +804,7 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Panel pnlHome;
         private System.Windows.Forms.DataGridView dataGridView2;
         private UserConUser userConUser1;
-        private userConTeacher userConTeacher1;
         private UserControlAdmin userControlAdmin1;
+        private userConTeacher userConTeacher1;
     }
 }
