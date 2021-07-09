@@ -64,6 +64,7 @@ namespace PrimarySchoolAPP
             displayDataTeachers();
             displayDataAdmin();
             displayDataWatch();
+            displayDataStudent();
 
             if (MyConnection.type == "A")
             {
@@ -95,7 +96,39 @@ namespace PrimarySchoolAPP
         }
 
 
+        public void displayDataStudent()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Student";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView4.DataSource = dt;
+                da.Update(dt);
+                StudentStatlab.Text = dt.Rows.Count.ToString();
 
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
 
         public void displayDataTeachers()
         {
@@ -263,6 +296,7 @@ namespace PrimarySchoolAPP
             displayDataAdmin();
             displayDataTeachers();
             displayDataWatch();
+            displayDataStudent();
         }
 
         private void stuBTN_Click_1(object sender, EventArgs e)

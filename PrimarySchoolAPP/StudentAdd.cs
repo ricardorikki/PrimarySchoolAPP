@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace PrimarySchoolAPP
 {
@@ -14,15 +16,48 @@ namespace PrimarySchoolAPP
     {
 
 
-        //SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
 
+        SqlCommand cmd;
+        string imgLoc = "";
 
-    
         public StudentAdd()
         {
             InitializeComponent();
         }
+        public void displayDataStudent()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM Student";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridViewStudent.DataSource = dt;
+                da.Update(dt);
+                dataGridViewStudent.AllowUserToAddRows = false;
 
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
         private void StudentAdd_Load(object sender, EventArgs e)
         {
             metroTabPage1.Text = @"Bio";
@@ -52,7 +87,7 @@ namespace PrimarySchoolAPP
             HousecomboBx.Items.Add("Blue-McLoud");
             HousecomboBx.Items.Add("Yellow-Dalass");
             HousecomboBx.Items.Add("Purple-AJ'S");
-
+            displayDataStudent();
         }
 
         private void FnameStuTB_Enter(object sender, EventArgs e)
@@ -116,6 +151,87 @@ namespace PrimarySchoolAPP
             if (ERN.Text == "Student Reg. Number")
             {
                 ERN.Text = "";
+            }
+        }
+
+        private void SaveBNT_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                byte[] img = null;
+
+                if (StuPhoto.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
+                    img = ms.GetBuffer();
+                    ms.Close();
+                }
+
+                if (StuPhoto.Image == null)
+                {
+                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
+                if (ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
+                {
+                    string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + GenderComBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    cmd = new SqlCommand(sql, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+                    con.Close();
+                    displayDataStudent();
+                   // ClearData();
+                    MessageBox.Show(x.ToString() + " Record inserted successfully");
+                }
+
+                else
+                {
+                    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void browseBnt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|ALL Files(*.*)|*.*";
+                dlg.Title = "Select Student Picture";
+
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    imgLoc = dlg.FileName.ToString();
+                    StuPhoto.ImageLocation = imgLoc;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
             }
         }
     }

@@ -80,11 +80,12 @@ namespace PrimarySchoolAPP
             this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Button();
+            this.userConStudent1 = new PrimarySchoolAPP.userConStudent1();
             this.userConWatch1 = new PrimarySchoolAPP.UserConWatch();
             this.userConTeacher1 = new PrimarySchoolAPP.userConTeacher();
             this.userControlAdmin1 = new PrimarySchoolAPP.UserControlAdmin();
             this.userConUser1 = new PrimarySchoolAPP.UserConUser();
-            this.userConStudent1 = new PrimarySchoolAPP.userConStudent1();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,6 +104,7 @@ namespace PrimarySchoolAPP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -110,6 +112,7 @@ namespace PrimarySchoolAPP
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Controls.Add(this.dataGridView4);
             this.panel2.Controls.Add(this.dataGridView3);
             this.panel2.Controls.Add(this.pnSet);
             this.panel2.Controls.Add(this.pnWat);
@@ -691,6 +694,13 @@ namespace PrimarySchoolAPP
             this.Logout.UseVisualStyleBackColor = true;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
+            // userConStudent1
+            // 
+            this.userConStudent1.Location = new System.Drawing.Point(209, 27);
+            this.userConStudent1.Name = "userConStudent1";
+            this.userConStudent1.Size = new System.Drawing.Size(917, 600);
+            this.userConStudent1.TabIndex = 42;
+            // 
             // userConWatch1
             // 
             this.userConWatch1.Location = new System.Drawing.Point(203, 53);
@@ -721,12 +731,14 @@ namespace PrimarySchoolAPP
             this.userConUser1.Size = new System.Drawing.Size(973, 603);
             this.userConUser1.TabIndex = 38;
             // 
-            // userConStudent1
+            // dataGridView4
             // 
-            this.userConStudent1.Location = new System.Drawing.Point(209, 27);
-            this.userConStudent1.Name = "userConStudent1";
-            this.userConStudent1.Size = new System.Drawing.Size(917, 600);
-            this.userConStudent1.TabIndex = 42;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(118, 573);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(33, 31);
+            this.dataGridView4.TabIndex = 42;
+            this.dataGridView4.Visible = false;
             // 
             // Dashboard
             // 
@@ -779,6 +791,7 @@ namespace PrimarySchoolAPP
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -841,5 +854,6 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.DataGridView dataGridView3;
         private UserConWatch userConWatch1;
         private userConStudent1 userConStudent1;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
