@@ -80,6 +80,7 @@ namespace PrimarySchoolAPP
             userConWatch1.Hide();
             userConUser1.Hide();
             userControlAdmin1.Hide();
+           userConStudent1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -249,7 +250,7 @@ namespace PrimarySchoolAPP
             userConUser1.Hide();
             userControlAdmin1.Hide();
             userConWatch1.Hide();
-            //userConStudent1.Hide();
+            userConStudent1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -272,7 +273,7 @@ namespace PrimarySchoolAPP
             userConUser1.Hide();
             userControlAdmin1.Hide();
             userConWatch1.Hide();
-            //userConStudent1.Show();
+            userConStudent1.Show();
 
             //*****Menu Indicators*******
             pnlHome.Hide();
@@ -290,7 +291,7 @@ namespace PrimarySchoolAPP
             userConUser1.Hide();
             userControlAdmin1.Hide();
             userConWatch1.Hide();
-            //userConStudent1.Hide();
+            userConStudent1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Hide();
@@ -309,7 +310,7 @@ namespace PrimarySchoolAPP
             userConUser1.Hide();
             userControlAdmin1.Show();
             userConWatch1.Hide();
-            //userConStudent1.Hide();
+            userConStudent1.Hide();
 
             //*****Menu Indicators*******
             
@@ -329,7 +330,7 @@ namespace PrimarySchoolAPP
             userConUser1.Hide();
             userControlAdmin1.Hide();
             userConWatch1.Show();
-            //userConStudent1.Hide();
+            userConStudent1.Hide();
 
             //*****Menu Indicators*******
 
@@ -348,7 +349,7 @@ namespace PrimarySchoolAPP
             userConUser1.Show();
             userControlAdmin1.Hide();
             userConWatch1.Hide();
-            //userConStudent1.Hide();
+            userConStudent1.Hide();
 
             //*****Menu Indicators*******
 

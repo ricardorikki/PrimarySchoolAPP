@@ -63,24 +63,24 @@ namespace PrimarySchoolAPP
             this.TeacherSearTB = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.NewBNT = new System.Windows.Forms.Button();
             this.IDtb = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.TeacherSearCBO = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NewBNT = new System.Windows.Forms.Button();
             this.DeleteBNT = new System.Windows.Forms.Button();
             this.UpdateBNT = new System.Windows.Forms.Button();
             this.SaveBNT = new System.Windows.Forms.Button();
             this.TeacherPhoto = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TeacherSearCBO = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TeacherPhoto)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeacherPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ClubcomboBx
@@ -423,6 +423,53 @@ namespace PrimarySchoolAPP
             this.label14.TabIndex = 97;
             this.label14.Text = "ID";
             // 
+            // IDtb
+            // 
+            this.IDtb.Location = new System.Drawing.Point(208, 36);
+            this.IDtb.Name = "IDtb";
+            this.IDtb.ReadOnly = true;
+            this.IDtb.Size = new System.Drawing.Size(22, 20);
+            this.IDtb.TabIndex = 96;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.dataGridViewTeachers);
+            this.panel2.Location = new System.Drawing.Point(24, 343);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 250);
+            this.panel2.TabIndex = 69;
+            // 
+            // TeacherSearCBO
+            // 
+            this.TeacherSearCBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TeacherSearCBO.FormattingEnabled = true;
+            this.TeacherSearCBO.Items.AddRange(new object[] {
+            "First Name",
+            "Last Name",
+            "Gender",
+            "Status",
+            "Rank"});
+            this.TeacherSearCBO.Location = new System.Drawing.Point(235, 17);
+            this.TeacherSearCBO.Name = "TeacherSearCBO";
+            this.TeacherSearCBO.Size = new System.Drawing.Size(112, 21);
+            this.TeacherSearCBO.TabIndex = 96;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.TeacherSearTB);
+            this.groupBox1.Controls.Add(this.TeacherSearCBO);
+            this.groupBox1.Location = new System.Drawing.Point(24, 292);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(369, 45);
+            this.groupBox1.TabIndex = 97;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Search";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // NewBNT
             // 
             this.NewBNT.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
@@ -434,14 +481,6 @@ namespace PrimarySchoolAPP
             this.NewBNT.Text = "New";
             this.NewBNT.UseVisualStyleBackColor = true;
             this.NewBNT.Click += new System.EventHandler(this.NewBNT_Click);
-            // 
-            // IDtb
-            // 
-            this.IDtb.Location = new System.Drawing.Point(208, 36);
-            this.IDtb.Name = "IDtb";
-            this.IDtb.ReadOnly = true;
-            this.IDtb.Size = new System.Drawing.Size(22, 20);
-            this.IDtb.TabIndex = 96;
             // 
             // DeleteBNT
             // 
@@ -490,15 +529,6 @@ namespace PrimarySchoolAPP
             this.TeacherPhoto.TabIndex = 58;
             this.TeacherPhoto.TabStop = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.dataGridViewTeachers);
-            this.panel2.Location = new System.Drawing.Point(24, 343);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 250);
-            this.panel2.TabIndex = 69;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::PrimarySchoolAPP.Properties.Resources.wallpaper;
@@ -508,36 +538,6 @@ namespace PrimarySchoolAPP
             this.pictureBox1.Size = new System.Drawing.Size(900, 275);
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
-            // 
-            // TeacherSearCBO
-            // 
-            this.TeacherSearCBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TeacherSearCBO.FormattingEnabled = true;
-            this.TeacherSearCBO.Items.AddRange(new object[] {
-            "First Name",
-            "Last Name",
-            "Gender",
-            "Status",
-            "Rank"});
-            this.TeacherSearCBO.Location = new System.Drawing.Point(235, 17);
-            this.TeacherSearCBO.Name = "TeacherSearCBO";
-            this.TeacherSearCBO.Size = new System.Drawing.Size(112, 21);
-            this.TeacherSearCBO.TabIndex = 96;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.TeacherSearTB);
-            this.groupBox1.Controls.Add(this.TeacherSearCBO);
-            this.groupBox1.Location = new System.Drawing.Point(24, 292);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(369, 45);
-            this.groupBox1.TabIndex = 97;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Search";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // userConTeacher
             // 
@@ -554,12 +554,12 @@ namespace PrimarySchoolAPP
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTeachers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TeacherPhoto)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeacherPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
