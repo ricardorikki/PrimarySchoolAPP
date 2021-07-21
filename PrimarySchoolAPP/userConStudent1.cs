@@ -16,7 +16,7 @@ namespace PrimarySchoolAPP
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
 
-        SqlCommand cmd;
+        //SqlCommand cmd;
   
         public userConStudent1()
         {

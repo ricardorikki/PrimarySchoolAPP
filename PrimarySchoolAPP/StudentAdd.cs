@@ -18,7 +18,7 @@ namespace PrimarySchoolAPP
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
 
-        SqlCommand cmd;
+        //SqlCommand cmd;
         string imgLoc = "";
 
         public StudentAdd()
@@ -102,24 +102,23 @@ namespace PrimarySchoolAPP
             metroTabPage2.Text = @"Personality Record";
             metroTabPage3.Text = @"Health Record";
             metroTabPage4.Text = @"Attendance Record";
-            metroTabPage5.Text = @"Academic Progress Record";
-
+           
             FnameStuTB.Text = "First Name";
             MiddnameStuTB.Text = "Middle Name";
             LastNameStuTB.Text = "Last Name";
             ERN.Text = "Student Reg. Number";
 
-            FnameStuTB.ForeColor = Color.Gray;
-            MiddnameStuTB.ForeColor = Color.Gray;
-            LastNameStuTB.ForeColor = Color.Gray;
-            ERN.ForeColor = Color.Gray;
+            FnameStuTB.ForeColor = Color.Black;
+            MiddnameStuTB.ForeColor = Color.Black;
+            LastNameStuTB.ForeColor = Color.Black;
+            ERN.ForeColor = Color.Black;
 
             GenderComBx.Items.Add("Male");
             GenderComBx.Items.Add("Female");
             ClubcomboBx.Items.Add("Computer");
             ClubcomboBx.Items.Add("4H");
             ClubcomboBx.Items.Add("Builders");
-            ClubcomboBx.Items.Add("Cub Scouth");
+            ClubcomboBx.Items.Add("Cub Scout");
             ClubcomboBx.Items.Add("Girls Guide");
             HousecomboBx.Items.Add("Red-Fullerton");
             HousecomboBx.Items.Add("Blue-McLoud");
@@ -127,6 +126,7 @@ namespace PrimarySchoolAPP
             HousecomboBx.Items.Add("Purple-AJ'S");
             displayDataStudent();
             displayDataAttendance();
+            StuPhoto.Image = Properties.Resources.user;
         }
 
         private void FnameStuTB_Enter(object sender, EventArgs e)
@@ -193,139 +193,8 @@ namespace PrimarySchoolAPP
             }
         }
 
-        private void SaveBNT_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                byte[] img = null;
-
-                if (StuPhoto.Image != null)
-                {
-                    MemoryStream ms = new MemoryStream();
-                    StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
-                    img = ms.GetBuffer();
-                    ms.Close();
-                }
-
-                if (StuPhoto.Image == null)
-                {
-                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-
-                if (ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
-                {
-                    string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + GenderComBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
-
-                    if (con.State != ConnectionState.Open)
-                    {
-                        con.Open();
-                    }
-                    cmd = new SqlCommand(sql, con);
-                    cmd.Parameters.Add(new SqlParameter("@img", img));
-                    int x = cmd.ExecuteNonQuery();
-                    con.Close();
-                    displayDataStudent();
-                   // ClearData();
-                    MessageBox.Show(x.ToString() + " Record inserted successfully");
-                }
-
-                else
-                {
-                    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-            }
-
-            catch (Exception ex)
-            {
-              MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void browseBnt_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog dlg = new OpenFileDialog();
-                dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|ALL Files(*.*)|*.*";
-                dlg.Title = "Select Student Picture";
-
-
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    imgLoc = dlg.FileName.ToString();
-                    StuPhoto.ImageLocation = imgLoc;
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-          
-        }
-
-        private void dataGridViewStudent2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-
-            {
-
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                }
-
-                if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow row = this.dataGridViewStudent2.Rows[e.RowIndex];
-                    studentid.Text = row.Cells[0].Value.ToString();
-                    FnameTB.Text = row.Cells[2].Value.ToString();
-                    MiddnameTB.Text = row.Cells[3].Value.ToString();
-                    LastNameTB.Text = row.Cells[4].Value.ToString();
-                   
-                    var data = (Byte[])(row.Cells[24].Value);
-                    var stream = new MemoryStream(data);
-                    StudentPhoto.Image = Image.FromStream(stream);
-                    Y1T1.Text = "";
-                    Y1T2.Text = ""; 
-                    Y1T3.Text = "";
-                    Y2T1.Text = ""; 
-                    Y2T2.Text = ""; 
-                    Y2T3.Text = ""; 
-                    Y3T1.Text = "";
-                    Y3T2.Text = ""; 
-                    Y3T3.Text = ""; 
-                    Y4T1.Text = "";
-                    Y4T2.Text = ""; 
-                    Y4T3.Text = "";
-                    Y5T1.Text = "";
-                    Y5T2.Text = "";
-                    Y5T3.Text = "";
-                    Y6T1.Text = "";
-                    Y6T2.Text = ""; 
-                    Y6T3.Text = "";
-     
-
-                }
-
-            }
-            catch (Exception ex)
-
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
+ 
+//**************************Attendance Save**************************************************************
         private void saveAttenBTN_Click(object sender, EventArgs e)
         {
             try
@@ -354,7 +223,7 @@ namespace PrimarySchoolAPP
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Record already exist");
+                    MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                    con.Close();
                 }
                 else
@@ -385,7 +254,7 @@ namespace PrimarySchoolAPP
                     cmd.Parameters.AddWithValue("@id_Stu", studentid.Text);
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Record Inserted Successfully.");
+                    MessageBox.Show("Record was saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     displayDataAttendance();
                 }
 
@@ -406,10 +275,503 @@ namespace PrimarySchoolAPP
             
             
         }
+ //**************************Attendance CellClick**************************************************************
+        private void dataGridViewAttendance_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewAttendance.Rows[e.RowIndex];
+                    studentid.Text = row.Cells[0].Value.ToString();
+                    FnameTB.Text = row.Cells[1].Value.ToString();
+                    MiddnameTB.Text = row.Cells[2].Value.ToString();
+                    LastNameTB.Text = row.Cells[3].Value.ToString();
+                    Y1T1.Text = row.Cells[5].Value.ToString();
+                    Y1T2.Text = row.Cells[6].Value.ToString();
+                    Y1T3.Text = row.Cells[7].Value.ToString();
+                    Y2T1.Text = row.Cells[8].Value.ToString();
+                    Y2T2.Text = row.Cells[9].Value.ToString();
+                    Y2T3.Text = row.Cells[10].Value.ToString();
+                    Y3T1.Text = row.Cells[11].Value.ToString();
+                    Y3T2.Text = row.Cells[12].Value.ToString();
+                    Y3T3.Text = row.Cells[13].Value.ToString();
+                    Y4T1.Text = row.Cells[14].Value.ToString();
+                    Y4T2.Text = row.Cells[15].Value.ToString();
+                    Y4T3.Text = row.Cells[16].Value.ToString();
+                    Y5T1.Text = row.Cells[17].Value.ToString();
+                    Y5T2.Text = row.Cells[18].Value.ToString();
+                    Y5T3.Text = row.Cells[19].Value.ToString();
+                    Y6T1.Text = row.Cells[20].Value.ToString();
+                    Y6T2.Text = row.Cells[21].Value.ToString();
+                    Y6T3.Text = row.Cells[22].Value.ToString();
+                    var data = (Byte[])(row.Cells[23].Value);
+                    var stream = new MemoryStream(data);
+                    StudentPhoto.Image = Image.FromStream(stream);
+                    
+
+
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+//**************************Attendance Update**************************************************************
+        private void UpdateAttenBTN_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+
+                SqlCommand cmd = con.CreateCommand();
+                string Sql = "UPDATE Attendance SET Yr1_Term1='" + Y1T1.Text + "',Yr1_Term2='" + Y1T2.Text + "', Yr1_Term3='" + Y1T3.Text + "', Yr2_Term1='" + Y2T1.Text + "', Yr2_Term2='" + Y2T2.Text + "', Yr2_Term3='" + Y2T3.Text + "', Yr3_Term1='" + Y3T1.Text + "', Yr3_Term2='" + Y3T2.Text + "', Yr3_Term3='" + Y3T3.Text + "', Yr4_Term1='" + Y4T1.Text + "', Yr4_Term2='" + Y4T2.Text + "', Yr4_Term3='" + Y4T3.Text + "', Yr5_Term1='" + Y5T1.Text + "', Yr5_Term2='" + Y5T2.Text + "', Yr5_Term3='" + Y5T3.Text + "', Yr6_Term1='" + Y6T1.Text + "', Yr6_Term2='" + Y6T2.Text + "', Yr6_Term3='" + Y6T3.Text + "' WHERE id_Stu='" + studentid.Text + "'";
+
+                cmd = new SqlCommand(Sql, con);
+                //cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                displayDataAttendance();
+                MessageBox.Show("Record updated successfully","Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // ClearData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }
+//**************************Attendance Delete**************************************************************
+        private void DeleteAttenBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Delete From Attendance WHERE id_Stu='" + studentid.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Update(dt);
+                dataGridViewAttendance.DataSource = dt;
+                displayDataAttendance();
+                MessageBox.Show("Record Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //ClearData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+ //**************************Student2-Attendance CellClick**************************************************************
+        private void dataGridViewStudent2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            Y1T1.Text = "";
+            Y1T2.Text = "";
+            Y1T3.Text = "";
+            Y2T1.Text = "";
+            Y2T2.Text = "";
+            Y2T3.Text = "";
+            Y3T1.Text = "";
+            Y3T2.Text = "";
+            Y3T3.Text = "";
+            Y4T1.Text = "";
+            Y4T2.Text = "";
+            Y4T3.Text = "";
+            Y5T1.Text = "";
+            Y5T2.Text = "";
+            Y5T3.Text = "";
+            Y6T1.Text = "";
+            Y6T2.Text = "";
+            Y6T3.Text = "";
+
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewStudent2.Rows[e.RowIndex];
+                    studentid.Text = row.Cells[0].Value.ToString();
+                    FnameTB.Text = row.Cells[2].Value.ToString();
+                    MiddnameTB.Text = row.Cells[3].Value.ToString();
+                    LastNameTB.Text = row.Cells[4].Value.ToString(); 
+                    var data = (Byte[])(row.Cells[24].Value);
+                    var stream = new MemoryStream(data);
+                    StudentPhoto.Image = Image.FromStream(stream);
+
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+//**************************Students Delete**************************************************************
+        private void DeleteBNT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Delete From Student WHERE id='" + IDStuTB.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Update(dt);
+                dataGridViewStudent.DataSource = dt;
+                displayDataStudent();
+                MessageBox.Show("Record Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //ClearData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+ //**************************Students Update**************************************************************
+        private void UpdateBNT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                byte[] img = null;
+
+                if (StuPhoto.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
+                    img = ms.GetBuffer();
+                    ms.Close();
+                }
+
+                if (StuPhoto.Image == null)
+                {
+                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
 
-       
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
 
-}
+                SqlCommand cmd = con.CreateCommand();
+                string Sql = "UPDATE Student SET ERN='" + ERN.Text + "',FisrtName='" + FnameStuTB.Text + "',MiddleName='" + MiddnameStuTB.Text + "',LastName='" + LastNameStuTB.Text + "',BirthNum='" + BirthNum.Text + "',DOB='" + DOBStudt.Text + "',DOReg='" + DateRegdt.Text + "',House='" + HousecomboBx.Text + "',Club='" + ClubcomboBx.Text + "',Gender='" + GenderComBx.Text + "',StudentAddress='" + StuAddress.Text + "',MotherName='" + motherName.Text + "',MatherOccupation='" + mothersOccupation.Text + "',MotherAddress='" + motherAddress.Text + "',MotherTel='" + mothersTelephone.Text + "',FatherName='" + fathersName.Text + "',FatherOccupation='" + fathersOccupation.Text + "',FatherAddress='" + fathersAddress.Text + "',FatherTel='" + fathersTelephone.Text + "',GuardianName='" + GuardianName.Text + "',GuardianOccupation='" + GuardianOccupation.Text + "',GuardianAddress='" + GuardianAddress.Text + "',GuardianTel='" + GuardianTelephone.Text + "',Photo=@img WHERE ID='" + IDStuTB.Text + "'";
+
+                cmd = new SqlCommand(Sql, con);
+                cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                displayDataStudent();
+                MessageBox.Show("Record updated successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // ClearData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }
+//**************************Students New**************************************************************
+        private void NewBNT_Click(object sender, EventArgs e)
+        {
+            IDStuTB.Text = "";
+            ERN.Text = "";
+            FnameStuTB.Text = "";
+            MiddnameStuTB.Text = "";
+            LastNameStuTB.Text = ""; ;
+            BirthNum.Text = "";
+            DOBStudt.Text = "";
+            DateRegdt.Text = "";
+            HousecomboBx.Items.Clear();
+
+            ClubcomboBx.Items.Clear();
+            GenderComBx.Items.Clear();
+            GenderComBx.Items.Add("Male");
+            GenderComBx.Items.Add("Female");
+            ClubcomboBx.Items.Add("Computer");
+            ClubcomboBx.Items.Add("4H");
+            ClubcomboBx.Items.Add("Builders");
+            ClubcomboBx.Items.Add("Cub Scout");
+            ClubcomboBx.Items.Add("Girls Guide");
+            HousecomboBx.Items.Add("Red-Fullerton");
+            HousecomboBx.Items.Add("Blue-McLoud");
+            HousecomboBx.Items.Add("Yellow-Dalass");
+            HousecomboBx.Items.Add("Purple-AJ'S");
+            StuAddress.Text = "";
+            motherName.Text = "";
+            mothersOccupation.Text = "";
+            motherAddress.Text = "";
+            mothersTelephone.Text = "";
+            fathersName.Text = "";
+            fathersOccupation.Text = "";
+            fathersAddress.Text = "";
+            fathersTelephone.Text = "";
+            GuardianName.Text = "";
+            GuardianOccupation.Text = "";
+            GuardianAddress.Text = "";
+            GuardianTelephone.Text = "";
+            StuPhoto.Image = Properties.Resources.user;
+        }
+ //**************************Students Save**************************************************************      
+        private void SaveBNT_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                //    byte[] img = null;
+
+                //    if (StuPhoto.Image != null)
+                //    {
+                //        MemoryStream ms = new MemoryStream();
+                //        StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
+                //        img = ms.GetBuffer();
+                //        ms.Close();
+                //    }
+
+                //    if (StuPhoto.Image == null)
+                //    {
+                //        MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
+
+
+                //    if (con.State != ConnectionState.Open)//ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
+                //    {
+                //        con.Open();
+                //        string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + GenderComBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
+
+
+                //        cmd = new SqlCommand(sql, con);
+                //        cmd.Parameters.Add(new SqlParameter("@img", img));
+                //        int x = cmd.ExecuteNonQuery();
+
+                //        displayDataStudent();
+                //       // ClearData();
+                //        MessageBox.Show(x.ToString() + " Record inserted successfully");
+                //    }
+
+                //    else
+                //    {
+                //        MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
+
+
+                //}
+
+                //catch (Exception ex)
+                //{
+                //  MessageBox.Show(ex.Message);con.Close();
+                //}
+
+
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+
+                byte[] img = null;
+
+                if (StuPhoto.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
+                    img = ms.GetBuffer();
+                    ms.Close();
+                }
+
+                if (StuPhoto.Image == null)
+                {
+                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from Student where ERN =@ERN", con);
+                cmd.Parameters.AddWithValue("@ERN", ERN.Text.ToLower());
+                //con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
+
+                else//ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
+                {
+                    con.Close();
+                    con.Open();
+                    string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + GenderComBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
+
+
+                    cmd = new SqlCommand(sql, con);
+                    cmd.Parameters.Add(new SqlParameter("@img", img));
+                    int x = cmd.ExecuteNonQuery();
+
+                    displayDataStudent();
+                    // ClearData();
+                    MessageBox.Show(x.ToString() + " Record inserted successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                //else
+                //{
+                //    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); con.Close();
+            }
+            finally
+            {
+                con.Close();
+            }
+
+
+        }
+        //**************************Student Photo Browse**************************************************************
+        private void browseBnt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|ALL Files(*.*)|*.*";
+                dlg.Title = "Select Student Picture";
+
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    imgLoc = dlg.FileName.ToString();
+                    StuPhoto.ImageLocation = imgLoc;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+ //**************************Student CellClick**************************************************************
+        private void dataGridViewStudent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewStudent2.Rows[e.RowIndex];
+                    IDStuTB.Text = row.Cells[0].Value.ToString();
+                    ERN.Text = row.Cells[1].Value.ToString();
+                    FnameStuTB.Text = row.Cells[2].Value.ToString();
+                    MiddnameStuTB.Text = row.Cells[3].Value.ToString();
+                    LastNameStuTB.Text = row.Cells[4].Value.ToString();
+                    BirthNum.Text = row.Cells[5].Value.ToString();
+                    DOBStudt.Text = row.Cells[6].Value.ToString();
+                    DateRegdt.Text = row.Cells[7].Value.ToString();
+                    HousecomboBx.Text = row.Cells[8].Value.ToString();
+                    ClubcomboBx.Text = row.Cells[9].Value.ToString();
+                    GenderComBx.Text = row.Cells[10].Value.ToString();
+                    StuAddress.Text = row.Cells[11].Value.ToString();
+                    motherName.Text = row.Cells[12].Value.ToString();
+                    mothersOccupation.Text = row.Cells[13].Value.ToString();
+                    motherAddress.Text = row.Cells[14].Value.ToString();
+                    mothersTelephone.Text = row.Cells[15].Value.ToString();
+                    fathersName.Text = row.Cells[16].Value.ToString();
+                    fathersOccupation.Text = row.Cells[17].Value.ToString();
+                    fathersAddress.Text = row.Cells[18].Value.ToString();
+                    fathersTelephone.Text = row.Cells[19].Value.ToString();
+                    GuardianName.Text = row.Cells[20].Value.ToString();
+                    GuardianOccupation.Text = row.Cells[21].Value.ToString();
+                    GuardianAddress.Text = row.Cells[22].Value.ToString();
+                    GuardianTelephone.Text = row.Cells[23].Value.ToString();
+
+                    var data = (Byte[])(row.Cells[24].Value);
+                    var stream = new MemoryStream(data);
+                    StuPhoto.Image = Image.FromStream(stream);
+
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        
+
+    }
+    }
 }

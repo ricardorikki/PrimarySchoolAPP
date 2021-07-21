@@ -29,16 +29,16 @@ namespace PrimarySchoolAPP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LastNameStuTB = new System.Windows.Forms.TextBox();
             this.StuAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -89,13 +89,85 @@ namespace PrimarySchoolAPP
             this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.NewBNT = new System.Windows.Forms.Button();
+            this.DeleteBNT = new System.Windows.Forms.Button();
+            this.UpdateBNT = new System.Windows.Forms.Button();
             this.label235 = new System.Windows.Forms.Label();
             this.IDStuTB = new System.Windows.Forms.TextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox171 = new System.Windows.Forms.TextBox();
             this.label244 = new System.Windows.Forms.Label();
             this.textBox170 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.label234 = new System.Windows.Forms.Label();
             this.textBox45 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -106,6 +178,27 @@ namespace PrimarySchoolAPP
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label248 = new System.Windows.Forms.Label();
+            this.label247 = new System.Windows.Forms.Label();
+            this.label246 = new System.Windows.Forms.Label();
+            this.label245 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox172 = new System.Windows.Forms.TextBox();
+            this.textBox173 = new System.Windows.Forms.TextBox();
+            this.textBox174 = new System.Windows.Forms.TextBox();
+            this.textBox175 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox169 = new System.Windows.Forms.TextBox();
+            this.textBox168 = new System.Windows.Forms.TextBox();
+            this.textBox167 = new System.Windows.Forms.TextBox();
+            this.textBox166 = new System.Windows.Forms.TextBox();
+            this.textBox164 = new System.Windows.Forms.TextBox();
+            this.textBox163 = new System.Windows.Forms.TextBox();
             this.textBox165 = new System.Windows.Forms.TextBox();
             this.label243 = new System.Windows.Forms.Label();
             this.label242 = new System.Windows.Forms.Label();
@@ -115,6 +208,22 @@ namespace PrimarySchoolAPP
             this.label238 = new System.Windows.Forms.Label();
             this.label237 = new System.Windows.Forms.Label();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridViewAttendance = new System.Windows.Forms.DataGridView();
+            this.label66 = new System.Windows.Forms.Label();
+            this.studentid = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridViewStudent2 = new System.Windows.Forms.DataGridView();
+            this.DeleteAttenBTN = new System.Windows.Forms.Button();
+            this.UpdateAttenBTN = new System.Windows.Forms.Button();
+            this.saveAttenBTN = new System.Windows.Forms.Button();
+            this.label250 = new System.Windows.Forms.Label();
+            this.label251 = new System.Windows.Forms.Label();
+            this.label252 = new System.Windows.Forms.Label();
+            this.StudentPhoto = new System.Windows.Forms.PictureBox();
+            this.FnameTB = new System.Windows.Forms.TextBox();
+            this.LastNameTB = new System.Windows.Forms.TextBox();
+            this.MiddnameTB = new System.Windows.Forms.TextBox();
             this.label287 = new System.Windows.Forms.Label();
             this.label261 = new System.Windows.Forms.Label();
             this.label262 = new System.Windows.Forms.Label();
@@ -163,117 +272,8 @@ namespace PrimarySchoolAPP
             this.Y1T3 = new System.Windows.Forms.TextBox();
             this.label275 = new System.Windows.Forms.Label();
             this.Y1T1 = new System.Windows.Forms.TextBox();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.textBox163 = new System.Windows.Forms.TextBox();
-            this.textBox164 = new System.Windows.Forms.TextBox();
-            this.textBox166 = new System.Windows.Forms.TextBox();
-            this.textBox167 = new System.Windows.Forms.TextBox();
-            this.textBox168 = new System.Windows.Forms.TextBox();
-            this.textBox169 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox172 = new System.Windows.Forms.TextBox();
-            this.textBox173 = new System.Windows.Forms.TextBox();
-            this.textBox174 = new System.Windows.Forms.TextBox();
-            this.textBox175 = new System.Windows.Forms.TextBox();
-            this.label245 = new System.Windows.Forms.Label();
-            this.label246 = new System.Windows.Forms.Label();
-            this.label247 = new System.Windows.Forms.Label();
-            this.label248 = new System.Windows.Forms.Label();
-            this.label250 = new System.Windows.Forms.Label();
-            this.label251 = new System.Windows.Forms.Label();
-            this.label252 = new System.Windows.Forms.Label();
-            this.StudentPhoto = new System.Windows.Forms.PictureBox();
-            this.FnameTB = new System.Windows.Forms.TextBox();
-            this.LastNameTB = new System.Windows.Forms.TextBox();
-            this.MiddnameTB = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridViewAttendance = new System.Windows.Forms.DataGridView();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.NewBNT = new System.Windows.Forms.Button();
-            this.DeleteBNT = new System.Windows.Forms.Button();
-            this.UpdateBNT = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.saveAttenBTN = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridViewStudent2 = new System.Windows.Forms.DataGridView();
-            this.label66 = new System.Windows.Forms.Label();
-            this.studentid = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StuPhoto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -281,23 +281,24 @@ namespace PrimarySchoolAPP
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
-            this.metroTabPage4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.metroTabPage4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // LastNameStuTB
             // 
+            this.LastNameStuTB.ForeColor = System.Drawing.Color.Black;
             this.LastNameStuTB.Location = new System.Drawing.Point(906, 48);
             this.LastNameStuTB.Name = "LastNameStuTB";
             this.LastNameStuTB.Size = new System.Drawing.Size(122, 20);
@@ -326,6 +327,7 @@ namespace PrimarySchoolAPP
             // 
             // MiddnameStuTB
             // 
+            this.MiddnameStuTB.ForeColor = System.Drawing.Color.Black;
             this.MiddnameStuTB.Location = new System.Drawing.Point(778, 48);
             this.MiddnameStuTB.Name = "MiddnameStuTB";
             this.MiddnameStuTB.Size = new System.Drawing.Size(122, 20);
@@ -392,6 +394,7 @@ namespace PrimarySchoolAPP
             // 
             // FnameStuTB
             // 
+            this.FnameStuTB.ForeColor = System.Drawing.Color.Black;
             this.FnameStuTB.Location = new System.Drawing.Point(650, 49);
             this.FnameStuTB.Name = "FnameStuTB";
             this.FnameStuTB.Size = new System.Drawing.Size(122, 20);
@@ -470,7 +473,8 @@ namespace PrimarySchoolAPP
             // 
             // ERN
             // 
-            this.ERN.Location = new System.Drawing.Point(720, 21);
+            this.ERN.ForeColor = System.Drawing.Color.Black;
+            this.ERN.Location = new System.Drawing.Point(760, 21);
             this.ERN.Name = "ERN";
             this.ERN.Size = new System.Drawing.Size(142, 20);
             this.ERN.TabIndex = 129;
@@ -766,28 +770,29 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewStudent
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewStudent.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewStudent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewStudent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudent.EnableHeadersVisualStyles = false;
             this.dataGridViewStudent.Location = new System.Drawing.Point(13, 16);
             this.dataGridViewStudent.Name = "dataGridViewStudent";
             this.dataGridViewStudent.Size = new System.Drawing.Size(449, 546);
             this.dataGridViewStudent.TabIndex = 0;
+            this.dataGridViewStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudent_CellClick);
             // 
             // metroTabControl1
             // 
@@ -797,10 +802,9 @@ namespace PrimarySchoolAPP
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 30);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 3;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1112, 655);
             this.metroTabControl1.TabIndex = 132;
             this.metroTabControl1.UseSelectable = true;
@@ -848,6 +852,42 @@ namespace PrimarySchoolAPP
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // NewBNT
+            // 
+            this.NewBNT.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
+            this.NewBNT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NewBNT.Location = new System.Drawing.Point(594, 562);
+            this.NewBNT.Name = "NewBNT";
+            this.NewBNT.Size = new System.Drawing.Size(100, 39);
+            this.NewBNT.TabIndex = 136;
+            this.NewBNT.Text = "New";
+            this.NewBNT.UseVisualStyleBackColor = true;
+            this.NewBNT.Click += new System.EventHandler(this.NewBNT_Click);
+            // 
+            // DeleteBNT
+            // 
+            this.DeleteBNT.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
+            this.DeleteBNT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteBNT.Location = new System.Drawing.Point(944, 562);
+            this.DeleteBNT.Name = "DeleteBNT";
+            this.DeleteBNT.Size = new System.Drawing.Size(100, 39);
+            this.DeleteBNT.TabIndex = 135;
+            this.DeleteBNT.Text = "   Delete";
+            this.DeleteBNT.UseVisualStyleBackColor = true;
+            this.DeleteBNT.Click += new System.EventHandler(this.DeleteBNT_Click);
+            // 
+            // UpdateBNT
+            // 
+            this.UpdateBNT.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
+            this.UpdateBNT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateBNT.Location = new System.Drawing.Point(825, 562);
+            this.UpdateBNT.Name = "UpdateBNT";
+            this.UpdateBNT.Size = new System.Drawing.Size(100, 39);
+            this.UpdateBNT.TabIndex = 134;
+            this.UpdateBNT.Text = "    Update";
+            this.UpdateBNT.UseVisualStyleBackColor = true;
+            this.UpdateBNT.Click += new System.EventHandler(this.UpdateBNT_Click);
+            // 
             // label235
             // 
             this.label235.AutoSize = true;
@@ -864,7 +904,7 @@ namespace PrimarySchoolAPP
             this.IDStuTB.Location = new System.Drawing.Point(681, 21);
             this.IDStuTB.Name = "IDStuTB";
             this.IDStuTB.ReadOnly = true;
-            this.IDStuTB.Size = new System.Drawing.Size(22, 20);
+            this.IDStuTB.Size = new System.Drawing.Size(39, 20);
             this.IDStuTB.TabIndex = 131;
             // 
             // metroTabPage2
@@ -889,6 +929,87 @@ namespace PrimarySchoolAPP
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Controls.Add(this.dataGridView3);
+            this.panel4.Location = new System.Drawing.Point(3, 21);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(508, 574);
+            this.panel4.TabIndex = 531;
+            // 
+            // dataGridView3
+            // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.EnableHeadersVisualStyles = false;
+            this.dataGridView3.Location = new System.Drawing.Point(13, 16);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(481, 546);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(587, 559);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 39);
+            this.button1.TabIndex = 530;
+            this.button1.Text = "New";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(937, 559);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 39);
+            this.button2.TabIndex = 529;
+            this.button2.Text = "   Delete";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(818, 559);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 39);
+            this.button3.TabIndex = 528;
+            this.button3.Text = "    Update";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(702, 559);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 39);
+            this.button4.TabIndex = 527;
+            this.button4.Text = "Save";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox171
             // 
@@ -1004,6 +1125,698 @@ namespace PrimarySchoolAPP
             this.groupBox3.TabIndex = 150;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "National Assessment Program";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox23.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox23.Location = new System.Drawing.Point(506, 445);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(32, 20);
+            this.textBox23.TabIndex = 590;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox24.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox24.Location = new System.Drawing.Point(506, 417);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(32, 20);
+            this.textBox24.TabIndex = 589;
+            // 
+            // label62
+            // 
+            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label62.Location = new System.Drawing.Point(425, 452);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(74, 13);
+            this.label62.TabIndex = 588;
+            this.label62.Text = "Social Studies";
+            // 
+            // label63
+            // 
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label63.Location = new System.Drawing.Point(424, 424);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(46, 13);
+            this.label63.TabIndex = 587;
+            this.label63.Text = "Science";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox22.Location = new System.Drawing.Point(102, 445);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(32, 20);
+            this.textBox22.TabIndex = 586;
+            // 
+            // label61
+            // 
+            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label61.Location = new System.Drawing.Point(20, 452);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(58, 13);
+            this.label61.TabIndex = 585;
+            this.label61.Text = "Ability Test";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox20.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox20.Location = new System.Drawing.Point(380, 445);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(32, 20);
+            this.textBox20.TabIndex = 584;
+            // 
+            // label56
+            // 
+            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label56.Location = new System.Drawing.Point(503, 401);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(35, 13);
+            this.label56.TabIndex = 583;
+            this.label56.Text = "Score";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox21.Location = new System.Drawing.Point(380, 417);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(32, 20);
+            this.textBox21.TabIndex = 582;
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label57.Location = new System.Drawing.Point(378, 401);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(35, 13);
+            this.label57.TabIndex = 581;
+            this.label57.Text = "Score";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label58.Location = new System.Drawing.Point(299, 452);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(67, 13);
+            this.label58.TabIndex = 580;
+            this.label58.Text = "Mathematics";
+            // 
+            // label59
+            // 
+            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label59.Location = new System.Drawing.Point(298, 424);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(76, 13);
+            this.label59.TabIndex = 579;
+            this.label59.Text = "Language Arts";
+            // 
+            // label60
+            // 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label60.Location = new System.Drawing.Point(307, 354);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(218, 16);
+            this.label60.TabIndex = 578;
+            this.label60.Text = "Curriculum Base Task Grade 6";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox18.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox18.Location = new System.Drawing.Point(218, 417);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(32, 20);
+            this.textBox18.TabIndex = 577;
+            // 
+            // label41
+            // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label41.Location = new System.Drawing.Point(216, 401);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(35, 13);
+            this.label41.TabIndex = 576;
+            this.label41.Text = "Score";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox19.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox19.Location = new System.Drawing.Point(102, 417);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(32, 20);
+            this.textBox19.TabIndex = 575;
+            // 
+            // label52
+            // 
+            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label52.Location = new System.Drawing.Point(100, 401);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(35, 13);
+            this.label52.TabIndex = 574;
+            this.label52.Text = "Score";
+            // 
+            // label53
+            // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label53.Location = new System.Drawing.Point(147, 424);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(67, 13);
+            this.label53.TabIndex = 573;
+            this.label53.Text = "Mathematics";
+            // 
+            // label54
+            // 
+            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label54.Location = new System.Drawing.Point(20, 424);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(76, 13);
+            this.label54.TabIndex = 572;
+            this.label54.Text = "Language Arts";
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label55.Location = new System.Drawing.Point(36, 354);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(194, 16);
+            this.label55.TabIndex = 571;
+            this.label55.Text = "Performance Task Grade 6\r\n";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label34.Location = new System.Drawing.Point(10, 321);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(544, 1);
+            this.label34.TabIndex = 570;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox16.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox16.Location = new System.Drawing.Point(505, 262);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(32, 20);
+            this.textBox16.TabIndex = 569;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label25.Location = new System.Drawing.Point(503, 246);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(35, 13);
+            this.label25.TabIndex = 568;
+            this.label25.Text = "Score";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox17.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox17.Location = new System.Drawing.Point(389, 262);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(32, 20);
+            this.textBox17.TabIndex = 567;
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label27.Location = new System.Drawing.Point(387, 246);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(35, 13);
+            this.label27.TabIndex = 566;
+            this.label27.Text = "Score";
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label28.Location = new System.Drawing.Point(434, 269);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(67, 13);
+            this.label28.TabIndex = 565;
+            this.label28.Text = "Mathematics";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label32.Location = new System.Drawing.Point(307, 269);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(76, 13);
+            this.label32.TabIndex = 564;
+            this.label32.Text = "Language Arts";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label33.Location = new System.Drawing.Point(323, 199);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(194, 16);
+            this.label33.TabIndex = 563;
+            this.label33.Text = "Performance Task Grade 5\r\n";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox15.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox15.Location = new System.Drawing.Point(227, 262);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(32, 20);
+            this.textBox15.TabIndex = 562;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label22.Location = new System.Drawing.Point(225, 246);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(35, 13);
+            this.label22.TabIndex = 561;
+            this.label22.Text = "Score";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox14.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox14.Location = new System.Drawing.Point(111, 262);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(32, 20);
+            this.textBox14.TabIndex = 560;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label21.Location = new System.Drawing.Point(109, 246);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 13);
+            this.label21.TabIndex = 559;
+            this.label21.Text = "Score";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label20.Location = new System.Drawing.Point(156, 269);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(67, 13);
+            this.label20.TabIndex = 558;
+            this.label20.Text = "Mathematics";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label19.Location = new System.Drawing.Point(29, 269);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 13);
+            this.label19.TabIndex = 557;
+            this.label19.Text = "Language Arts";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox5.Location = new System.Drawing.Point(227, 68);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(32, 20);
+            this.textBox5.TabIndex = 556;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox3.Location = new System.Drawing.Point(227, 100);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(32, 20);
+            this.textBox3.TabIndex = 555;
+            // 
+            // label51
+            // 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label51.Location = new System.Drawing.Point(45, 199);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(194, 16);
+            this.label51.TabIndex = 554;
+            this.label51.Text = "Performance Task Grade 4";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox13.Location = new System.Drawing.Point(362, 157);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(32, 20);
+            this.textBox13.TabIndex = 553;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox12.Location = new System.Drawing.Point(362, 131);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(32, 20);
+            this.textBox12.TabIndex = 552;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox11.Location = new System.Drawing.Point(520, 134);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(32, 20);
+            this.textBox11.TabIndex = 551;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox10.Location = new System.Drawing.Point(520, 108);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(32, 20);
+            this.textBox10.TabIndex = 550;
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label50.Location = new System.Drawing.Point(422, 143);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(49, 13);
+            this.label50.TabIndex = 549;
+            this.label50.Text = "Statistics";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label49.Location = new System.Drawing.Point(422, 115);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(43, 13);
+            this.label49.TabIndex = 548;
+            this.label49.Text = "Algebra";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label48.Location = new System.Drawing.Point(289, 137);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(61, 13);
+            this.label48.TabIndex = 547;
+            this.label48.Text = "Study Skills";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label47.Location = new System.Drawing.Point(289, 160);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(58, 13);
+            this.label47.TabIndex = 546;
+            this.label47.Text = "Com. Task";
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label46.Location = new System.Drawing.Point(341, 11);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(176, 16);
+            this.label46.TabIndex = 545;
+            this.label46.Text = "Grade 3 Diagnostic Test";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label36.Location = new System.Drawing.Point(517, 37);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(35, 13);
+            this.label36.TabIndex = 544;
+            this.label36.Text = "Score";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox4.Location = new System.Drawing.Point(520, 81);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(32, 20);
+            this.textBox4.TabIndex = 543;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox6.Location = new System.Drawing.Point(520, 56);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(32, 20);
+            this.textBox6.TabIndex = 542;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox7.Location = new System.Drawing.Point(363, 81);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(31, 20);
+            this.textBox7.TabIndex = 541;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox8.Location = new System.Drawing.Point(363, 105);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(31, 20);
+            this.textBox8.TabIndex = 540;
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label37.Location = new System.Drawing.Point(422, 92);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(52, 13);
+            this.label37.TabIndex = 539;
+            this.label37.Text = "Geometry";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label38.Location = new System.Drawing.Point(422, 56);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(95, 26);
+            this.label38.TabIndex = 538;
+            this.label38.Text = "Number Estimation\r\nand Mesurement";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox9.Location = new System.Drawing.Point(363, 56);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(31, 20);
+            this.textBox9.TabIndex = 537;
+            // 
+            // label39
+            // 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label39.Location = new System.Drawing.Point(289, 108);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(60, 13);
+            this.label39.TabIndex = 536;
+            this.label39.Text = "Vocabulary";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label40.Location = new System.Drawing.Point(289, 84);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(50, 13);
+            this.label40.TabIndex = 535;
+            this.label40.Text = "Structure";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label44.Location = new System.Drawing.Point(289, 56);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(45, 13);
+            this.label44.TabIndex = 534;
+            this.label44.Text = "Phonics";
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label45.Location = new System.Drawing.Point(359, 37);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(35, 13);
+            this.label45.TabIndex = 533;
+            this.label45.Text = "Score";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label29.Location = new System.Drawing.Point(224, 52);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(35, 13);
+            this.label29.TabIndex = 532;
+            this.label29.Text = "Score";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox2.Location = new System.Drawing.Point(113, 90);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(31, 20);
+            this.textBox2.TabIndex = 528;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox1.Location = new System.Drawing.Point(113, 112);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(31, 20);
+            this.textBox1.TabIndex = 527;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label30.Location = new System.Drawing.Point(159, 94);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(64, 26);
+            this.label30.TabIndex = 526;
+            this.label30.Text = "Writing and \r\nDrawing";
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label31.Location = new System.Drawing.Point(159, 71);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(47, 13);
+            this.label31.TabIndex = 525;
+            this.label31.Text = "Reading";
             // 
             // label234
             // 
@@ -1150,6 +1963,248 @@ namespace PrimarySchoolAPP
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
+            // button5
+            // 
+            this.button5.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(631, 557);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 39);
+            this.button5.TabIndex = 249;
+            this.button5.Text = "New";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(981, 557);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 39);
+            this.button6.TabIndex = 248;
+            this.button6.Text = "   Delete";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(862, 557);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 39);
+            this.button7.TabIndex = 247;
+            this.button7.Text = "    Update";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(746, 557);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(100, 39);
+            this.button8.TabIndex = 246;
+            this.button8.Text = "Save";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // label248
+            // 
+            this.label248.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label248.AutoSize = true;
+            this.label248.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label248.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label248.Location = new System.Drawing.Point(772, 119);
+            this.label248.Name = "label248";
+            this.label248.Size = new System.Drawing.Size(67, 13);
+            this.label248.TabIndex = 245;
+            this.label248.Text = "Last Name";
+            // 
+            // label247
+            // 
+            this.label247.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label247.AutoSize = true;
+            this.label247.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label247.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label247.Location = new System.Drawing.Point(772, 96);
+            this.label247.Name = "label247";
+            this.label247.Size = new System.Drawing.Size(80, 13);
+            this.label247.TabIndex = 244;
+            this.label247.Text = "Middle Name";
+            // 
+            // label246
+            // 
+            this.label246.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label246.AutoSize = true;
+            this.label246.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label246.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label246.Location = new System.Drawing.Point(772, 71);
+            this.label246.Name = "label246";
+            this.label246.Size = new System.Drawing.Size(67, 13);
+            this.label246.TabIndex = 243;
+            this.label246.Text = "First Name";
+            // 
+            // label245
+            // 
+            this.label245.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label245.AutoSize = true;
+            this.label245.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label245.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label245.Location = new System.Drawing.Point(772, 41);
+            this.label245.Name = "label245";
+            this.label245.Size = new System.Drawing.Size(33, 13);
+            this.label245.TabIndex = 242;
+            this.label245.Text = "ERN";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::PrimarySchoolAPP.Properties.Resources.unnamed;
+            this.pictureBox1.Location = new System.Drawing.Point(629, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 141);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 240;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox172
+            // 
+            this.textBox172.Location = new System.Drawing.Point(867, 64);
+            this.textBox172.Name = "textBox172";
+            this.textBox172.Size = new System.Drawing.Size(122, 20);
+            this.textBox172.TabIndex = 237;
+            // 
+            // textBox173
+            // 
+            this.textBox173.Location = new System.Drawing.Point(867, 116);
+            this.textBox173.Name = "textBox173";
+            this.textBox173.Size = new System.Drawing.Size(122, 20);
+            this.textBox173.TabIndex = 239;
+            // 
+            // textBox174
+            // 
+            this.textBox174.Location = new System.Drawing.Point(820, 38);
+            this.textBox174.Name = "textBox174";
+            this.textBox174.Size = new System.Drawing.Size(142, 20);
+            this.textBox174.TabIndex = 241;
+            // 
+            // textBox175
+            // 
+            this.textBox175.Location = new System.Drawing.Point(867, 90);
+            this.textBox175.Name = "textBox175";
+            this.textBox175.Size = new System.Drawing.Size(122, 20);
+            this.textBox175.TabIndex = 238;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(3, 22);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(593, 574);
+            this.panel1.TabIndex = 236;
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(566, 546);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // textBox169
+            // 
+            this.textBox169.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox169.Location = new System.Drawing.Point(775, 416);
+            this.textBox169.Multiline = true;
+            this.textBox169.Name = "textBox169";
+            this.textBox169.Size = new System.Drawing.Size(289, 32);
+            this.textBox169.TabIndex = 235;
+            // 
+            // textBox168
+            // 
+            this.textBox168.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox168.Location = new System.Drawing.Point(775, 469);
+            this.textBox168.Multiline = true;
+            this.textBox168.Name = "textBox168";
+            this.textBox168.Size = new System.Drawing.Size(289, 32);
+            this.textBox168.TabIndex = 234;
+            // 
+            // textBox167
+            // 
+            this.textBox167.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox167.Location = new System.Drawing.Point(775, 362);
+            this.textBox167.Multiline = true;
+            this.textBox167.Name = "textBox167";
+            this.textBox167.Size = new System.Drawing.Size(289, 32);
+            this.textBox167.TabIndex = 233;
+            // 
+            // textBox166
+            // 
+            this.textBox166.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox166.Location = new System.Drawing.Point(775, 315);
+            this.textBox166.Multiline = true;
+            this.textBox166.Name = "textBox166";
+            this.textBox166.Size = new System.Drawing.Size(289, 32);
+            this.textBox166.TabIndex = 232;
+            // 
+            // textBox164
+            // 
+            this.textBox164.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox164.Location = new System.Drawing.Point(775, 270);
+            this.textBox164.Multiline = true;
+            this.textBox164.Name = "textBox164";
+            this.textBox164.Size = new System.Drawing.Size(289, 32);
+            this.textBox164.TabIndex = 231;
+            // 
+            // textBox163
+            // 
+            this.textBox163.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox163.Location = new System.Drawing.Point(775, 226);
+            this.textBox163.Multiline = true;
+            this.textBox163.Name = "textBox163";
+            this.textBox163.Size = new System.Drawing.Size(289, 32);
+            this.textBox163.TabIndex = 230;
+            // 
             // textBox165
             // 
             this.textBox165.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1262,13 +2317,14 @@ namespace PrimarySchoolAPP
             // metroTabPage4
             // 
             this.metroTabPage4.BackColor = System.Drawing.Color.White;
+            this.metroTabPage4.Controls.Add(this.label68);
+            this.metroTabPage4.Controls.Add(this.label67);
             this.metroTabPage4.Controls.Add(this.panel3);
             this.metroTabPage4.Controls.Add(this.label66);
             this.metroTabPage4.Controls.Add(this.studentid);
             this.metroTabPage4.Controls.Add(this.panel5);
-            this.metroTabPage4.Controls.Add(this.button9);
-            this.metroTabPage4.Controls.Add(this.button10);
-            this.metroTabPage4.Controls.Add(this.button11);
+            this.metroTabPage4.Controls.Add(this.DeleteAttenBTN);
+            this.metroTabPage4.Controls.Add(this.UpdateAttenBTN);
             this.metroTabPage4.Controls.Add(this.saveAttenBTN);
             this.metroTabPage4.Controls.Add(this.label250);
             this.metroTabPage4.Controls.Add(this.label251);
@@ -1337,669 +2393,136 @@ namespace PrimarySchoolAPP
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 10;
             // 
-            // label287
+            // panel3
             // 
-            this.label287.AutoSize = true;
-            this.label287.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label287.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label287.Location = new System.Drawing.Point(640, 384);
-            this.label287.Name = "label287";
-            this.label287.Size = new System.Drawing.Size(97, 13);
-            this.label287.TabIndex = 309;
-            this.label287.Text = "Number of Days";
-            // 
-            // label261
-            // 
-            this.label261.AutoSize = true;
-            this.label261.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label261.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label261.Location = new System.Drawing.Point(1075, 361);
-            this.label261.Name = "label261";
-            this.label261.Size = new System.Drawing.Size(14, 13);
-            this.label261.TabIndex = 308;
-            this.label261.Text = "3";
-            // 
-            // label262
-            // 
-            this.label262.AutoSize = true;
-            this.label262.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label262.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label262.Location = new System.Drawing.Point(1038, 361);
-            this.label262.Name = "label262";
-            this.label262.Size = new System.Drawing.Size(14, 13);
-            this.label262.TabIndex = 307;
-            this.label262.Text = "2";
-            // 
-            // label263
-            // 
-            this.label263.AutoSize = true;
-            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label263.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label263.Location = new System.Drawing.Point(1002, 361);
-            this.label263.Name = "label263";
-            this.label263.Size = new System.Drawing.Size(14, 13);
-            this.label263.TabIndex = 306;
-            this.label263.Text = "1";
-            // 
-            // Y6T2
-            // 
-            this.Y6T2.Location = new System.Drawing.Point(1030, 377);
-            this.Y6T2.Name = "Y6T2";
-            this.Y6T2.Size = new System.Drawing.Size(30, 20);
-            this.Y6T2.TabIndex = 305;
-            // 
-            // Y6T3
-            // 
-            this.Y6T3.Location = new System.Drawing.Point(1066, 377);
-            this.Y6T3.Name = "Y6T3";
-            this.Y6T3.Size = new System.Drawing.Size(30, 20);
-            this.Y6T3.TabIndex = 304;
-            // 
-            // Y6T1
-            // 
-            this.Y6T1.Location = new System.Drawing.Point(994, 377);
-            this.Y6T1.Name = "Y6T1";
-            this.Y6T1.Size = new System.Drawing.Size(30, 20);
-            this.Y6T1.TabIndex = 303;
-            // 
-            // label265
-            // 
-            this.label265.AutoSize = true;
-            this.label265.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label265.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label265.Location = new System.Drawing.Point(947, 361);
-            this.label265.Name = "label265";
-            this.label265.Size = new System.Drawing.Size(14, 13);
-            this.label265.TabIndex = 302;
-            this.label265.Text = "3";
-            // 
-            // label280
-            // 
-            this.label280.AutoSize = true;
-            this.label280.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label280.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label280.Location = new System.Drawing.Point(910, 361);
-            this.label280.Name = "label280";
-            this.label280.Size = new System.Drawing.Size(14, 13);
-            this.label280.TabIndex = 301;
-            this.label280.Text = "2";
-            // 
-            // label281
-            // 
-            this.label281.AutoSize = true;
-            this.label281.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label281.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label281.Location = new System.Drawing.Point(874, 361);
-            this.label281.Name = "label281";
-            this.label281.Size = new System.Drawing.Size(14, 13);
-            this.label281.TabIndex = 300;
-            this.label281.Text = "1";
-            // 
-            // Y5T2
-            // 
-            this.Y5T2.Location = new System.Drawing.Point(903, 377);
-            this.Y5T2.Name = "Y5T2";
-            this.Y5T2.Size = new System.Drawing.Size(30, 20);
-            this.Y5T2.TabIndex = 299;
-            // 
-            // Y5T3
-            // 
-            this.Y5T3.Location = new System.Drawing.Point(939, 377);
-            this.Y5T3.Name = "Y5T3";
-            this.Y5T3.Size = new System.Drawing.Size(30, 20);
-            this.Y5T3.TabIndex = 298;
-            // 
-            // Y5T1
-            // 
-            this.Y5T1.Location = new System.Drawing.Point(867, 377);
-            this.Y5T1.Name = "Y5T1";
-            this.Y5T1.Size = new System.Drawing.Size(30, 20);
-            this.Y5T1.TabIndex = 297;
-            // 
-            // label282
-            // 
-            this.label282.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label282.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label282.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label282.Location = new System.Drawing.Point(983, 357);
-            this.label282.Name = "label282";
-            this.label282.Size = new System.Drawing.Size(1, 130);
-            this.label282.TabIndex = 296;
-            // 
-            // label283
-            // 
-            this.label283.AutoSize = true;
-            this.label283.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label283.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label283.Location = new System.Drawing.Point(827, 361);
-            this.label283.Name = "label283";
-            this.label283.Size = new System.Drawing.Size(14, 13);
-            this.label283.TabIndex = 295;
-            this.label283.Text = "3";
-            // 
-            // label284
-            // 
-            this.label284.AutoSize = true;
-            this.label284.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label284.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label284.Location = new System.Drawing.Point(791, 361);
-            this.label284.Name = "label284";
-            this.label284.Size = new System.Drawing.Size(14, 13);
-            this.label284.TabIndex = 294;
-            this.label284.Text = "2";
-            // 
-            // label285
-            // 
-            this.label285.AutoSize = true;
-            this.label285.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label285.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label285.Location = new System.Drawing.Point(754, 361);
-            this.label285.Name = "label285";
-            this.label285.Size = new System.Drawing.Size(14, 13);
-            this.label285.TabIndex = 293;
-            this.label285.Text = "1";
-            // 
-            // Y4T2
-            // 
-            this.Y4T2.Location = new System.Drawing.Point(783, 377);
-            this.Y4T2.Name = "Y4T2";
-            this.Y4T2.Size = new System.Drawing.Size(30, 20);
-            this.Y4T2.TabIndex = 292;
-            // 
-            // Y4T3
-            // 
-            this.Y4T3.Location = new System.Drawing.Point(819, 377);
-            this.Y4T3.Name = "Y4T3";
-            this.Y4T3.Size = new System.Drawing.Size(30, 20);
-            this.Y4T3.TabIndex = 291;
-            // 
-            // label286
-            // 
-            this.label286.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label286.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label286.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label286.Location = new System.Drawing.Point(854, 357);
-            this.label286.Name = "label286";
-            this.label286.Size = new System.Drawing.Size(1, 130);
-            this.label286.TabIndex = 290;
-            // 
-            // Y4T1
-            // 
-            this.Y4T1.Location = new System.Drawing.Point(747, 377);
-            this.Y4T1.Name = "Y4T1";
-            this.Y4T1.Size = new System.Drawing.Size(30, 20);
-            this.Y4T1.TabIndex = 289;
-            // 
-            // label277
-            // 
-            this.label277.AutoSize = true;
-            this.label277.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label277.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label277.Location = new System.Drawing.Point(1075, 206);
-            this.label277.Name = "label277";
-            this.label277.Size = new System.Drawing.Size(14, 13);
-            this.label277.TabIndex = 288;
-            this.label277.Text = "3";
-            // 
-            // label278
-            // 
-            this.label278.AutoSize = true;
-            this.label278.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label278.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label278.Location = new System.Drawing.Point(1039, 206);
-            this.label278.Name = "label278";
-            this.label278.Size = new System.Drawing.Size(14, 13);
-            this.label278.TabIndex = 287;
-            this.label278.Text = "2";
-            // 
-            // label279
-            // 
-            this.label279.AutoSize = true;
-            this.label279.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label279.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label279.Location = new System.Drawing.Point(1004, 206);
-            this.label279.Name = "label279";
-            this.label279.Size = new System.Drawing.Size(14, 13);
-            this.label279.TabIndex = 286;
-            this.label279.Text = "1";
-            // 
-            // Y3T2
-            // 
-            this.Y3T2.Location = new System.Drawing.Point(1032, 222);
-            this.Y3T2.Name = "Y3T2";
-            this.Y3T2.Size = new System.Drawing.Size(30, 20);
-            this.Y3T2.TabIndex = 285;
-            // 
-            // Y3T3
-            // 
-            this.Y3T3.Location = new System.Drawing.Point(1066, 222);
-            this.Y3T3.Name = "Y3T3";
-            this.Y3T3.Size = new System.Drawing.Size(30, 20);
-            this.Y3T3.TabIndex = 284;
-            // 
-            // Y3T1
-            // 
-            this.Y3T1.Location = new System.Drawing.Point(996, 222);
-            this.Y3T1.Name = "Y3T1";
-            this.Y3T1.Size = new System.Drawing.Size(30, 20);
-            this.Y3T1.TabIndex = 283;
-            // 
-            // label266
-            // 
-            this.label266.AutoSize = true;
-            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label266.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label266.Location = new System.Drawing.Point(948, 206);
-            this.label266.Name = "label266";
-            this.label266.Size = new System.Drawing.Size(14, 13);
-            this.label266.TabIndex = 282;
-            this.label266.Text = "3";
-            // 
-            // label267
-            // 
-            this.label267.AutoSize = true;
-            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label267.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label267.Location = new System.Drawing.Point(915, 206);
-            this.label267.Name = "label267";
-            this.label267.Size = new System.Drawing.Size(14, 13);
-            this.label267.TabIndex = 281;
-            this.label267.Text = "2";
-            // 
-            // label268
-            // 
-            this.label268.AutoSize = true;
-            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label268.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label268.Location = new System.Drawing.Point(878, 206);
-            this.label268.Name = "label268";
-            this.label268.Size = new System.Drawing.Size(14, 13);
-            this.label268.TabIndex = 280;
-            this.label268.Text = "1";
-            // 
-            // Y2T2
-            // 
-            this.Y2T2.Location = new System.Drawing.Point(906, 222);
-            this.Y2T2.Name = "Y2T2";
-            this.Y2T2.Size = new System.Drawing.Size(30, 20);
-            this.Y2T2.TabIndex = 279;
-            // 
-            // Y2T3
-            // 
-            this.Y2T3.Location = new System.Drawing.Point(939, 222);
-            this.Y2T3.Name = "Y2T3";
-            this.Y2T3.Size = new System.Drawing.Size(30, 20);
-            this.Y2T3.TabIndex = 278;
-            // 
-            // Y2T1
-            // 
-            this.Y2T1.Location = new System.Drawing.Point(870, 222);
-            this.Y2T1.Name = "Y2T1";
-            this.Y2T1.Size = new System.Drawing.Size(30, 20);
-            this.Y2T1.TabIndex = 277;
-            // 
-            // label276
-            // 
-            this.label276.AutoSize = true;
-            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label276.Location = new System.Drawing.Point(645, 225);
-            this.label276.Name = "label276";
-            this.label276.Size = new System.Drawing.Size(97, 13);
-            this.label276.TabIndex = 276;
-            this.label276.Text = "Number of Days";
-            // 
-            // label249
-            // 
-            this.label249.AutoSize = true;
-            this.label249.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label249.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label249.Location = new System.Drawing.Point(1014, 334);
-            this.label249.Name = "label249";
-            this.label249.Size = new System.Drawing.Size(52, 13);
-            this.label249.TabIndex = 271;
-            this.label249.Text = "Grade 6";
-            // 
-            // label254
-            // 
-            this.label254.AutoSize = true;
-            this.label254.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label254.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label254.Location = new System.Drawing.Point(889, 334);
-            this.label254.Name = "label254";
-            this.label254.Size = new System.Drawing.Size(52, 13);
-            this.label254.TabIndex = 263;
-            this.label254.Text = "Grade 5";
-            // 
-            // label259
-            // 
-            this.label259.AutoSize = true;
-            this.label259.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label259.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label259.Location = new System.Drawing.Point(769, 334);
-            this.label259.Name = "label259";
-            this.label259.Size = new System.Drawing.Size(52, 13);
-            this.label259.TabIndex = 255;
-            this.label259.Text = "Grade 4";
-            // 
-            // label264
-            // 
-            this.label264.AutoSize = true;
-            this.label264.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label264.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label264.Location = new System.Drawing.Point(1014, 181);
-            this.label264.Name = "label264";
-            this.label264.Size = new System.Drawing.Size(52, 13);
-            this.label264.TabIndex = 247;
-            this.label264.Text = "Grade 3";
-            // 
-            // label269
-            // 
-            this.label269.AutoSize = true;
-            this.label269.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label269.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label269.Location = new System.Drawing.Point(889, 181);
-            this.label269.Name = "label269";
-            this.label269.Size = new System.Drawing.Size(52, 13);
-            this.label269.TabIndex = 239;
-            this.label269.Text = "Grade 2";
-            // 
-            // label270
-            // 
-            this.label270.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label270.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label270.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label270.Location = new System.Drawing.Point(983, 202);
-            this.label270.Name = "label270";
-            this.label270.Size = new System.Drawing.Size(1, 130);
-            this.label270.TabIndex = 236;
-            // 
-            // label271
-            // 
-            this.label271.AutoSize = true;
-            this.label271.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label271.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label271.Location = new System.Drawing.Point(828, 206);
-            this.label271.Name = "label271";
-            this.label271.Size = new System.Drawing.Size(14, 13);
-            this.label271.TabIndex = 234;
-            this.label271.Text = "3";
-            // 
-            // label272
-            // 
-            this.label272.AutoSize = true;
-            this.label272.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label272.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label272.Location = new System.Drawing.Point(791, 206);
-            this.label272.Name = "label272";
-            this.label272.Size = new System.Drawing.Size(14, 13);
-            this.label272.TabIndex = 233;
-            this.label272.Text = "2";
-            // 
-            // label273
-            // 
-            this.label273.AutoSize = true;
-            this.label273.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label273.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label273.Location = new System.Drawing.Point(755, 206);
-            this.label273.Name = "label273";
-            this.label273.Size = new System.Drawing.Size(14, 13);
-            this.label273.TabIndex = 232;
-            this.label273.Text = "1";
-            // 
-            // label274
-            // 
-            this.label274.AutoSize = true;
-            this.label274.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label274.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label274.Location = new System.Drawing.Point(769, 181);
-            this.label274.Name = "label274";
-            this.label274.Size = new System.Drawing.Size(52, 13);
-            this.label274.TabIndex = 231;
-            this.label274.Text = "Grade 1";
-            // 
-            // Y1T2
-            // 
-            this.Y1T2.Location = new System.Drawing.Point(783, 222);
-            this.Y1T2.Name = "Y1T2";
-            this.Y1T2.Size = new System.Drawing.Size(30, 20);
-            this.Y1T2.TabIndex = 230;
-            // 
-            // Y1T3
-            // 
-            this.Y1T3.Location = new System.Drawing.Point(819, 222);
-            this.Y1T3.Name = "Y1T3";
-            this.Y1T3.Size = new System.Drawing.Size(30, 20);
-            this.Y1T3.TabIndex = 229;
-            // 
-            // label275
-            // 
-            this.label275.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label275.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label275.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label275.Location = new System.Drawing.Point(854, 202);
-            this.label275.Name = "label275";
-            this.label275.Size = new System.Drawing.Size(1, 130);
-            this.label275.TabIndex = 228;
-            // 
-            // Y1T1
-            // 
-            this.Y1T1.Location = new System.Drawing.Point(747, 222);
-            this.Y1T1.Name = "Y1T1";
-            this.Y1T1.Size = new System.Drawing.Size(30, 20);
-            this.Y1T1.TabIndex = 227;
-            // 
-            // metroTabPage5
-            // 
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 10;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(1104, 613);
-            this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "metroTabPage5";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 10;
-            // 
-            // textBox163
-            // 
-            this.textBox163.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox163.Location = new System.Drawing.Point(775, 226);
-            this.textBox163.Multiline = true;
-            this.textBox163.Name = "textBox163";
-            this.textBox163.Size = new System.Drawing.Size(289, 32);
-            this.textBox163.TabIndex = 230;
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.dataGridViewAttendance);
+            this.panel3.Location = new System.Drawing.Point(14, 307);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(591, 270);
+            this.panel3.TabIndex = 319;
             // 
-            // textBox164
+            // dataGridViewAttendance
             // 
-            this.textBox164.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridViewAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox164.Location = new System.Drawing.Point(775, 270);
-            this.textBox164.Multiline = true;
-            this.textBox164.Name = "textBox164";
-            this.textBox164.Size = new System.Drawing.Size(289, 32);
-            this.textBox164.TabIndex = 231;
+            this.dataGridViewAttendance.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewAttendance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewAttendance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridViewAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAttendance.EnableHeadersVisualStyles = false;
+            this.dataGridViewAttendance.Location = new System.Drawing.Point(13, 16);
+            this.dataGridViewAttendance.Name = "dataGridViewAttendance";
+            this.dataGridViewAttendance.Size = new System.Drawing.Size(564, 242);
+            this.dataGridViewAttendance.TabIndex = 0;
+            this.dataGridViewAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAttendance_CellClick);
             // 
-            // textBox166
+            // label66
             // 
-            this.textBox166.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label66.Location = new System.Drawing.Point(794, 17);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(20, 13);
+            this.label66.TabIndex = 325;
+            this.label66.Text = "ID";
+            // 
+            // studentid
+            // 
+            this.studentid.Location = new System.Drawing.Point(820, 10);
+            this.studentid.Name = "studentid";
+            this.studentid.ReadOnly = true;
+            this.studentid.Size = new System.Drawing.Size(50, 20);
+            this.studentid.TabIndex = 324;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox166.Location = new System.Drawing.Point(775, 315);
-            this.textBox166.Multiline = true;
-            this.textBox166.Name = "textBox166";
-            this.textBox166.Size = new System.Drawing.Size(289, 32);
-            this.textBox166.TabIndex = 232;
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Controls.Add(this.dataGridViewStudent2);
+            this.panel5.Location = new System.Drawing.Point(14, 30);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(591, 246);
+            this.panel5.TabIndex = 320;
             // 
-            // textBox167
+            // dataGridViewStudent2
             // 
-            this.textBox167.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewStudent2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewStudent2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox167.Location = new System.Drawing.Point(775, 362);
-            this.textBox167.Multiline = true;
-            this.textBox167.Name = "textBox167";
-            this.textBox167.Size = new System.Drawing.Size(289, 32);
-            this.textBox167.TabIndex = 233;
+            this.dataGridViewStudent2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewStudent2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewStudent2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStudent2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewStudent2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudent2.EnableHeadersVisualStyles = false;
+            this.dataGridViewStudent2.Location = new System.Drawing.Point(13, 16);
+            this.dataGridViewStudent2.Name = "dataGridViewStudent2";
+            this.dataGridViewStudent2.Size = new System.Drawing.Size(564, 218);
+            this.dataGridViewStudent2.TabIndex = 0;
+            this.dataGridViewStudent2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudent2_CellClick);
             // 
-            // textBox168
+            // DeleteAttenBTN
             // 
-            this.textBox168.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox168.Location = new System.Drawing.Point(775, 469);
-            this.textBox168.Multiline = true;
-            this.textBox168.Name = "textBox168";
-            this.textBox168.Size = new System.Drawing.Size(289, 32);
-            this.textBox168.TabIndex = 234;
+            this.DeleteAttenBTN.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
+            this.DeleteAttenBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteAttenBTN.Location = new System.Drawing.Point(953, 526);
+            this.DeleteAttenBTN.Name = "DeleteAttenBTN";
+            this.DeleteAttenBTN.Size = new System.Drawing.Size(100, 39);
+            this.DeleteAttenBTN.TabIndex = 322;
+            this.DeleteAttenBTN.Text = "   Delete";
+            this.DeleteAttenBTN.UseVisualStyleBackColor = true;
+            this.DeleteAttenBTN.Click += new System.EventHandler(this.DeleteAttenBTN_Click);
             // 
-            // textBox169
+            // UpdateAttenBTN
             // 
-            this.textBox169.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox169.Location = new System.Drawing.Point(775, 416);
-            this.textBox169.Multiline = true;
-            this.textBox169.Name = "textBox169";
-            this.textBox169.Size = new System.Drawing.Size(289, 32);
-            this.textBox169.TabIndex = 235;
+            this.UpdateAttenBTN.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
+            this.UpdateAttenBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateAttenBTN.Location = new System.Drawing.Point(834, 526);
+            this.UpdateAttenBTN.Name = "UpdateAttenBTN";
+            this.UpdateAttenBTN.Size = new System.Drawing.Size(100, 39);
+            this.UpdateAttenBTN.TabIndex = 321;
+            this.UpdateAttenBTN.Text = "    Update";
+            this.UpdateAttenBTN.UseVisualStyleBackColor = true;
+            this.UpdateAttenBTN.Click += new System.EventHandler(this.UpdateAttenBTN_Click);
             // 
-            // panel1
+            // saveAttenBTN
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(3, 22);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(593, 574);
-            this.panel1.TabIndex = 236;
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(566, 546);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::PrimarySchoolAPP.Properties.Resources.unnamed;
-            this.pictureBox1.Location = new System.Drawing.Point(629, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 240;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox172
-            // 
-            this.textBox172.Location = new System.Drawing.Point(867, 64);
-            this.textBox172.Name = "textBox172";
-            this.textBox172.Size = new System.Drawing.Size(122, 20);
-            this.textBox172.TabIndex = 237;
-            // 
-            // textBox173
-            // 
-            this.textBox173.Location = new System.Drawing.Point(867, 116);
-            this.textBox173.Name = "textBox173";
-            this.textBox173.Size = new System.Drawing.Size(122, 20);
-            this.textBox173.TabIndex = 239;
-            // 
-            // textBox174
-            // 
-            this.textBox174.Location = new System.Drawing.Point(820, 38);
-            this.textBox174.Name = "textBox174";
-            this.textBox174.Size = new System.Drawing.Size(142, 20);
-            this.textBox174.TabIndex = 241;
-            // 
-            // textBox175
-            // 
-            this.textBox175.Location = new System.Drawing.Point(867, 90);
-            this.textBox175.Name = "textBox175";
-            this.textBox175.Size = new System.Drawing.Size(122, 20);
-            this.textBox175.TabIndex = 238;
-            // 
-            // label245
-            // 
-            this.label245.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label245.AutoSize = true;
-            this.label245.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label245.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label245.Location = new System.Drawing.Point(772, 41);
-            this.label245.Name = "label245";
-            this.label245.Size = new System.Drawing.Size(33, 13);
-            this.label245.TabIndex = 242;
-            this.label245.Text = "ERN";
-            // 
-            // label246
-            // 
-            this.label246.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label246.AutoSize = true;
-            this.label246.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label246.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label246.Location = new System.Drawing.Point(772, 71);
-            this.label246.Name = "label246";
-            this.label246.Size = new System.Drawing.Size(67, 13);
-            this.label246.TabIndex = 243;
-            this.label246.Text = "First Name";
-            // 
-            // label247
-            // 
-            this.label247.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label247.AutoSize = true;
-            this.label247.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label247.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label247.Location = new System.Drawing.Point(772, 96);
-            this.label247.Name = "label247";
-            this.label247.Size = new System.Drawing.Size(80, 13);
-            this.label247.TabIndex = 244;
-            this.label247.Text = "Middle Name";
-            // 
-            // label248
-            // 
-            this.label248.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label248.AutoSize = true;
-            this.label248.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label248.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label248.Location = new System.Drawing.Point(772, 119);
-            this.label248.Name = "label248";
-            this.label248.Size = new System.Drawing.Size(67, 13);
-            this.label248.TabIndex = 245;
-            this.label248.Text = "Last Name";
+            this.saveAttenBTN.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
+            this.saveAttenBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveAttenBTN.Location = new System.Drawing.Point(718, 526);
+            this.saveAttenBTN.Name = "saveAttenBTN";
+            this.saveAttenBTN.Size = new System.Drawing.Size(100, 39);
+            this.saveAttenBTN.TabIndex = 320;
+            this.saveAttenBTN.Text = "Save";
+            this.saveAttenBTN.UseVisualStyleBackColor = true;
+            this.saveAttenBTN.Click += new System.EventHandler(this.saveAttenBTN_Click);
             // 
             // label250
             // 
@@ -2075,994 +2598,488 @@ namespace PrimarySchoolAPP
             this.MiddnameTB.Size = new System.Drawing.Size(122, 20);
             this.MiddnameTB.TabIndex = 311;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Controls.Add(this.dataGridViewAttendance);
-            this.panel3.Location = new System.Drawing.Point(14, 307);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(591, 270);
-            this.panel3.TabIndex = 319;
-            // 
-            // dataGridViewAttendance
-            // 
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridViewAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewAttendance.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridViewAttendance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewAttendance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridViewAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAttendance.EnableHeadersVisualStyles = false;
-            this.dataGridViewAttendance.Location = new System.Drawing.Point(13, 16);
-            this.dataGridViewAttendance.Name = "dataGridViewAttendance";
-            this.dataGridViewAttendance.Size = new System.Drawing.Size(564, 242);
-            this.dataGridViewAttendance.TabIndex = 0;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label30.Location = new System.Drawing.Point(159, 94);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(64, 26);
-            this.label30.TabIndex = 526;
-            this.label30.Text = "Writing and \r\nDrawing";
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label31.Location = new System.Drawing.Point(159, 71);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(47, 13);
-            this.label31.TabIndex = 525;
-            this.label31.Text = "Reading";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(113, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(31, 20);
-            this.textBox1.TabIndex = 527;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(113, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(31, 20);
-            this.textBox2.TabIndex = 528;
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label29.Location = new System.Drawing.Point(224, 52);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(35, 13);
-            this.label29.TabIndex = 532;
-            this.label29.Text = "Score";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label36.Location = new System.Drawing.Point(517, 37);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(35, 13);
-            this.label36.TabIndex = 544;
-            this.label36.Text = "Score";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox4.Location = new System.Drawing.Point(520, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(32, 20);
-            this.textBox4.TabIndex = 543;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox6.Location = new System.Drawing.Point(520, 56);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(32, 20);
-            this.textBox6.TabIndex = 542;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox7.Location = new System.Drawing.Point(363, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(31, 20);
-            this.textBox7.TabIndex = 541;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox8.Location = new System.Drawing.Point(363, 105);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(31, 20);
-            this.textBox8.TabIndex = 540;
-            // 
-            // label37
-            // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label37.Location = new System.Drawing.Point(422, 92);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(52, 13);
-            this.label37.TabIndex = 539;
-            this.label37.Text = "Geometry";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label38.Location = new System.Drawing.Point(422, 56);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(95, 26);
-            this.label38.TabIndex = 538;
-            this.label38.Text = "Number Estimation\r\nand Mesurement";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox9.Location = new System.Drawing.Point(363, 56);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(31, 20);
-            this.textBox9.TabIndex = 537;
-            // 
-            // label39
-            // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label39.Location = new System.Drawing.Point(289, 108);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(60, 13);
-            this.label39.TabIndex = 536;
-            this.label39.Text = "Vocabulary";
-            // 
-            // label40
-            // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label40.Location = new System.Drawing.Point(289, 84);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(50, 13);
-            this.label40.TabIndex = 535;
-            this.label40.Text = "Structure";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label44.Location = new System.Drawing.Point(289, 56);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(45, 13);
-            this.label44.TabIndex = 534;
-            this.label44.Text = "Phonics";
-            // 
-            // label45
-            // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label45.Location = new System.Drawing.Point(359, 37);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(35, 13);
-            this.label45.TabIndex = 533;
-            this.label45.Text = "Score";
-            // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label46.Location = new System.Drawing.Point(341, 11);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(176, 16);
-            this.label46.TabIndex = 545;
-            this.label46.Text = "Grade 3 Diagnostic Test";
-            // 
-            // label47
-            // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label47.Location = new System.Drawing.Point(289, 160);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(58, 13);
-            this.label47.TabIndex = 546;
-            this.label47.Text = "Com. Task";
-            // 
-            // label48
-            // 
-            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label48.Location = new System.Drawing.Point(289, 137);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(61, 13);
-            this.label48.TabIndex = 547;
-            this.label48.Text = "Study Skills";
-            // 
-            // label49
-            // 
-            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label49.Location = new System.Drawing.Point(422, 115);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(43, 13);
-            this.label49.TabIndex = 548;
-            this.label49.Text = "Algebra";
-            // 
-            // label50
-            // 
-            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label50.Location = new System.Drawing.Point(422, 143);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(49, 13);
-            this.label50.TabIndex = 549;
-            this.label50.Text = "Statistics";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox10.Location = new System.Drawing.Point(520, 108);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(32, 20);
-            this.textBox10.TabIndex = 550;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox11.Location = new System.Drawing.Point(520, 134);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(32, 20);
-            this.textBox11.TabIndex = 551;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox12.Location = new System.Drawing.Point(362, 131);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(32, 20);
-            this.textBox12.TabIndex = 552;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox13.Location = new System.Drawing.Point(362, 157);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(32, 20);
-            this.textBox13.TabIndex = 553;
-            // 
-            // label51
-            // 
-            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label51.Location = new System.Drawing.Point(45, 199);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(194, 16);
-            this.label51.TabIndex = 554;
-            this.label51.Text = "Performance Task Grade 4";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(227, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(32, 20);
-            this.textBox3.TabIndex = 555;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox5.Location = new System.Drawing.Point(227, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(32, 20);
-            this.textBox5.TabIndex = 556;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(29, 269);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 13);
-            this.label19.TabIndex = 557;
-            this.label19.Text = "Language Arts";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(156, 269);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(67, 13);
-            this.label20.TabIndex = 558;
-            this.label20.Text = "Mathematics";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox14.Location = new System.Drawing.Point(111, 262);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(32, 20);
-            this.textBox14.TabIndex = 560;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label21.Location = new System.Drawing.Point(109, 246);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 13);
-            this.label21.TabIndex = 559;
-            this.label21.Text = "Score";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox15.Location = new System.Drawing.Point(227, 262);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(32, 20);
-            this.textBox15.TabIndex = 562;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label22.Location = new System.Drawing.Point(225, 246);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 13);
-            this.label22.TabIndex = 561;
-            this.label22.Text = "Score";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox16.Location = new System.Drawing.Point(505, 262);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(32, 20);
-            this.textBox16.TabIndex = 569;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label25.Location = new System.Drawing.Point(503, 246);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(35, 13);
-            this.label25.TabIndex = 568;
-            this.label25.Text = "Score";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox17.Location = new System.Drawing.Point(389, 262);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(32, 20);
-            this.textBox17.TabIndex = 567;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label27.Location = new System.Drawing.Point(387, 246);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(35, 13);
-            this.label27.TabIndex = 566;
-            this.label27.Text = "Score";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label28.Location = new System.Drawing.Point(434, 269);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(67, 13);
-            this.label28.TabIndex = 565;
-            this.label28.Text = "Mathematics";
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label32.Location = new System.Drawing.Point(307, 269);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(76, 13);
-            this.label32.TabIndex = 564;
-            this.label32.Text = "Language Arts";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label33.Location = new System.Drawing.Point(323, 199);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(194, 16);
-            this.label33.TabIndex = 563;
-            this.label33.Text = "Performance Task Grade 5\r\n";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label34.Location = new System.Drawing.Point(10, 321);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(544, 1);
-            this.label34.TabIndex = 570;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox18.Location = new System.Drawing.Point(218, 417);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(32, 20);
-            this.textBox18.TabIndex = 577;
-            // 
-            // label41
-            // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label41.Location = new System.Drawing.Point(216, 401);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(35, 13);
-            this.label41.TabIndex = 576;
-            this.label41.Text = "Score";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox19.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox19.Location = new System.Drawing.Point(102, 417);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(32, 20);
-            this.textBox19.TabIndex = 575;
-            // 
-            // label52
-            // 
-            this.label52.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label52.Location = new System.Drawing.Point(100, 401);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(35, 13);
-            this.label52.TabIndex = 574;
-            this.label52.Text = "Score";
-            // 
-            // label53
-            // 
-            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label53.Location = new System.Drawing.Point(147, 424);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(67, 13);
-            this.label53.TabIndex = 573;
-            this.label53.Text = "Mathematics";
-            // 
-            // label54
-            // 
-            this.label54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label54.Location = new System.Drawing.Point(20, 424);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(76, 13);
-            this.label54.TabIndex = 572;
-            this.label54.Text = "Language Arts";
-            // 
-            // label55
-            // 
-            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label55.Location = new System.Drawing.Point(36, 354);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(194, 16);
-            this.label55.TabIndex = 571;
-            this.label55.Text = "Performance Task Grade 6\r\n";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox20.Location = new System.Drawing.Point(380, 445);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(32, 20);
-            this.textBox20.TabIndex = 584;
-            // 
-            // label56
-            // 
-            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label56.Location = new System.Drawing.Point(503, 401);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(35, 13);
-            this.label56.TabIndex = 583;
-            this.label56.Text = "Score";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox21.Location = new System.Drawing.Point(380, 417);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(32, 20);
-            this.textBox21.TabIndex = 582;
-            // 
-            // label57
-            // 
-            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label57.Location = new System.Drawing.Point(378, 401);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(35, 13);
-            this.label57.TabIndex = 581;
-            this.label57.Text = "Score";
-            // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label58.Location = new System.Drawing.Point(299, 452);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(67, 13);
-            this.label58.TabIndex = 580;
-            this.label58.Text = "Mathematics";
-            // 
-            // label59
-            // 
-            this.label59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label59.Location = new System.Drawing.Point(298, 424);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(76, 13);
-            this.label59.TabIndex = 579;
-            this.label59.Text = "Language Arts";
-            // 
-            // label60
-            // 
-            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label60.Location = new System.Drawing.Point(307, 354);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(218, 16);
-            this.label60.TabIndex = 578;
-            this.label60.Text = "Curriculum Base Task Grade 6";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox22.Location = new System.Drawing.Point(102, 445);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(32, 20);
-            this.textBox22.TabIndex = 586;
-            // 
-            // label61
-            // 
-            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label61.Location = new System.Drawing.Point(20, 452);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(58, 13);
-            this.label61.TabIndex = 585;
-            this.label61.Text = "Ability Test";
-            // 
-            // textBox23
-            // 
-            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox23.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox23.Location = new System.Drawing.Point(506, 445);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(32, 20);
-            this.textBox23.TabIndex = 590;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox24.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox24.Location = new System.Drawing.Point(506, 417);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(32, 20);
-            this.textBox24.TabIndex = 589;
-            // 
-            // label62
-            // 
-            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label62.Location = new System.Drawing.Point(425, 452);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(74, 13);
-            this.label62.TabIndex = 588;
-            this.label62.Text = "Social Studies";
-            // 
-            // label63
-            // 
-            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label63.Location = new System.Drawing.Point(424, 424);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(46, 13);
-            this.label63.TabIndex = 587;
-            this.label63.Text = "Science";
-            // 
-            // NewBNT
-            // 
-            this.NewBNT.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
-            this.NewBNT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewBNT.Location = new System.Drawing.Point(594, 562);
-            this.NewBNT.Name = "NewBNT";
-            this.NewBNT.Size = new System.Drawing.Size(100, 39);
-            this.NewBNT.TabIndex = 136;
-            this.NewBNT.Text = "New";
-            this.NewBNT.UseVisualStyleBackColor = true;
-            // 
-            // DeleteBNT
-            // 
-            this.DeleteBNT.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
-            this.DeleteBNT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBNT.Location = new System.Drawing.Point(944, 562);
-            this.DeleteBNT.Name = "DeleteBNT";
-            this.DeleteBNT.Size = new System.Drawing.Size(100, 39);
-            this.DeleteBNT.TabIndex = 135;
-            this.DeleteBNT.Text = "   Delete";
-            this.DeleteBNT.UseVisualStyleBackColor = true;
-            // 
-            // UpdateBNT
-            // 
-            this.UpdateBNT.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
-            this.UpdateBNT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateBNT.Location = new System.Drawing.Point(825, 562);
-            this.UpdateBNT.Name = "UpdateBNT";
-            this.UpdateBNT.Size = new System.Drawing.Size(100, 39);
-            this.UpdateBNT.TabIndex = 134;
-            this.UpdateBNT.Text = "    Update";
-            this.UpdateBNT.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(587, 559);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 39);
-            this.button1.TabIndex = 530;
-            this.button1.Text = "New";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(937, 559);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 39);
-            this.button2.TabIndex = 529;
-            this.button2.Text = "   Delete";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(818, 559);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 39);
-            this.button3.TabIndex = 528;
-            this.button3.Text = "    Update";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(702, 559);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 39);
-            this.button4.TabIndex = 527;
-            this.button4.Text = "Save";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(631, 557);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 39);
-            this.button5.TabIndex = 249;
-            this.button5.Text = "New";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(981, 557);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 39);
-            this.button6.TabIndex = 248;
-            this.button6.Text = "   Delete";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(862, 557);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 39);
-            this.button7.TabIndex = 247;
-            this.button7.Text = "    Update";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(746, 557);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 39);
-            this.button8.TabIndex = 246;
-            this.button8.Text = "Save";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(654, 538);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 39);
-            this.button9.TabIndex = 323;
-            this.button9.Text = "New";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(1004, 538);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 39);
-            this.button10.TabIndex = 322;
-            this.button10.Text = "   Delete";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(885, 538);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 39);
-            this.button11.TabIndex = 321;
-            this.button11.Text = "    Update";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // saveAttenBTN
-            // 
-            this.saveAttenBTN.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
-            this.saveAttenBTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveAttenBTN.Location = new System.Drawing.Point(769, 538);
-            this.saveAttenBTN.Name = "saveAttenBTN";
-            this.saveAttenBTN.Size = new System.Drawing.Size(100, 39);
-            this.saveAttenBTN.TabIndex = 320;
-            this.saveAttenBTN.Text = "Save";
-            this.saveAttenBTN.UseVisualStyleBackColor = true;
-            this.saveAttenBTN.Click += new System.EventHandler(this.saveAttenBTN_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.dataGridView3);
-            this.panel4.Location = new System.Drawing.Point(3, 21);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(508, 574);
-            this.panel4.TabIndex = 531;
-            // 
-            // dataGridView3
-            // 
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.EnableHeadersVisualStyles = false;
-            this.dataGridView3.Location = new System.Drawing.Point(13, 16);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(481, 546);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Controls.Add(this.dataGridViewStudent2);
-            this.panel5.Location = new System.Drawing.Point(14, 30);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(591, 246);
-            this.panel5.TabIndex = 320;
-            // 
-            // dataGridViewStudent2
-            // 
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewStudent2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridViewStudent2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewStudent2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridViewStudent2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewStudent2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStudent2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridViewStudent2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudent2.EnableHeadersVisualStyles = false;
-            this.dataGridViewStudent2.Location = new System.Drawing.Point(13, 16);
-            this.dataGridViewStudent2.Name = "dataGridViewStudent2";
-            this.dataGridViewStudent2.Size = new System.Drawing.Size(564, 218);
-            this.dataGridViewStudent2.TabIndex = 0;
-            this.dataGridViewStudent2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudent2_CellClick);
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label66.Location = new System.Drawing.Point(794, 17);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(20, 13);
-            this.label66.TabIndex = 325;
-            this.label66.Text = "ID";
-            // 
-            // studentid
-            // 
-            this.studentid.Location = new System.Drawing.Point(820, 10);
-            this.studentid.Name = "studentid";
-            this.studentid.ReadOnly = true;
-            this.studentid.Size = new System.Drawing.Size(50, 20);
-            this.studentid.TabIndex = 324;
+            // label287
+            // 
+            this.label287.AutoSize = true;
+            this.label287.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label287.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label287.Location = new System.Drawing.Point(640, 384);
+            this.label287.Name = "label287";
+            this.label287.Size = new System.Drawing.Size(97, 13);
+            this.label287.TabIndex = 309;
+            this.label287.Text = "Number of Days";
+            // 
+            // label261
+            // 
+            this.label261.AutoSize = true;
+            this.label261.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label261.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label261.Location = new System.Drawing.Point(1075, 361);
+            this.label261.Name = "label261";
+            this.label261.Size = new System.Drawing.Size(14, 13);
+            this.label261.TabIndex = 308;
+            this.label261.Text = "3";
+            // 
+            // label262
+            // 
+            this.label262.AutoSize = true;
+            this.label262.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label262.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label262.Location = new System.Drawing.Point(1038, 361);
+            this.label262.Name = "label262";
+            this.label262.Size = new System.Drawing.Size(14, 13);
+            this.label262.TabIndex = 307;
+            this.label262.Text = "2";
+            // 
+            // label263
+            // 
+            this.label263.AutoSize = true;
+            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label263.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label263.Location = new System.Drawing.Point(1002, 361);
+            this.label263.Name = "label263";
+            this.label263.Size = new System.Drawing.Size(14, 13);
+            this.label263.TabIndex = 306;
+            this.label263.Text = "1";
+            // 
+            // Y6T2
+            // 
+            this.Y6T2.Location = new System.Drawing.Point(1030, 377);
+            this.Y6T2.Name = "Y6T2";
+            this.Y6T2.Size = new System.Drawing.Size(30, 20);
+            this.Y6T2.TabIndex = 305;
+            // 
+            // Y6T3
+            // 
+            this.Y6T3.Location = new System.Drawing.Point(1066, 377);
+            this.Y6T3.Name = "Y6T3";
+            this.Y6T3.Size = new System.Drawing.Size(30, 20);
+            this.Y6T3.TabIndex = 304;
+            // 
+            // Y6T1
+            // 
+            this.Y6T1.Location = new System.Drawing.Point(994, 377);
+            this.Y6T1.Name = "Y6T1";
+            this.Y6T1.Size = new System.Drawing.Size(30, 20);
+            this.Y6T1.TabIndex = 303;
+            // 
+            // label265
+            // 
+            this.label265.AutoSize = true;
+            this.label265.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label265.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label265.Location = new System.Drawing.Point(947, 361);
+            this.label265.Name = "label265";
+            this.label265.Size = new System.Drawing.Size(14, 13);
+            this.label265.TabIndex = 302;
+            this.label265.Text = "3";
+            // 
+            // label280
+            // 
+            this.label280.AutoSize = true;
+            this.label280.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label280.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label280.Location = new System.Drawing.Point(910, 361);
+            this.label280.Name = "label280";
+            this.label280.Size = new System.Drawing.Size(14, 13);
+            this.label280.TabIndex = 301;
+            this.label280.Text = "2";
+            // 
+            // label281
+            // 
+            this.label281.AutoSize = true;
+            this.label281.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label281.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label281.Location = new System.Drawing.Point(874, 361);
+            this.label281.Name = "label281";
+            this.label281.Size = new System.Drawing.Size(14, 13);
+            this.label281.TabIndex = 300;
+            this.label281.Text = "1";
+            // 
+            // Y5T2
+            // 
+            this.Y5T2.Location = new System.Drawing.Point(903, 377);
+            this.Y5T2.Name = "Y5T2";
+            this.Y5T2.Size = new System.Drawing.Size(30, 20);
+            this.Y5T2.TabIndex = 299;
+            // 
+            // Y5T3
+            // 
+            this.Y5T3.Location = new System.Drawing.Point(939, 377);
+            this.Y5T3.Name = "Y5T3";
+            this.Y5T3.Size = new System.Drawing.Size(30, 20);
+            this.Y5T3.TabIndex = 298;
+            // 
+            // Y5T1
+            // 
+            this.Y5T1.Location = new System.Drawing.Point(867, 377);
+            this.Y5T1.Name = "Y5T1";
+            this.Y5T1.Size = new System.Drawing.Size(30, 20);
+            this.Y5T1.TabIndex = 297;
+            // 
+            // label282
+            // 
+            this.label282.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label282.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label282.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label282.Location = new System.Drawing.Point(983, 357);
+            this.label282.Name = "label282";
+            this.label282.Size = new System.Drawing.Size(1, 130);
+            this.label282.TabIndex = 296;
+            // 
+            // label283
+            // 
+            this.label283.AutoSize = true;
+            this.label283.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label283.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label283.Location = new System.Drawing.Point(827, 361);
+            this.label283.Name = "label283";
+            this.label283.Size = new System.Drawing.Size(14, 13);
+            this.label283.TabIndex = 295;
+            this.label283.Text = "3";
+            // 
+            // label284
+            // 
+            this.label284.AutoSize = true;
+            this.label284.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label284.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label284.Location = new System.Drawing.Point(791, 361);
+            this.label284.Name = "label284";
+            this.label284.Size = new System.Drawing.Size(14, 13);
+            this.label284.TabIndex = 294;
+            this.label284.Text = "2";
+            // 
+            // label285
+            // 
+            this.label285.AutoSize = true;
+            this.label285.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label285.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label285.Location = new System.Drawing.Point(754, 361);
+            this.label285.Name = "label285";
+            this.label285.Size = new System.Drawing.Size(14, 13);
+            this.label285.TabIndex = 293;
+            this.label285.Text = "1";
+            // 
+            // Y4T2
+            // 
+            this.Y4T2.Location = new System.Drawing.Point(783, 377);
+            this.Y4T2.Name = "Y4T2";
+            this.Y4T2.Size = new System.Drawing.Size(30, 20);
+            this.Y4T2.TabIndex = 292;
+            // 
+            // Y4T3
+            // 
+            this.Y4T3.Location = new System.Drawing.Point(819, 377);
+            this.Y4T3.Name = "Y4T3";
+            this.Y4T3.Size = new System.Drawing.Size(30, 20);
+            this.Y4T3.TabIndex = 291;
+            // 
+            // label286
+            // 
+            this.label286.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label286.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label286.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label286.Location = new System.Drawing.Point(854, 357);
+            this.label286.Name = "label286";
+            this.label286.Size = new System.Drawing.Size(1, 130);
+            this.label286.TabIndex = 290;
+            // 
+            // Y4T1
+            // 
+            this.Y4T1.Location = new System.Drawing.Point(747, 377);
+            this.Y4T1.Name = "Y4T1";
+            this.Y4T1.Size = new System.Drawing.Size(30, 20);
+            this.Y4T1.TabIndex = 289;
+            // 
+            // label277
+            // 
+            this.label277.AutoSize = true;
+            this.label277.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label277.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label277.Location = new System.Drawing.Point(1075, 206);
+            this.label277.Name = "label277";
+            this.label277.Size = new System.Drawing.Size(14, 13);
+            this.label277.TabIndex = 288;
+            this.label277.Text = "3";
+            // 
+            // label278
+            // 
+            this.label278.AutoSize = true;
+            this.label278.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label278.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label278.Location = new System.Drawing.Point(1039, 206);
+            this.label278.Name = "label278";
+            this.label278.Size = new System.Drawing.Size(14, 13);
+            this.label278.TabIndex = 287;
+            this.label278.Text = "2";
+            // 
+            // label279
+            // 
+            this.label279.AutoSize = true;
+            this.label279.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label279.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label279.Location = new System.Drawing.Point(1004, 206);
+            this.label279.Name = "label279";
+            this.label279.Size = new System.Drawing.Size(14, 13);
+            this.label279.TabIndex = 286;
+            this.label279.Text = "1";
+            // 
+            // Y3T2
+            // 
+            this.Y3T2.ForeColor = System.Drawing.Color.Black;
+            this.Y3T2.Location = new System.Drawing.Point(1032, 222);
+            this.Y3T2.Name = "Y3T2";
+            this.Y3T2.Size = new System.Drawing.Size(30, 20);
+            this.Y3T2.TabIndex = 285;
+            // 
+            // Y3T3
+            // 
+            this.Y3T3.ForeColor = System.Drawing.Color.Black;
+            this.Y3T3.Location = new System.Drawing.Point(1066, 222);
+            this.Y3T3.Name = "Y3T3";
+            this.Y3T3.Size = new System.Drawing.Size(30, 20);
+            this.Y3T3.TabIndex = 284;
+            // 
+            // Y3T1
+            // 
+            this.Y3T1.ForeColor = System.Drawing.Color.Black;
+            this.Y3T1.Location = new System.Drawing.Point(996, 222);
+            this.Y3T1.Name = "Y3T1";
+            this.Y3T1.Size = new System.Drawing.Size(30, 20);
+            this.Y3T1.TabIndex = 283;
+            // 
+            // label266
+            // 
+            this.label266.AutoSize = true;
+            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label266.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label266.Location = new System.Drawing.Point(948, 206);
+            this.label266.Name = "label266";
+            this.label266.Size = new System.Drawing.Size(14, 13);
+            this.label266.TabIndex = 282;
+            this.label266.Text = "3";
+            // 
+            // label267
+            // 
+            this.label267.AutoSize = true;
+            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label267.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label267.Location = new System.Drawing.Point(915, 206);
+            this.label267.Name = "label267";
+            this.label267.Size = new System.Drawing.Size(14, 13);
+            this.label267.TabIndex = 281;
+            this.label267.Text = "2";
+            // 
+            // label268
+            // 
+            this.label268.AutoSize = true;
+            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label268.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label268.Location = new System.Drawing.Point(878, 206);
+            this.label268.Name = "label268";
+            this.label268.Size = new System.Drawing.Size(14, 13);
+            this.label268.TabIndex = 280;
+            this.label268.Text = "1";
+            // 
+            // Y2T2
+            // 
+            this.Y2T2.ForeColor = System.Drawing.Color.Black;
+            this.Y2T2.Location = new System.Drawing.Point(906, 222);
+            this.Y2T2.Name = "Y2T2";
+            this.Y2T2.Size = new System.Drawing.Size(30, 20);
+            this.Y2T2.TabIndex = 279;
+            // 
+            // Y2T3
+            // 
+            this.Y2T3.ForeColor = System.Drawing.Color.Black;
+            this.Y2T3.Location = new System.Drawing.Point(939, 222);
+            this.Y2T3.Name = "Y2T3";
+            this.Y2T3.Size = new System.Drawing.Size(30, 20);
+            this.Y2T3.TabIndex = 278;
+            // 
+            // Y2T1
+            // 
+            this.Y2T1.ForeColor = System.Drawing.Color.Black;
+            this.Y2T1.Location = new System.Drawing.Point(870, 222);
+            this.Y2T1.Name = "Y2T1";
+            this.Y2T1.Size = new System.Drawing.Size(30, 20);
+            this.Y2T1.TabIndex = 277;
+            // 
+            // label276
+            // 
+            this.label276.AutoSize = true;
+            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label276.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label276.Location = new System.Drawing.Point(645, 225);
+            this.label276.Name = "label276";
+            this.label276.Size = new System.Drawing.Size(97, 13);
+            this.label276.TabIndex = 276;
+            this.label276.Text = "Number of Days";
+            // 
+            // label249
+            // 
+            this.label249.AutoSize = true;
+            this.label249.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label249.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label249.Location = new System.Drawing.Point(1014, 334);
+            this.label249.Name = "label249";
+            this.label249.Size = new System.Drawing.Size(52, 13);
+            this.label249.TabIndex = 271;
+            this.label249.Text = "Grade 6";
+            // 
+            // label254
+            // 
+            this.label254.AutoSize = true;
+            this.label254.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label254.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label254.Location = new System.Drawing.Point(889, 334);
+            this.label254.Name = "label254";
+            this.label254.Size = new System.Drawing.Size(52, 13);
+            this.label254.TabIndex = 263;
+            this.label254.Text = "Grade 5";
+            // 
+            // label259
+            // 
+            this.label259.AutoSize = true;
+            this.label259.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label259.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label259.Location = new System.Drawing.Point(769, 334);
+            this.label259.Name = "label259";
+            this.label259.Size = new System.Drawing.Size(52, 13);
+            this.label259.TabIndex = 255;
+            this.label259.Text = "Grade 4";
+            // 
+            // label264
+            // 
+            this.label264.AutoSize = true;
+            this.label264.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label264.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label264.Location = new System.Drawing.Point(1014, 181);
+            this.label264.Name = "label264";
+            this.label264.Size = new System.Drawing.Size(52, 13);
+            this.label264.TabIndex = 247;
+            this.label264.Text = "Grade 3";
+            // 
+            // label269
+            // 
+            this.label269.AutoSize = true;
+            this.label269.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label269.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label269.Location = new System.Drawing.Point(889, 181);
+            this.label269.Name = "label269";
+            this.label269.Size = new System.Drawing.Size(52, 13);
+            this.label269.TabIndex = 239;
+            this.label269.Text = "Grade 2";
+            // 
+            // label270
+            // 
+            this.label270.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label270.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label270.ForeColor = System.Drawing.Color.Black;
+            this.label270.Location = new System.Drawing.Point(983, 202);
+            this.label270.Name = "label270";
+            this.label270.Size = new System.Drawing.Size(1, 130);
+            this.label270.TabIndex = 236;
+            // 
+            // label271
+            // 
+            this.label271.AutoSize = true;
+            this.label271.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label271.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label271.Location = new System.Drawing.Point(828, 206);
+            this.label271.Name = "label271";
+            this.label271.Size = new System.Drawing.Size(14, 13);
+            this.label271.TabIndex = 234;
+            this.label271.Text = "3";
+            // 
+            // label272
+            // 
+            this.label272.AutoSize = true;
+            this.label272.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label272.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label272.Location = new System.Drawing.Point(791, 206);
+            this.label272.Name = "label272";
+            this.label272.Size = new System.Drawing.Size(14, 13);
+            this.label272.TabIndex = 233;
+            this.label272.Text = "2";
+            // 
+            // label273
+            // 
+            this.label273.AutoSize = true;
+            this.label273.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label273.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label273.Location = new System.Drawing.Point(755, 206);
+            this.label273.Name = "label273";
+            this.label273.Size = new System.Drawing.Size(14, 13);
+            this.label273.TabIndex = 232;
+            this.label273.Text = "1";
+            // 
+            // label274
+            // 
+            this.label274.AutoSize = true;
+            this.label274.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label274.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label274.Location = new System.Drawing.Point(769, 181);
+            this.label274.Name = "label274";
+            this.label274.Size = new System.Drawing.Size(52, 13);
+            this.label274.TabIndex = 231;
+            this.label274.Text = "Grade 1";
+            // 
+            // Y1T2
+            // 
+            this.Y1T2.ForeColor = System.Drawing.Color.Black;
+            this.Y1T2.Location = new System.Drawing.Point(783, 222);
+            this.Y1T2.Name = "Y1T2";
+            this.Y1T2.Size = new System.Drawing.Size(30, 20);
+            this.Y1T2.TabIndex = 230;
+            // 
+            // Y1T3
+            // 
+            this.Y1T3.ForeColor = System.Drawing.Color.Black;
+            this.Y1T3.Location = new System.Drawing.Point(819, 222);
+            this.Y1T3.Name = "Y1T3";
+            this.Y1T3.Size = new System.Drawing.Size(30, 20);
+            this.Y1T3.TabIndex = 229;
+            // 
+            // label275
+            // 
+            this.label275.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label275.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label275.ForeColor = System.Drawing.Color.Black;
+            this.label275.Location = new System.Drawing.Point(854, 202);
+            this.label275.Name = "label275";
+            this.label275.Size = new System.Drawing.Size(1, 130);
+            this.label275.TabIndex = 228;
+            // 
+            // Y1T1
+            // 
+            this.Y1T1.ForeColor = System.Drawing.Color.Black;
+            this.Y1T1.Location = new System.Drawing.Point(747, 222);
+            this.Y1T1.Name = "Y1T1";
+            this.Y1T1.Size = new System.Drawing.Size(30, 20);
+            this.Y1T1.TabIndex = 227;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label67.Location = new System.Drawing.Point(11, 13);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(94, 13);
+            this.label67.TabIndex = 326;
+            this.label67.Text = "List of students";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label68.Location = new System.Drawing.Point(11, 291);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(139, 13);
+            this.label68.TabIndex = 327;
+            this.label68.Text = "Attendance of students";
             // 
             // StudentAdd
             // 
@@ -3084,22 +3101,22 @@ namespace PrimarySchoolAPP
             this.metroTabPage1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
-            this.metroTabPage4.ResumeLayout(false);
-            this.metroTabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).EndInit();
+            this.metroTabPage4.ResumeLayout(false);
+            this.metroTabPage4.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAttendance)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3178,7 +3195,6 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Label label239;
         private System.Windows.Forms.Label label238;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private MetroFramework.Controls.MetroTabPage metroTabPage5;
         private System.Windows.Forms.TextBox textBox171;
         private System.Windows.Forms.Label label244;
         private System.Windows.Forms.TextBox textBox170;
@@ -3330,9 +3346,8 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button DeleteAttenBTN;
+        private System.Windows.Forms.Button UpdateAttenBTN;
         private System.Windows.Forms.Button saveAttenBTN;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -3340,5 +3355,7 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.TextBox studentid;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridViewStudent2;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label67;
     }
 }
