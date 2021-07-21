@@ -46,8 +46,8 @@ namespace PrimarySchoolAPP
                 WELname.Text = Login.UserDisplayName.displayName;  
 
             //**************************Removing the Max button***************************************
-            MaximizeBox = false;
-            ControlBox = true;
+            //MaximizeBox = false;
+            //ControlBox = true;
             
             //btnHome.ForeColor = Color.Black;
             //teaBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent

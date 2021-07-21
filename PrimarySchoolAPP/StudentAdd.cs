@@ -41,10 +41,46 @@ namespace PrimarySchoolAPP
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 dataGridViewStudent.DataSource = dt;
+                dataGridViewStudent2.DataSource = dt;
                 da.Update(dt);
                 dataGridViewStudent.AllowUserToAddRows = false;
+                dataGridViewStudent2.AllowUserToAddRows = false;
 
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        public void displayDataAttendance()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                
+
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT  Student.id[student ID],Student.FisrtName[First Name], Student.MiddleName[Middle Name], Student.LastName[Last Name], Student.DOB[Date of Birth], .Attendance.Yr1_Term1[Grade 1 Term1], Attendance.Yr1_Term2[Grade 1 Term2], Attendance.Yr1_Term3[Grade 1 Term3], Attendance.Yr2_Term1[Grade 2 Term1],Attendance.Yr2_Term2[Grade 2 Term2], Attendance.Yr2_Term3[Grade 2 Term3], Attendance.Yr3_Term1[Grade 3 Term1], Attendance.Yr3_Term2[Grade 3 Term2], Attendance.Yr3_Term3[Grade 3 Term3], Attendance.Yr4_Term1[Grade 4 Term1], Attendance.Yr4_Term2[Grade 4 Term2], Attendance.Yr4_Term3[Grade 4 Term3],Attendance.Yr5_Term1[Grade 5 Term1], Attendance.Yr5_Term2[Grade 5 Term2], Attendance.Yr5_Term3[Grade 5 Term3], Attendance.Yr6_Term1[Grade 6 Term1], Attendance.Yr6_Term2[Grade 6 Term2], Attendance.Yr6_Term3[Grade 6 Term3],Student.Photo FROM Attendance INNER JOIN Student ON Attendance.id_Stu = Student.id";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridViewAttendance.DataSource = dt;
+                da.Update(dt);
+                dataGridViewAttendance.AllowUserToAddRows = false;
+                
+               
 
             }
             catch (Exception ex)
@@ -60,6 +96,8 @@ namespace PrimarySchoolAPP
         }
         private void StudentAdd_Load(object sender, EventArgs e)
         {
+            MaximizeBox = false;
+            ControlBox = true;
             metroTabPage1.Text = @"Bio";
             metroTabPage2.Text = @"Personality Record";
             metroTabPage3.Text = @"Health Record";
@@ -88,6 +126,7 @@ namespace PrimarySchoolAPP
             HousecomboBx.Items.Add("Yellow-Dalass");
             HousecomboBx.Items.Add("Purple-AJ'S");
             displayDataStudent();
+            displayDataAttendance();
         }
 
         private void FnameStuTB_Enter(object sender, EventArgs e)
@@ -179,7 +218,7 @@ namespace PrimarySchoolAPP
 
                 if (ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
                 {
-                    string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + GenderComBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
+                    string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + GenderComBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
 
                     if (con.State != ConnectionState.Open)
                     {
@@ -204,8 +243,7 @@ namespace PrimarySchoolAPP
 
             catch (Exception ex)
             {
-                con.Close();
-                MessageBox.Show(ex.Message);
+              MessageBox.Show(ex.Message);
             }
         }
 
@@ -229,10 +267,149 @@ namespace PrimarySchoolAPP
             {
                 MessageBox.Show(ex.Message);
             }
+          
+        }
+
+        private void dataGridViewStudent2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewStudent2.Rows[e.RowIndex];
+                    studentid.Text = row.Cells[0].Value.ToString();
+                    FnameTB.Text = row.Cells[2].Value.ToString();
+                    MiddnameTB.Text = row.Cells[3].Value.ToString();
+                    LastNameTB.Text = row.Cells[4].Value.ToString();
+                   
+                    var data = (Byte[])(row.Cells[24].Value);
+                    var stream = new MemoryStream(data);
+                    StudentPhoto.Image = Image.FromStream(stream);
+                    Y1T1.Text = "";
+                    Y1T2.Text = ""; 
+                    Y1T3.Text = "";
+                    Y2T1.Text = ""; 
+                    Y2T2.Text = ""; 
+                    Y2T3.Text = ""; 
+                    Y3T1.Text = "";
+                    Y3T2.Text = ""; 
+                    Y3T3.Text = ""; 
+                    Y4T1.Text = "";
+                    Y4T2.Text = ""; 
+                    Y4T3.Text = "";
+                    Y5T1.Text = "";
+                    Y5T2.Text = "";
+                    Y5T3.Text = "";
+                    Y6T1.Text = "";
+                    Y6T2.Text = ""; 
+                    Y6T3.Text = "";
+     
+
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
             finally
             {
                 con.Close();
             }
         }
-    }
+
+        private void saveAttenBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+
+                byte[] img = null;
+
+                if (StuPhoto.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
+                    img = ms.GetBuffer();
+                    ms.Close();
+                }
+
+                if (StuPhoto.Image == null)
+                {
+                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from Attendance where id_Stu =@id_Stu", con);
+                cmd.Parameters.AddWithValue("@id_Stu", studentid.Text.ToLower());
+                //con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("Record already exist");
+                   con.Close();
+                }
+                else
+                {
+                   con.Close();
+                    con.Open();
+                    cmd = new SqlCommand("INSERT INTO Attendance(Yr1_Term1, Yr1_Term2, Yr1_Term3, Yr2_Term1, Yr2_Term2, Yr2_Term3, Yr3_Term1, Yr3_Term2, Yr3_Term3, Yr4_Term1, Yr4_Term2, Yr4_Term3, Yr5_Term1, Yr5_Term2, Yr5_Term3, Yr6_Term1, Yr6_Term2, Yr6_Term3,id_Stu) VALUES(@Yr1_Term1, @Yr1_Term2, @Yr1_Term3, @Yr2_Term1, @Yr2_Term2, @Yr2_Term3, @Yr3_Term1, @Yr3_Term2, @Yr3_Term3, @Yr4_Term1, @Yr4_Term2, @Yr4_Term3, @Yr5_Term1, @Yr5_Term2, @Yr5_Term3, @Yr6_Term1, @Yr6_Term2, @Yr6_Term3,@id_Stu)", con);
+                    //cmd = new SqlCommand("INSERT INTO Attendance(id_Stu) VALUES(@id_Stu)", con);
+
+                    cmd.Parameters.AddWithValue("@Yr1_Term1", Y1T1.Text);
+                    cmd.Parameters.AddWithValue("@Yr1_Term2", Y1T2.Text);
+                    cmd.Parameters.AddWithValue("@Yr1_Term3", Y1T3.Text);
+                    cmd.Parameters.AddWithValue("@Yr2_Term1", Y2T1.Text);
+                    cmd.Parameters.AddWithValue("@Yr2_Term2", Y2T2.Text);
+                    cmd.Parameters.AddWithValue("@Yr2_Term3", Y2T3.Text);
+                    cmd.Parameters.AddWithValue("@Yr3_Term1", Y3T1.Text);
+                    cmd.Parameters.AddWithValue("@Yr3_Term2", Y3T2.Text);
+                    cmd.Parameters.AddWithValue("@Yr3_Term3", Y3T3.Text);
+                    cmd.Parameters.AddWithValue("@Yr4_Term1", Y4T1.Text);
+                    cmd.Parameters.AddWithValue("@Yr4_Term2", Y4T2.Text);
+                    cmd.Parameters.AddWithValue("@Yr4_Term3", Y4T3.Text);
+                    cmd.Parameters.AddWithValue("@Yr5_Term1", Y5T1.Text);
+                    cmd.Parameters.AddWithValue("@Yr5_Term2", Y5T2.Text);
+                    cmd.Parameters.AddWithValue("@Yr5_Term3", Y5T3.Text);
+                    cmd.Parameters.AddWithValue("@Yr6_Term1", Y6T1.Text);
+                    cmd.Parameters.AddWithValue("@Yr6_Term2", Y6T2.Text);
+                    cmd.Parameters.AddWithValue("@Yr6_Term3", Y6T3.Text);
+                    cmd.Parameters.AddWithValue("@id_Stu", studentid.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record Inserted Successfully.");
+                    displayDataAttendance();
+                }
+
+
+            }
+
+            catch (Exception ex)
+            {
+               
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            } 
+            
+            
+            
+            
+        }
+
+
+
+       
+
+}
 }
