@@ -42,10 +42,11 @@ namespace PrimarySchoolAPP
                 da.Fill(dt);
                 dataGridViewStudent.DataSource = dt;
                 dataGridViewStudent2.DataSource = dt;
+                dataGridViewStudent3.DataSource = dt;
                 da.Update(dt);
                 dataGridViewStudent.AllowUserToAddRows = false;
                 dataGridViewStudent2.AllowUserToAddRows = false;
-
+                dataGridViewStudent3.AllowUserToAddRows = false;
 
             }
             catch (Exception ex)
@@ -94,6 +95,72 @@ namespace PrimarySchoolAPP
             }
 
         }
+        public void displayDataAssessment()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT Student.ERN, Student.FisrtName, Student.MiddleName[Middle Name], Student.LastName[Last Name], National_Assessment.GenKnowledge[General Knowledge], National_Assessment.NumberConcepts[Number Concepts], National_Assessment.OralLang[Oral Language], National_Assessment.Reading, National_Assessment.Structure, National_Assessment.Vocab[Vocabulary], National_Assessment.StudySkills[Study Skills], National_Assessment.ComTask[Com. Task], National_Assessment.NumEst[Number Estimation & Measurement], National_Assessment.Geometry, National_Assessment.Algebra, National_Assessment.[Statistics], National_Assessment.LangArtGrade4[Lang. Arts Grade 4], National_Assessment.MathGrade4[Math Grade 4],National_Assessment.LangArtGrade5[Lang. Arts Grade 5], National_Assessment.MathGrade5[Math Grade 5], National_Assessment.LangArtGrade6[Lang. Arts 6], National_Assessment.AbilityTest[Ability Test], National_Assessment.MathGrade6[Math Grade 6],National_Assessment.LangArtGrade6Curri[Lang. Arts Grade 6 Curriculum], National_Assessment.MathGrade6Curri[Math Grade 6 Curriculum], National_Assessment.Science,National_Assessment.SocialStudies[Social Studies], National_Assessment.id_Stu, National_Assessment.WritingDrawing[Writing Drawing] FROM Student INNER JOIN National_Assessment ON Student.id = National_Assessment.id_Stu";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridViewAssessment.DataSource = dt;
+                da.Update(dt);
+                dataGridViewAssessment.AllowUserToAddRows = false;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        public void Clear()
+        {
+
+            GenKnw.Text = "";
+            NumCon.Text = "";
+            OralLang.Text = "";
+            Reading.Text = "";
+            Structure.Text = "";
+            Vocab.Text = "";
+            StudySkills.Text = "";
+            ComTask.Text = "";
+            NumEst.Text = "";
+            Geometry.Text = "";
+            Algebra.Text = "";
+            Statistics.Text = "";
+            LangArtGrade4.Text = "";
+            MathGrade4.Text = "";
+            LangArtGrade5.Text = "";
+            MathGrade5.Text = "";
+            LangArtGrade6.Text = "";
+            AbilityTest.Text = "";
+            MathGrade6.Text = "";
+            LangArtCurriGrade6.Text = "";
+            MathCurriGrade6.Text = "";
+            SocialStudies.Text = "";
+            Science.Text = "";
+            FnameStudent.Text = "";
+            LnameStudent.Text = "";
+            idAssessment.Text = "";
+            WriteDraw.Text = "";
+        }
         private void StudentAdd_Load(object sender, EventArgs e)
         {
             MaximizeBox = false;
@@ -126,6 +193,7 @@ namespace PrimarySchoolAPP
             HousecomboBx.Items.Add("Purple-AJ'S");
             displayDataStudent();
             displayDataAttendance();
+            displayDataAssessment();
             StuPhoto.Image = Properties.Resources.user;
         }
 
@@ -521,7 +589,7 @@ namespace PrimarySchoolAPP
                 cmd.Parameters.Add(new SqlParameter("@img", img));
                 int x = cmd.ExecuteNonQuery();
                 displayDataStudent();
-                MessageBox.Show("Record updated successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Record updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // ClearData();
             }
             catch (Exception ex)
@@ -576,57 +644,12 @@ namespace PrimarySchoolAPP
             GuardianTelephone.Text = "";
             StuPhoto.Image = Properties.Resources.user;
         }
- //**************************Students Save**************************************************************      
+//**************************Students Save**************************************************************      
         private void SaveBNT_Click(object sender, EventArgs e)
         {
 
             try
             {
-
-                //    byte[] img = null;
-
-                //    if (StuPhoto.Image != null)
-                //    {
-                //        MemoryStream ms = new MemoryStream();
-                //        StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
-                //        img = ms.GetBuffer();
-                //        ms.Close();
-                //    }
-
-                //    if (StuPhoto.Image == null)
-                //    {
-                //        MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-
-
-                //    if (con.State != ConnectionState.Open)//ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
-                //    {
-                //        con.Open();
-                //        string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + GenderComBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
-
-
-                //        cmd = new SqlCommand(sql, con);
-                //        cmd.Parameters.Add(new SqlParameter("@img", img));
-                //        int x = cmd.ExecuteNonQuery();
-
-                //        displayDataStudent();
-                //       // ClearData();
-                //        MessageBox.Show(x.ToString() + " Record inserted successfully");
-                //    }
-
-                //    else
-                //    {
-                //        MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //    }
-
-
-                //}
-
-                //catch (Exception ex)
-                //{
-                //  MessageBox.Show(ex.Message);con.Close();
-                //}
-
 
                 if (con.State != ConnectionState.Open)
                     con.Open();
@@ -691,7 +714,7 @@ namespace PrimarySchoolAPP
 
 
         }
-        //**************************Student Photo Browse**************************************************************
+//**************************Student Photo Browse**************************************************************
         private void browseBnt_Click(object sender, EventArgs e)
         {
             try
@@ -714,7 +737,7 @@ namespace PrimarySchoolAPP
             }
 
         }
- //**************************Student CellClick**************************************************************
+//**************************Student CellClick**************************************************************
         private void dataGridViewStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -773,5 +796,281 @@ namespace PrimarySchoolAPP
         
 
     }
+ 
+        
+//**************************Assessment Save**************************************************************
+        private void SaveBTNassessment_Click(object sender, EventArgs e)
+        {
+            GenKnw.Text = "";
+            NumCon.Text = "";
+            OralLang.Text = "";
+            Reading.Text = "";
+            Structure.Text = "";
+            Vocab.Text = "";
+            StudySkills.Text = "";
+            ComTask.Text = "";
+            NumEst.Text = "";
+            Geometry.Text = "";
+            Algebra.Text = "";
+            Statistics.Text = "";
+            LangArtGrade4.Text = "";
+            MathGrade4.Text = "";
+            LangArtGrade5.Text = "";
+            MathGrade5.Text = "";
+            LangArtGrade6.Text = "";
+            AbilityTest.Text = "";
+            MathGrade6.Text = "";
+            LangArtCurriGrade6.Text = "";
+            MathCurriGrade6.Text = "";
+            SocialStudies.Text = "";
+            Science.Text = "";
+            WriteDraw.Text = "";
+
+            try
+            {
+
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT * from  National_Assessment where id_Stu =@id_Stu", con);
+                cmd.Parameters.AddWithValue("@id_Stu", idAssessment.Text.ToLower());
+                //con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
+                else
+                {
+                    con.Close();
+                    con.Open();
+                    cmd = new SqlCommand("INSERT INTO National_Assessment(GenKnowledge,NumberConcepts,OralLang,Reading,Structure,Vocab,StudySkills,ComTask,NumEst,Geometry,Algebra,[Statistics],LangArtGrade4,MathGrade4,LangArtGrade5,MathGrade5,LangArtGrade6,AbilityTest,MathGrade6,LangArtGrade6Curri,MathGrade6Curri,Science,SocialStudies,id_Stu,WritingDrawing) VALUES(@GenKnowledge,@NumberConcepts,@OralLang,@Reading,@Structure,@Vocab,@StudySkills,@ComTask,@NumEst,@Geometry,@Algebra,@Statistics,@LangArtGrade4,@MathGrade4,@LangArtGrade5,@MathGrade5,@LangArtGrade6,@AbilityTest,@MathGrade6,@LangArtGrade6Curri,@MathGrade6Curri,@Science,@SocialStudies,@id_Stu,@WritingDrawing)", con);
+                    //cmd = new SqlCommand("INSERT INTO Attendance(id_Stu) VALUES(@id_Stu)", con);
+
+                    cmd.Parameters.AddWithValue("@GenKnowledge",GenKnw.Text);
+                    cmd.Parameters.AddWithValue("@NumberConcepts", NumCon.Text);
+                    cmd.Parameters.AddWithValue("@OralLang", OralLang.Text);
+                    cmd.Parameters.AddWithValue("@Reading", Reading.Text);
+                    cmd.Parameters.AddWithValue("@Structure", Structure.Text);
+                    cmd.Parameters.AddWithValue("@Vocab", Vocab.Text);
+                    cmd.Parameters.AddWithValue("@StudySkills", StudySkills.Text);
+                    cmd.Parameters.AddWithValue("@ComTask", ComTask.Text);
+                    cmd.Parameters.AddWithValue("@NumEst", NumEst.Text);
+                    cmd.Parameters.AddWithValue("@Geometry", Geometry.Text);
+                    cmd.Parameters.AddWithValue("@Algebra", Algebra.Text);
+                    cmd.Parameters.AddWithValue("@Statistics", Statistics.Text);
+                    cmd.Parameters.AddWithValue("@LangArtGrade4", LangArtGrade4.Text);
+                    cmd.Parameters.AddWithValue("@MathGrade4", MathGrade4.Text);
+                    cmd.Parameters.AddWithValue("@LangArtGrade5", LangArtGrade5.Text);
+                    cmd.Parameters.AddWithValue("@MathGrade5", MathGrade5.Text);
+                    cmd.Parameters.AddWithValue("@LangArtGrade6", LangArtGrade6.Text);
+                    cmd.Parameters.AddWithValue("@AbilityTest", AbilityTest.Text);
+                    cmd.Parameters.AddWithValue("@MathGrade6", MathGrade6.Text);
+                    cmd.Parameters.AddWithValue("@LangArtGrade6Curri", LangArtCurriGrade6.Text);
+                    cmd.Parameters.AddWithValue("@MathGrade6Curri", MathCurriGrade6.Text);
+                    cmd.Parameters.AddWithValue("@Science", Science.Text);
+                    cmd.Parameters.AddWithValue("@SocialStudies", SocialStudies.Text);
+                    cmd.Parameters.AddWithValue("@id_Stu", idAssessment.Text);
+                    cmd.Parameters.AddWithValue("@WritingDrawing", WriteDraw.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record was saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    displayDataAssessment();
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); con.Close();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+//**************************Assessment Update**************************************************************
+        private void UpdateBTNassessment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = con.CreateCommand();
+                //string Sql = "UPDATE National_Assessment SET ERN='" + ERN.Text + "',FisrtName='" + FnameStuTB.Text + "',MiddleName='" + MiddnameStuTB.Text + "',LastName='" + LastNameStuTB.Text + "',BirthNum='" + BirthNum.Text + "',DOB='" + DOBStudt.Text + "',DOReg='" + DateRegdt.Text + "',House='" + HousecomboBx.Text + "',Club='" + ClubcomboBx.Text + "',Gender='" + GenderComBx.Text + "',StudentAddress='" + StuAddress.Text + "',MotherName='" + motherName.Text + "',MatherOccupation='" + mothersOccupation.Text + "',MotherAddress='" + motherAddress.Text + "',MotherTel='" + mothersTelephone.Text + "',FatherName='" + fathersName.Text + "',FatherOccupation='" + fathersOccupation.Text + "',FatherAddress='" + fathersAddress.Text + "',FatherTel='" + fathersTelephone.Text + "',GuardianName='" + GuardianName.Text + "',GuardianOccupation='" + GuardianOccupation.Text + "',GuardianAddress='" + GuardianAddress.Text + "',GuardianTel='" + GuardianTelephone.Text + "',Photo=@img WHERE ID='" + IDStuTB.Text + "'";
+                string Sql = "UPDATE National_Assessment SET GenKnowledge='" + GenKnw.Text + "',NumberConcepts='" + NumCon.Text + "',OralLang='" + OralLang.Text + "',Reading='" + Reading.Text + "',Structure='" + Structure.Text + "',Vocab='" + Vocab.Text + "',StudySkills='" + StudySkills.Text + "',ComTask='" + ComTask.Text + "',NumEst='" + NumEst.Text + "',Geometry='" + Geometry.Text + "',Algebra='" + Algebra.Text + "',[Statistics]='" + Statistics.Text + "',LangArtGrade4='" + LangArtGrade4.Text + "',MathGrade4='" + MathGrade4.Text + "',LangArtGrade5='" + LangArtGrade5.Text + "',MathGrade5='" + MathGrade5.Text + "',LangArtGrade6='" + LangArtGrade6.Text + "',AbilityTest='" + AbilityTest.Text + "',MathGrade6='" + MathGrade6.Text + "',LangArtGrade6Curri='" + LangArtCurriGrade6.Text + "',MathGrade6Curri='" + MathCurriGrade6.Text + "',Science='" + Science.Text + "',SocialStudies='" + SocialStudies.Text + "',WritingDrawing='" + WriteDraw.Text +"' WHERE id_Stu='" + idAssessment.Text + "'";
+
+
+                cmd = new SqlCommand(Sql, con);
+                //cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                displayDataAssessment();
+                MessageBox.Show("Record updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // ClearData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }
+//**************************Assessment Delete**************************************************************
+        private void DeleteBTNassessment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Delete From National_Assessment WHERE id_Stu='" + idAssessment.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                da.Update(dt);
+                dataGridViewStudent.DataSource = dt;
+                displayDataAssessment();
+                MessageBox.Show("Record Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clear();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+//**************************Assessment CellClick**************************************************************
+        private void dataGridViewAssessment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewAssessment.Rows[e.RowIndex];
+                    FnameStudent.Text = row.Cells[1].Value.ToString();
+                    LnameStudent.Text = row.Cells[3].Value.ToString();
+                    idAssessment.Text = row.Cells[27].Value.ToString();
+                   
+                    GenKnw.Text = row.Cells[4].Value.ToString();
+                    NumCon.Text = row.Cells[5].Value.ToString();
+                    OralLang.Text = row.Cells[6].Value.ToString();
+                    Reading.Text = row.Cells[7].Value.ToString();
+                    Structure.Text = row.Cells[8].Value.ToString();
+                    Vocab.Text = row.Cells[9].Value.ToString();
+                    StudySkills.Text = row.Cells[10].Value.ToString();
+                    ComTask.Text = row.Cells[11].Value.ToString();
+                    NumEst.Text = row.Cells[12].Value.ToString();
+                    Geometry.Text = row.Cells[13].Value.ToString();
+                    Algebra.Text = row.Cells[14].Value.ToString();
+                    Statistics.Text = row.Cells[15].Value.ToString();
+                    LangArtGrade4.Text = row.Cells[16].Value.ToString();
+                    MathGrade4.Text = row.Cells[17].Value.ToString();
+                    LangArtGrade5.Text = row.Cells[18].Value.ToString();
+                    MathGrade5.Text = row.Cells[19].Value.ToString();
+                    LangArtGrade6.Text = row.Cells[20].Value.ToString();
+                    AbilityTest.Text = row.Cells[21].Value.ToString();
+                    MathGrade6.Text = row.Cells[22].Value.ToString();
+                    LangArtCurriGrade6.Text = row.Cells[23].Value.ToString();
+                    MathCurriGrade6.Text = row.Cells[24].Value.ToString();
+                    Science.Text = row.Cells[25].Value.ToString();
+                    SocialStudies.Text = row.Cells[26].Value.ToString();
+                    WriteDraw.Text = row.Cells[28].Value.ToString();
+
+                    
+                }
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+//**************************Student Assessment Click**************************************************************
+        private void dataGridViewStudent3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GenKnw.Text = "";
+            NumCon.Text = "";
+            OralLang.Text = "";
+            Reading.Text = "";
+            Structure.Text = "";
+            Vocab.Text = "";
+            StudySkills.Text = "";
+            ComTask.Text = "";
+            NumEst.Text = "";
+            Geometry.Text = "";
+            Algebra.Text = "";
+            Statistics.Text = "";
+            LangArtGrade4.Text = "";
+            MathGrade4.Text = "";
+            LangArtGrade5.Text = "";
+            MathGrade5.Text = "";
+            LangArtGrade6.Text = "";
+            AbilityTest.Text = "";
+            MathGrade6.Text = "";
+            LangArtCurriGrade6.Text = "";
+            MathCurriGrade6.Text = "";
+            SocialStudies.Text = "";
+            Science.Text = "";
+            WriteDraw.Text = "";
+
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewStudent2.Rows[e.RowIndex];
+
+                    FnameStudent.Text = row.Cells[2].Value.ToString();
+                    LnameStudent.Text = row.Cells[4].Value.ToString();                 
+                    idAssessment.Text = row.Cells[0].Value.ToString();
+
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
     }
 }

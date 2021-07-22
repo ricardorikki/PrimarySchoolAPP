@@ -29,16 +29,18 @@ namespace PrimarySchoolAPP
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LastNameStuTB = new System.Windows.Forms.TextBox();
             this.StuAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -96,80 +98,79 @@ namespace PrimarySchoolAPP
             this.IDStuTB = new System.Windows.Forms.TextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox171 = new System.Windows.Forms.TextBox();
+            this.dataGridViewAssessment = new System.Windows.Forms.DataGridView();
+            this.DeleteBTNassessment = new System.Windows.Forms.Button();
+            this.UpdateBTNassessment = new System.Windows.Forms.Button();
+            this.SaveBTNassessment = new System.Windows.Forms.Button();
+            this.LnameStudent = new System.Windows.Forms.TextBox();
             this.label244 = new System.Windows.Forms.Label();
-            this.textBox170 = new System.Windows.Forms.TextBox();
+            this.FnameStudent = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.SocialStudies = new System.Windows.Forms.TextBox();
+            this.Science = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.AbilityTest = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.MathCurriGrade6 = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.LangArtCurriGrade6 = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.MathGrade6 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.LangArtGrade6 = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.MathGrade5 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.LangArtGrade5 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.MathGrade4 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.LangArtGrade4 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Reading = new System.Windows.Forms.TextBox();
+            this.WriteDraw = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.ComTask = new System.Windows.Forms.TextBox();
+            this.StudySkills = new System.Windows.Forms.TextBox();
+            this.Statistics = new System.Windows.Forms.TextBox();
+            this.Algebra = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.Geometry = new System.Windows.Forms.TextBox();
+            this.NumEst = new System.Windows.Forms.TextBox();
+            this.Structure = new System.Windows.Forms.TextBox();
+            this.Vocab = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.Phonics = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NumCon = new System.Windows.Forms.TextBox();
+            this.OralLang = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label234 = new System.Windows.Forms.Label();
-            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.GenKnw = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -208,6 +209,8 @@ namespace PrimarySchoolAPP
             this.label238 = new System.Windows.Forms.Label();
             this.label237 = new System.Windows.Forms.Label();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewAttendance = new System.Windows.Forms.DataGridView();
             this.label66 = new System.Windows.Forms.Label();
@@ -272,8 +275,12 @@ namespace PrimarySchoolAPP
             this.Y1T3 = new System.Windows.Forms.TextBox();
             this.label275 = new System.Windows.Forms.Label();
             this.Y1T1 = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
+            this.idAssessment = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dataGridViewStudent3 = new System.Windows.Forms.DataGridView();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StuPhoto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -282,7 +289,7 @@ namespace PrimarySchoolAPP
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssessment)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -294,6 +301,8 @@ namespace PrimarySchoolAPP
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent3)).BeginInit();
             this.SuspendLayout();
             // 
             // LastNameStuTB
@@ -770,22 +779,22 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewStudent
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewStudent.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewStudent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewStudent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudent.EnableHeadersVisualStyles = false;
             this.dataGridViewStudent.Location = new System.Drawing.Point(13, 16);
@@ -804,7 +813,7 @@ namespace PrimarySchoolAPP
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 30);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(1112, 655);
             this.metroTabControl1.TabIndex = 132;
             this.metroTabControl1.UseSelectable = true;
@@ -909,14 +918,18 @@ namespace PrimarySchoolAPP
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.label71);
+            this.metroTabPage2.Controls.Add(this.label70);
+            this.metroTabPage2.Controls.Add(this.panel6);
+            this.metroTabPage2.Controls.Add(this.label69);
+            this.metroTabPage2.Controls.Add(this.idAssessment);
             this.metroTabPage2.Controls.Add(this.panel4);
-            this.metroTabPage2.Controls.Add(this.button1);
-            this.metroTabPage2.Controls.Add(this.button2);
-            this.metroTabPage2.Controls.Add(this.button3);
-            this.metroTabPage2.Controls.Add(this.button4);
-            this.metroTabPage2.Controls.Add(this.textBox171);
+            this.metroTabPage2.Controls.Add(this.DeleteBTNassessment);
+            this.metroTabPage2.Controls.Add(this.UpdateBTNassessment);
+            this.metroTabPage2.Controls.Add(this.SaveBTNassessment);
+            this.metroTabPage2.Controls.Add(this.LnameStudent);
             this.metroTabPage2.Controls.Add(this.label244);
-            this.metroTabPage2.Controls.Add(this.textBox170);
+            this.metroTabPage2.Controls.Add(this.FnameStudent);
             this.metroTabPage2.Controls.Add(this.groupBox3);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
@@ -936,89 +949,82 @@ namespace PrimarySchoolAPP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.dataGridView3);
-            this.panel4.Location = new System.Drawing.Point(3, 21);
+            this.panel4.Controls.Add(this.dataGridViewAssessment);
+            this.panel4.Location = new System.Drawing.Point(3, 329);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(508, 574);
+            this.panel4.Size = new System.Drawing.Size(508, 269);
             this.panel4.TabIndex = 531;
             // 
-            // dataGridView3
+            // dataGridViewAssessment
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewAssessment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewAssessment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.EnableHeadersVisualStyles = false;
-            this.dataGridView3.Location = new System.Drawing.Point(13, 16);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(481, 546);
-            this.dataGridView3.TabIndex = 0;
+            this.dataGridViewAssessment.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewAssessment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewAssessment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAssessment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewAssessment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAssessment.EnableHeadersVisualStyles = false;
+            this.dataGridViewAssessment.Location = new System.Drawing.Point(13, 16);
+            this.dataGridViewAssessment.Name = "dataGridViewAssessment";
+            this.dataGridViewAssessment.Size = new System.Drawing.Size(481, 241);
+            this.dataGridViewAssessment.TabIndex = 0;
+            this.dataGridViewAssessment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAssessment_CellClick);
             // 
-            // button1
+            // DeleteBTNassessment
             // 
-            this.button1.Image = global::PrimarySchoolAPP.Properties.Resources.add_41_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(587, 559);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 39);
-            this.button1.TabIndex = 530;
-            this.button1.Text = "New";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DeleteBTNassessment.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
+            this.DeleteBTNassessment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteBTNassessment.Location = new System.Drawing.Point(871, 567);
+            this.DeleteBTNassessment.Name = "DeleteBTNassessment";
+            this.DeleteBTNassessment.Size = new System.Drawing.Size(100, 39);
+            this.DeleteBTNassessment.TabIndex = 529;
+            this.DeleteBTNassessment.Text = "   Delete";
+            this.DeleteBTNassessment.UseVisualStyleBackColor = true;
+            this.DeleteBTNassessment.Click += new System.EventHandler(this.DeleteBTNassessment_Click);
             // 
-            // button2
+            // UpdateBTNassessment
             // 
-            this.button2.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_delete_24;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(937, 559);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 39);
-            this.button2.TabIndex = 529;
-            this.button2.Text = "   Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UpdateBTNassessment.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
+            this.UpdateBTNassessment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateBTNassessment.Location = new System.Drawing.Point(752, 567);
+            this.UpdateBTNassessment.Name = "UpdateBTNassessment";
+            this.UpdateBTNassessment.Size = new System.Drawing.Size(100, 39);
+            this.UpdateBTNassessment.TabIndex = 528;
+            this.UpdateBTNassessment.Text = "    Update";
+            this.UpdateBTNassessment.UseVisualStyleBackColor = true;
+            this.UpdateBTNassessment.Click += new System.EventHandler(this.UpdateBTNassessment_Click);
             // 
-            // button3
+            // SaveBTNassessment
             // 
-            this.button3.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_update_24;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(818, 559);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 39);
-            this.button3.TabIndex = 528;
-            this.button3.Text = "    Update";
-            this.button3.UseVisualStyleBackColor = true;
+            this.SaveBTNassessment.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
+            this.SaveBTNassessment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveBTNassessment.Location = new System.Drawing.Point(636, 567);
+            this.SaveBTNassessment.Name = "SaveBTNassessment";
+            this.SaveBTNassessment.Size = new System.Drawing.Size(100, 39);
+            this.SaveBTNassessment.TabIndex = 527;
+            this.SaveBTNassessment.Text = "Save";
+            this.SaveBTNassessment.UseVisualStyleBackColor = true;
+            this.SaveBTNassessment.Click += new System.EventHandler(this.SaveBTNassessment_Click);
             // 
-            // button4
+            // LnameStudent
             // 
-            this.button4.Image = global::PrimarySchoolAPP.Properties.Resources.icons8_save_501;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(702, 559);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 39);
-            this.button4.TabIndex = 527;
-            this.button4.Text = "Save";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox171
-            // 
-            this.textBox171.BackColor = System.Drawing.Color.White;
-            this.textBox171.Location = new System.Drawing.Point(882, 21);
-            this.textBox171.Name = "textBox171";
-            this.textBox171.ReadOnly = true;
-            this.textBox171.Size = new System.Drawing.Size(113, 20);
-            this.textBox171.TabIndex = 526;
+            this.LnameStudent.BackColor = System.Drawing.Color.White;
+            this.LnameStudent.Location = new System.Drawing.Point(739, 18);
+            this.LnameStudent.Name = "LnameStudent";
+            this.LnameStudent.ReadOnly = true;
+            this.LnameStudent.Size = new System.Drawing.Size(113, 20);
+            this.LnameStudent.TabIndex = 526;
             // 
             // label244
             // 
@@ -1026,20 +1032,20 @@ namespace PrimarySchoolAPP
             this.label244.BackColor = System.Drawing.Color.White;
             this.label244.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label244.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label244.Location = new System.Drawing.Point(676, 24);
+            this.label244.Location = new System.Drawing.Point(533, 21);
             this.label244.Name = "label244";
             this.label244.Size = new System.Drawing.Size(87, 13);
             this.label244.TabIndex = 525;
             this.label244.Text = "Student Name";
             // 
-            // textBox170
+            // FnameStudent
             // 
-            this.textBox170.BackColor = System.Drawing.Color.White;
-            this.textBox170.Location = new System.Drawing.Point(767, 21);
-            this.textBox170.Name = "textBox170";
-            this.textBox170.ReadOnly = true;
-            this.textBox170.Size = new System.Drawing.Size(102, 20);
-            this.textBox170.TabIndex = 525;
+            this.FnameStudent.BackColor = System.Drawing.Color.White;
+            this.FnameStudent.Location = new System.Drawing.Point(624, 18);
+            this.FnameStudent.Name = "FnameStudent";
+            this.FnameStudent.ReadOnly = true;
+            this.FnameStudent.Size = new System.Drawing.Size(102, 20);
+            this.FnameStudent.TabIndex = 525;
             // 
             // groupBox3
             // 
@@ -1047,71 +1053,71 @@ namespace PrimarySchoolAPP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.textBox23);
-            this.groupBox3.Controls.Add(this.textBox24);
+            this.groupBox3.Controls.Add(this.SocialStudies);
+            this.groupBox3.Controls.Add(this.Science);
             this.groupBox3.Controls.Add(this.label62);
             this.groupBox3.Controls.Add(this.label63);
-            this.groupBox3.Controls.Add(this.textBox22);
+            this.groupBox3.Controls.Add(this.AbilityTest);
             this.groupBox3.Controls.Add(this.label61);
-            this.groupBox3.Controls.Add(this.textBox20);
+            this.groupBox3.Controls.Add(this.MathCurriGrade6);
             this.groupBox3.Controls.Add(this.label56);
-            this.groupBox3.Controls.Add(this.textBox21);
+            this.groupBox3.Controls.Add(this.LangArtCurriGrade6);
             this.groupBox3.Controls.Add(this.label57);
             this.groupBox3.Controls.Add(this.label58);
             this.groupBox3.Controls.Add(this.label59);
             this.groupBox3.Controls.Add(this.label60);
-            this.groupBox3.Controls.Add(this.textBox18);
+            this.groupBox3.Controls.Add(this.MathGrade6);
             this.groupBox3.Controls.Add(this.label41);
-            this.groupBox3.Controls.Add(this.textBox19);
+            this.groupBox3.Controls.Add(this.LangArtGrade6);
             this.groupBox3.Controls.Add(this.label52);
             this.groupBox3.Controls.Add(this.label53);
             this.groupBox3.Controls.Add(this.label54);
             this.groupBox3.Controls.Add(this.label55);
             this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Controls.Add(this.textBox16);
+            this.groupBox3.Controls.Add(this.MathGrade5);
             this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.textBox17);
+            this.groupBox3.Controls.Add(this.LangArtGrade5);
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.MathGrade4);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.LangArtGrade4);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.Reading);
+            this.groupBox3.Controls.Add(this.WriteDraw);
             this.groupBox3.Controls.Add(this.label51);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.ComTask);
+            this.groupBox3.Controls.Add(this.StudySkills);
+            this.groupBox3.Controls.Add(this.Statistics);
+            this.groupBox3.Controls.Add(this.Algebra);
             this.groupBox3.Controls.Add(this.label50);
             this.groupBox3.Controls.Add(this.label49);
             this.groupBox3.Controls.Add(this.label48);
             this.groupBox3.Controls.Add(this.label47);
             this.groupBox3.Controls.Add(this.label46);
             this.groupBox3.Controls.Add(this.label36);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.Geometry);
+            this.groupBox3.Controls.Add(this.NumEst);
+            this.groupBox3.Controls.Add(this.Structure);
+            this.groupBox3.Controls.Add(this.Vocab);
             this.groupBox3.Controls.Add(this.label37);
             this.groupBox3.Controls.Add(this.label38);
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.Phonics);
             this.groupBox3.Controls.Add(this.label39);
             this.groupBox3.Controls.Add(this.label40);
             this.groupBox3.Controls.Add(this.label44);
             this.groupBox3.Controls.Add(this.label45);
             this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.NumCon);
+            this.groupBox3.Controls.Add(this.OralLang);
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label31);
             this.groupBox3.Controls.Add(this.label234);
-            this.groupBox3.Controls.Add(this.textBox45);
+            this.groupBox3.Controls.Add(this.GenKnw);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label65);
@@ -1119,6 +1125,7 @@ namespace PrimarySchoolAPP
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Controls.Add(this.label42);
             this.groupBox3.Controls.Add(this.label43);
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(530, 47);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(565, 506);
@@ -1126,23 +1133,23 @@ namespace PrimarySchoolAPP
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "National Assessment Program";
             // 
-            // textBox23
+            // SocialStudies
             // 
-            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox23.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox23.Location = new System.Drawing.Point(506, 445);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(32, 20);
-            this.textBox23.TabIndex = 590;
+            this.SocialStudies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SocialStudies.ForeColor = System.Drawing.Color.Black;
+            this.SocialStudies.Location = new System.Drawing.Point(506, 445);
+            this.SocialStudies.Name = "SocialStudies";
+            this.SocialStudies.Size = new System.Drawing.Size(32, 20);
+            this.SocialStudies.TabIndex = 590;
             // 
-            // textBox24
+            // Science
             // 
-            this.textBox24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox24.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox24.Location = new System.Drawing.Point(506, 417);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(32, 20);
-            this.textBox24.TabIndex = 589;
+            this.Science.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Science.ForeColor = System.Drawing.Color.Black;
+            this.Science.Location = new System.Drawing.Point(506, 417);
+            this.Science.Name = "Science";
+            this.Science.Size = new System.Drawing.Size(32, 20);
+            this.Science.TabIndex = 589;
             // 
             // label62
             // 
@@ -1168,14 +1175,14 @@ namespace PrimarySchoolAPP
             this.label63.TabIndex = 587;
             this.label63.Text = "Science";
             // 
-            // textBox22
+            // AbilityTest
             // 
-            this.textBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox22.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox22.Location = new System.Drawing.Point(102, 445);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(32, 20);
-            this.textBox22.TabIndex = 586;
+            this.AbilityTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AbilityTest.ForeColor = System.Drawing.Color.Black;
+            this.AbilityTest.Location = new System.Drawing.Point(102, 445);
+            this.AbilityTest.Name = "AbilityTest";
+            this.AbilityTest.Size = new System.Drawing.Size(32, 20);
+            this.AbilityTest.TabIndex = 586;
             // 
             // label61
             // 
@@ -1189,14 +1196,14 @@ namespace PrimarySchoolAPP
             this.label61.TabIndex = 585;
             this.label61.Text = "Ability Test";
             // 
-            // textBox20
+            // MathCurriGrade6
             // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox20.Location = new System.Drawing.Point(380, 445);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(32, 20);
-            this.textBox20.TabIndex = 584;
+            this.MathCurriGrade6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MathCurriGrade6.ForeColor = System.Drawing.Color.Black;
+            this.MathCurriGrade6.Location = new System.Drawing.Point(380, 445);
+            this.MathCurriGrade6.Name = "MathCurriGrade6";
+            this.MathCurriGrade6.Size = new System.Drawing.Size(32, 20);
+            this.MathCurriGrade6.TabIndex = 584;
             // 
             // label56
             // 
@@ -1210,14 +1217,14 @@ namespace PrimarySchoolAPP
             this.label56.TabIndex = 583;
             this.label56.Text = "Score";
             // 
-            // textBox21
+            // LangArtCurriGrade6
             // 
-            this.textBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox21.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox21.Location = new System.Drawing.Point(380, 417);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(32, 20);
-            this.textBox21.TabIndex = 582;
+            this.LangArtCurriGrade6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LangArtCurriGrade6.ForeColor = System.Drawing.Color.Black;
+            this.LangArtCurriGrade6.Location = new System.Drawing.Point(380, 417);
+            this.LangArtCurriGrade6.Name = "LangArtCurriGrade6";
+            this.LangArtCurriGrade6.Size = new System.Drawing.Size(32, 20);
+            this.LangArtCurriGrade6.TabIndex = 582;
             // 
             // label57
             // 
@@ -1267,14 +1274,14 @@ namespace PrimarySchoolAPP
             this.label60.TabIndex = 578;
             this.label60.Text = "Curriculum Base Task Grade 6";
             // 
-            // textBox18
+            // MathGrade6
             // 
-            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox18.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox18.Location = new System.Drawing.Point(218, 417);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(32, 20);
-            this.textBox18.TabIndex = 577;
+            this.MathGrade6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MathGrade6.ForeColor = System.Drawing.Color.Black;
+            this.MathGrade6.Location = new System.Drawing.Point(218, 417);
+            this.MathGrade6.Name = "MathGrade6";
+            this.MathGrade6.Size = new System.Drawing.Size(32, 20);
+            this.MathGrade6.TabIndex = 577;
             // 
             // label41
             // 
@@ -1288,14 +1295,14 @@ namespace PrimarySchoolAPP
             this.label41.TabIndex = 576;
             this.label41.Text = "Score";
             // 
-            // textBox19
+            // LangArtGrade6
             // 
-            this.textBox19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox19.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox19.Location = new System.Drawing.Point(102, 417);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(32, 20);
-            this.textBox19.TabIndex = 575;
+            this.LangArtGrade6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LangArtGrade6.ForeColor = System.Drawing.Color.Black;
+            this.LangArtGrade6.Location = new System.Drawing.Point(102, 417);
+            this.LangArtGrade6.Name = "LangArtGrade6";
+            this.LangArtGrade6.Size = new System.Drawing.Size(32, 20);
+            this.LangArtGrade6.TabIndex = 575;
             // 
             // label52
             // 
@@ -1356,14 +1363,14 @@ namespace PrimarySchoolAPP
             this.label34.Size = new System.Drawing.Size(544, 1);
             this.label34.TabIndex = 570;
             // 
-            // textBox16
+            // MathGrade5
             // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox16.Location = new System.Drawing.Point(505, 262);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(32, 20);
-            this.textBox16.TabIndex = 569;
+            this.MathGrade5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MathGrade5.ForeColor = System.Drawing.Color.Black;
+            this.MathGrade5.Location = new System.Drawing.Point(505, 262);
+            this.MathGrade5.Name = "MathGrade5";
+            this.MathGrade5.Size = new System.Drawing.Size(32, 20);
+            this.MathGrade5.TabIndex = 569;
             // 
             // label25
             // 
@@ -1377,14 +1384,14 @@ namespace PrimarySchoolAPP
             this.label25.TabIndex = 568;
             this.label25.Text = "Score";
             // 
-            // textBox17
+            // LangArtGrade5
             // 
-            this.textBox17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox17.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox17.Location = new System.Drawing.Point(389, 262);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(32, 20);
-            this.textBox17.TabIndex = 567;
+            this.LangArtGrade5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LangArtGrade5.ForeColor = System.Drawing.Color.Black;
+            this.LangArtGrade5.Location = new System.Drawing.Point(389, 262);
+            this.LangArtGrade5.Name = "LangArtGrade5";
+            this.LangArtGrade5.Size = new System.Drawing.Size(32, 20);
+            this.LangArtGrade5.TabIndex = 567;
             // 
             // label27
             // 
@@ -1434,14 +1441,14 @@ namespace PrimarySchoolAPP
             this.label33.TabIndex = 563;
             this.label33.Text = "Performance Task Grade 5\r\n";
             // 
-            // textBox15
+            // MathGrade4
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox15.Location = new System.Drawing.Point(227, 262);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(32, 20);
-            this.textBox15.TabIndex = 562;
+            this.MathGrade4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MathGrade4.ForeColor = System.Drawing.Color.Black;
+            this.MathGrade4.Location = new System.Drawing.Point(227, 262);
+            this.MathGrade4.Name = "MathGrade4";
+            this.MathGrade4.Size = new System.Drawing.Size(32, 20);
+            this.MathGrade4.TabIndex = 562;
             // 
             // label22
             // 
@@ -1455,14 +1462,14 @@ namespace PrimarySchoolAPP
             this.label22.TabIndex = 561;
             this.label22.Text = "Score";
             // 
-            // textBox14
+            // LangArtGrade4
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox14.Location = new System.Drawing.Point(111, 262);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(32, 20);
-            this.textBox14.TabIndex = 560;
+            this.LangArtGrade4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LangArtGrade4.ForeColor = System.Drawing.Color.Black;
+            this.LangArtGrade4.Location = new System.Drawing.Point(111, 262);
+            this.LangArtGrade4.Name = "LangArtGrade4";
+            this.LangArtGrade4.Size = new System.Drawing.Size(32, 20);
+            this.LangArtGrade4.TabIndex = 560;
             // 
             // label21
             // 
@@ -1500,23 +1507,23 @@ namespace PrimarySchoolAPP
             this.label19.TabIndex = 557;
             this.label19.Text = "Language Arts";
             // 
-            // textBox5
+            // Reading
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox5.Location = new System.Drawing.Point(227, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(32, 20);
-            this.textBox5.TabIndex = 556;
+            this.Reading.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Reading.ForeColor = System.Drawing.Color.Black;
+            this.Reading.Location = new System.Drawing.Point(227, 68);
+            this.Reading.Name = "Reading";
+            this.Reading.Size = new System.Drawing.Size(32, 20);
+            this.Reading.TabIndex = 556;
             // 
-            // textBox3
+            // WriteDraw
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox3.Location = new System.Drawing.Point(227, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(32, 20);
-            this.textBox3.TabIndex = 555;
+            this.WriteDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.WriteDraw.ForeColor = System.Drawing.Color.Black;
+            this.WriteDraw.Location = new System.Drawing.Point(227, 100);
+            this.WriteDraw.Name = "WriteDraw";
+            this.WriteDraw.Size = new System.Drawing.Size(32, 20);
+            this.WriteDraw.TabIndex = 555;
             // 
             // label51
             // 
@@ -1530,45 +1537,45 @@ namespace PrimarySchoolAPP
             this.label51.TabIndex = 554;
             this.label51.Text = "Performance Task Grade 4";
             // 
-            // textBox13
+            // ComTask
             // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox13.Location = new System.Drawing.Point(362, 157);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(32, 20);
-            this.textBox13.TabIndex = 553;
+            this.ComTask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComTask.ForeColor = System.Drawing.Color.Black;
+            this.ComTask.Location = new System.Drawing.Point(362, 157);
+            this.ComTask.Name = "ComTask";
+            this.ComTask.Size = new System.Drawing.Size(32, 20);
+            this.ComTask.TabIndex = 553;
             // 
-            // textBox12
+            // StudySkills
             // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox12.Location = new System.Drawing.Point(362, 131);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(32, 20);
-            this.textBox12.TabIndex = 552;
+            this.StudySkills.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.StudySkills.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudySkills.ForeColor = System.Drawing.Color.Black;
+            this.StudySkills.Location = new System.Drawing.Point(362, 131);
+            this.StudySkills.Name = "StudySkills";
+            this.StudySkills.Size = new System.Drawing.Size(32, 20);
+            this.StudySkills.TabIndex = 552;
             // 
-            // textBox11
+            // Statistics
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox11.Location = new System.Drawing.Point(520, 134);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(32, 20);
-            this.textBox11.TabIndex = 551;
+            this.Statistics.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Statistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Statistics.ForeColor = System.Drawing.Color.Black;
+            this.Statistics.Location = new System.Drawing.Point(520, 134);
+            this.Statistics.Name = "Statistics";
+            this.Statistics.Size = new System.Drawing.Size(32, 20);
+            this.Statistics.TabIndex = 551;
             // 
-            // textBox10
+            // Algebra
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox10.Location = new System.Drawing.Point(520, 108);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(32, 20);
-            this.textBox10.TabIndex = 550;
+            this.Algebra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Algebra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Algebra.ForeColor = System.Drawing.Color.Black;
+            this.Algebra.Location = new System.Drawing.Point(520, 108);
+            this.Algebra.Name = "Algebra";
+            this.Algebra.Size = new System.Drawing.Size(32, 20);
+            this.Algebra.TabIndex = 550;
             // 
             // label50
             // 
@@ -1642,45 +1649,45 @@ namespace PrimarySchoolAPP
             this.label36.TabIndex = 544;
             this.label36.Text = "Score";
             // 
-            // textBox4
+            // Geometry
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox4.Location = new System.Drawing.Point(520, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(32, 20);
-            this.textBox4.TabIndex = 543;
+            this.Geometry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Geometry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Geometry.ForeColor = System.Drawing.Color.Black;
+            this.Geometry.Location = new System.Drawing.Point(520, 81);
+            this.Geometry.Name = "Geometry";
+            this.Geometry.Size = new System.Drawing.Size(32, 20);
+            this.Geometry.TabIndex = 543;
             // 
-            // textBox6
+            // NumEst
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox6.Location = new System.Drawing.Point(520, 56);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(32, 20);
-            this.textBox6.TabIndex = 542;
+            this.NumEst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumEst.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumEst.ForeColor = System.Drawing.Color.Black;
+            this.NumEst.Location = new System.Drawing.Point(520, 56);
+            this.NumEst.Name = "NumEst";
+            this.NumEst.Size = new System.Drawing.Size(32, 20);
+            this.NumEst.TabIndex = 542;
             // 
-            // textBox7
+            // Structure
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox7.Location = new System.Drawing.Point(363, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(31, 20);
-            this.textBox7.TabIndex = 541;
+            this.Structure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Structure.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Structure.ForeColor = System.Drawing.Color.Black;
+            this.Structure.Location = new System.Drawing.Point(363, 81);
+            this.Structure.Name = "Structure";
+            this.Structure.Size = new System.Drawing.Size(31, 20);
+            this.Structure.TabIndex = 541;
             // 
-            // textBox8
+            // Vocab
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox8.Location = new System.Drawing.Point(363, 105);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(31, 20);
-            this.textBox8.TabIndex = 540;
+            this.Vocab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Vocab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vocab.ForeColor = System.Drawing.Color.Black;
+            this.Vocab.Location = new System.Drawing.Point(363, 105);
+            this.Vocab.Name = "Vocab";
+            this.Vocab.Size = new System.Drawing.Size(31, 20);
+            this.Vocab.TabIndex = 540;
             // 
             // label37
             // 
@@ -1706,15 +1713,15 @@ namespace PrimarySchoolAPP
             this.label38.TabIndex = 538;
             this.label38.Text = "Number Estimation\r\nand Mesurement";
             // 
-            // textBox9
+            // Phonics
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox9.Location = new System.Drawing.Point(363, 56);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(31, 20);
-            this.textBox9.TabIndex = 537;
+            this.Phonics.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Phonics.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phonics.ForeColor = System.Drawing.Color.Black;
+            this.Phonics.Location = new System.Drawing.Point(363, 56);
+            this.Phonics.Name = "Phonics";
+            this.Phonics.Size = new System.Drawing.Size(31, 20);
+            this.Phonics.TabIndex = 537;
             // 
             // label39
             // 
@@ -1776,23 +1783,23 @@ namespace PrimarySchoolAPP
             this.label29.TabIndex = 532;
             this.label29.Text = "Score";
             // 
-            // textBox2
+            // NumCon
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(113, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(31, 20);
-            this.textBox2.TabIndex = 528;
+            this.NumCon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumCon.ForeColor = System.Drawing.Color.Black;
+            this.NumCon.Location = new System.Drawing.Point(113, 90);
+            this.NumCon.Name = "NumCon";
+            this.NumCon.Size = new System.Drawing.Size(31, 20);
+            this.NumCon.TabIndex = 528;
             // 
-            // textBox1
+            // OralLang
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(113, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(31, 20);
-            this.textBox1.TabIndex = 527;
+            this.OralLang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.OralLang.ForeColor = System.Drawing.Color.Black;
+            this.OralLang.Location = new System.Drawing.Point(113, 112);
+            this.OralLang.Name = "OralLang";
+            this.OralLang.Size = new System.Drawing.Size(31, 20);
+            this.OralLang.TabIndex = 527;
             // 
             // label30
             // 
@@ -1829,14 +1836,14 @@ namespace PrimarySchoolAPP
             this.label234.Size = new System.Drawing.Size(544, 1);
             this.label234.TabIndex = 523;
             // 
-            // textBox45
+            // GenKnw
             // 
-            this.textBox45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox45.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.textBox45.Location = new System.Drawing.Point(112, 67);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(32, 20);
-            this.textBox45.TabIndex = 318;
+            this.GenKnw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.GenKnw.ForeColor = System.Drawing.Color.Black;
+            this.GenKnw.Location = new System.Drawing.Point(112, 67);
+            this.GenKnw.Name = "GenKnw";
+            this.GenKnw.Size = new System.Drawing.Size(32, 20);
+            this.GenKnw.TabIndex = 318;
             // 
             // label18
             // 
@@ -2116,22 +2123,22 @@ namespace PrimarySchoolAPP
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(13, 16);
@@ -2393,6 +2400,28 @@ namespace PrimarySchoolAPP
             this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.VerticalScrollbarSize = 10;
             // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label68.Location = new System.Drawing.Point(11, 291);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(139, 13);
+            this.label68.TabIndex = 327;
+            this.label68.Text = "Attendance of students";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label67.Location = new System.Drawing.Point(11, 13);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(94, 13);
+            this.label67.TabIndex = 326;
+            this.label67.Text = "List of students";
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2407,22 +2436,22 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewAttendance
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewAttendance.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewAttendance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewAttendance.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAttendance.EnableHeadersVisualStyles = false;
             this.dataGridViewAttendance.Location = new System.Drawing.Point(13, 16);
@@ -2464,22 +2493,22 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewStudent2
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewStudent2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewStudent2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewStudent2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewStudent2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewStudent2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewStudent2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStudent2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStudent2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewStudent2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudent2.EnableHeadersVisualStyles = false;
             this.dataGridViewStudent2.Location = new System.Drawing.Point(13, 16);
@@ -3059,27 +3088,88 @@ namespace PrimarySchoolAPP
             this.Y1T1.Size = new System.Drawing.Size(30, 20);
             this.Y1T1.TabIndex = 227;
             // 
-            // label67
+            // idAssessment
             // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label67.Location = new System.Drawing.Point(11, 13);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(94, 13);
-            this.label67.TabIndex = 326;
-            this.label67.Text = "List of students";
+            this.idAssessment.BackColor = System.Drawing.Color.White;
+            this.idAssessment.Location = new System.Drawing.Point(924, 18);
+            this.idAssessment.Name = "idAssessment";
+            this.idAssessment.ReadOnly = true;
+            this.idAssessment.Size = new System.Drawing.Size(53, 20);
+            this.idAssessment.TabIndex = 532;
             // 
-            // label68
+            // label69
             // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label68.Location = new System.Drawing.Point(11, 291);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(139, 13);
-            this.label68.TabIndex = 327;
-            this.label68.Text = "Attendance of students";
+            this.label69.AutoSize = true;
+            this.label69.BackColor = System.Drawing.Color.White;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label69.Location = new System.Drawing.Point(889, 21);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(28, 13);
+            this.label69.TabIndex = 533;
+            this.label69.Text = "ID#";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Controls.Add(this.dataGridViewStudent3);
+            this.panel6.Location = new System.Drawing.Point(3, 37);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(508, 243);
+            this.panel6.TabIndex = 532;
+            // 
+            // dataGridViewStudent3
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewStudent3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewStudent3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewStudent3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridViewStudent3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewStudent3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStudent3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewStudent3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStudent3.EnableHeadersVisualStyles = false;
+            this.dataGridViewStudent3.Location = new System.Drawing.Point(13, 16);
+            this.dataGridViewStudent3.Name = "dataGridViewStudent3";
+            this.dataGridViewStudent3.Size = new System.Drawing.Size(481, 215);
+            this.dataGridViewStudent3.TabIndex = 0;
+            this.dataGridViewStudent3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudent3_CellClick);
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.BackColor = System.Drawing.Color.White;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label70.Location = new System.Drawing.Point(0, 18);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(75, 13);
+            this.label70.TabIndex = 534;
+            this.label70.Text = "Student List";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.BackColor = System.Drawing.Color.White;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label71.Location = new System.Drawing.Point(0, 312);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(116, 13);
+            this.label71.TabIndex = 535;
+            this.label71.Text = "Assessment Details";
             // 
             // StudentAdd
             // 
@@ -3102,7 +3192,7 @@ namespace PrimarySchoolAPP
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAssessment)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
@@ -3117,6 +3207,8 @@ namespace PrimarySchoolAPP
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3180,7 +3272,7 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label234;
-        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox GenKnw;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private MetroFramework.Controls.MetroTabPage metroTabPage3;
@@ -3195,9 +3287,9 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Label label239;
         private System.Windows.Forms.Label label238;
         private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private System.Windows.Forms.TextBox textBox171;
+        private System.Windows.Forms.TextBox LnameStudent;
         private System.Windows.Forms.Label label244;
-        private System.Windows.Forms.TextBox textBox170;
+        private System.Windows.Forms.TextBox FnameStudent;
         private System.Windows.Forms.Label label287;
         private System.Windows.Forms.Label label261;
         private System.Windows.Forms.Label label262;
@@ -3272,76 +3364,75 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.TextBox FnameTB;
         private System.Windows.Forms.TextBox LastNameTB;
         private System.Windows.Forms.TextBox MiddnameTB;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Reading;
+        private System.Windows.Forms.TextBox WriteDraw;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox ComTask;
+        private System.Windows.Forms.TextBox StudySkills;
+        private System.Windows.Forms.TextBox Statistics;
+        private System.Windows.Forms.TextBox Algebra;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox Geometry;
+        private System.Windows.Forms.TextBox NumEst;
+        private System.Windows.Forms.TextBox Structure;
+        private System.Windows.Forms.TextBox Vocab;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox Phonics;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NumCon;
+        private System.Windows.Forms.TextBox OralLang;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox SocialStudies;
+        private System.Windows.Forms.TextBox Science;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox AbilityTest;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox MathCurriGrade6;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox LangArtCurriGrade6;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox MathGrade6;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox LangArtGrade6;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox MathGrade5;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox LangArtGrade5;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox MathGrade4;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox LangArtGrade4;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button NewBNT;
         private System.Windows.Forms.Button DeleteBNT;
         private System.Windows.Forms.Button UpdateBNT;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button DeleteBTNassessment;
+        private System.Windows.Forms.Button UpdateBTNassessment;
+        private System.Windows.Forms.Button SaveBTNassessment;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
@@ -3350,12 +3441,18 @@ namespace PrimarySchoolAPP
         private System.Windows.Forms.Button UpdateAttenBTN;
         private System.Windows.Forms.Button saveAttenBTN;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridViewAssessment;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.TextBox studentid;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridViewStudent2;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox idAssessment;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView dataGridViewStudent3;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label70;
     }
 }
