@@ -194,6 +194,8 @@ namespace PrimarySchoolAPP
             displayDataStudent();
             displayDataAttendance();
             displayDataAssessment();
+
+           
             StuPhoto.Image = Properties.Resources.user;
         }
 
@@ -647,9 +649,18 @@ namespace PrimarySchoolAPP
 //**************************Students Save**************************************************************      
         private void SaveBNT_Click(object sender, EventArgs e)
         {
+            //DateTime selectedDate = Convert.ToDateTime(DOBStudt.Value);
+            //DateTime todayDate = Convert.ToDateTime(DateTime.Now);
+            //if (selectedDate == todayDate)
+            //{
+            //    MessageBox.Show("Selected date Must be greater then Today's date");
+            //}DateTime.Now.Date - DateTime.DaysInMonth.)
+
+            
 
             try
             {
+               
 
                 if (con.State != ConnectionState.Open)
                     con.Open();
@@ -678,7 +689,11 @@ namespace PrimarySchoolAPP
                     MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     con.Close();
                 }
-
+                if (DOBStudt.Value.Date > DateTime.Now.AddYears(-6))
+                {
+                    MessageBox.Show("Please enter a valid birth date","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DOBStudt.Focus();
+                }
                 else//ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
                 {
                     con.Close();
@@ -700,7 +715,7 @@ namespace PrimarySchoolAPP
                 //    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //}
 
-
+               
             }
 
             catch (Exception ex)
@@ -825,6 +840,9 @@ namespace PrimarySchoolAPP
             SocialStudies.Text = "";
             Science.Text = "";
             WriteDraw.Text = "";
+
+           
+
 
             try
             {
@@ -1072,5 +1090,7 @@ namespace PrimarySchoolAPP
             }
 
         }
+
+        
     }
 }

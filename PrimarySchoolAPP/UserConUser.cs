@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace PrimarySchoolAPP
 {
@@ -113,6 +114,19 @@ namespace PrimarySchoolAPP
         {
             try
             {
+                string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
+            if (Regex.IsMatch(EmailUSER.Text, pattern))
+            {
+                errorProvider1.Clear();
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                errorProvider1.SetError(this.EmailUSER, "Please enter a correct email address");
+                return;
+            }
 
                 if (FnameUSER.Text != ""  && LastNameUSER.Text != ""  && EmailUSER.Text != "" && UsernameUSER.Text != "" && PasswordUSER.Text != "" && RolecomboBx.Text != "" )
                 {
@@ -135,7 +149,7 @@ namespace PrimarySchoolAPP
                 {
                     MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+ 
 
             }
 
@@ -181,7 +195,9 @@ namespace PrimarySchoolAPP
                 RolecomboBx.Focus();
                 errorProvider1.SetError(RolecomboBx, "Please select a Role");
             }
-            
+
+
+           
         }
 
         private void UpdateBNT_Click(object sender, EventArgs e)
@@ -255,6 +271,24 @@ namespace PrimarySchoolAPP
         private void NewBNT_Click(object sender, EventArgs e)
         {
             ClearData();
+        }
+
+        private void EmailUSER_Leave(object sender, EventArgs e)
+        {
+          string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
+          if (Regex.IsMatch(EmailUSER.Text, pattern))
+            {
+                errorProvider1.Clear();
+
+            }
+          else
+            {
+                MessageBox.Show("Please enter a correct email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                errorProvider1.SetError(this.EmailUSER, "Please enter a correct email address");
+                return;
+            }
+
         }
     }
 }

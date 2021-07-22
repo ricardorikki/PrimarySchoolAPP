@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace PrimarySchoolAPP
 {
@@ -83,7 +84,19 @@ namespace PrimarySchoolAPP
         private void SaveAdminBNT_Click(object sender, EventArgs e)
         {
             try
-            {
+            {string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
+                if (Regex.IsMatch(EmailAdminTB.Text, pattern))
+                {
+                    errorProvider1.Clear();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    errorProvider1.SetError(this.EmailAdminTB, "Please enter a correct email address");
+                    return;
+                }
 
                 byte[] img = null;
 
@@ -118,13 +131,18 @@ namespace PrimarySchoolAPP
                     //ClearData();
                     MessageBox.Show(x.ToString() + " Record inserted successfully");
                 }
-
+                 
+                if (DOBadminDT.Value.Date > DateTime.Now.AddYears(-6))
+                {
+                    MessageBox.Show("Please enter a valid birth date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DOBadminDT.Focus();
+                    errorProvider1.SetError(this.DOBadminDT, "Please enter a correct email address");
+                }
                 else
                 {
                     MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
+               
             }
 
             catch (Exception ex)

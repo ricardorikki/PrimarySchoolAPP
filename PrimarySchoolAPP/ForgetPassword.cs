@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace PrimarySchoolAPP
 {
@@ -66,6 +67,21 @@ namespace PrimarySchoolAPP
 
         private void btnRecovery_Click(object sender, EventArgs e)
         {
+            string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
+            if (Regex.IsMatch(txtEmail.Text, pattern))
+            {
+                errorProvider1.Clear();
+
+            }
+            else
+            {
+                MessageBox.Show("Please enter a correct email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                errorProvider1.SetError(this.txtEmail, "Please enter a correct email address");
+                return;
+            }
+
+
             str = "SELECT Username ,Email FROM Login where Username='" + txtUserName.Text + "' and  Email='" + txtEmail.Text + "'";
             con.Open();
             cmd = new SqlCommand(str, con);
