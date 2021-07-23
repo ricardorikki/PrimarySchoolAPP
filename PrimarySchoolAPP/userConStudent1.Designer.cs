@@ -29,11 +29,11 @@ namespace PrimarySchoolAPP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TeacherSearTB = new System.Windows.Forms.TextBox();
-            this.TeacherSearCBO = new System.Windows.Forms.ComboBox();
+            this.StudentSearTB = new System.Windows.Forms.TextBox();
+            this.StudentSearCOBO = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewStudent = new System.Windows.Forms.DataGridView();
             this.editBNT = new System.Windows.Forms.Button();
@@ -44,8 +44,8 @@ namespace PrimarySchoolAPP
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.TeacherSearTB);
-            this.groupBox1.Controls.Add(this.TeacherSearCBO);
+            this.groupBox1.Controls.Add(this.StudentSearTB);
+            this.groupBox1.Controls.Add(this.StudentSearCOBO);
             this.groupBox1.Location = new System.Drawing.Point(12, 19);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(369, 45);
@@ -53,27 +53,28 @@ namespace PrimarySchoolAPP
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
-            // TeacherSearTB
+            // StudentSearTB
             // 
-            this.TeacherSearTB.Location = new System.Drawing.Point(6, 18);
-            this.TeacherSearTB.Name = "TeacherSearTB";
-            this.TeacherSearTB.Size = new System.Drawing.Size(223, 20);
-            this.TeacherSearTB.TabIndex = 67;
+            this.StudentSearTB.Location = new System.Drawing.Point(6, 18);
+            this.StudentSearTB.Name = "StudentSearTB";
+            this.StudentSearTB.Size = new System.Drawing.Size(223, 20);
+            this.StudentSearTB.TabIndex = 67;
+            this.StudentSearTB.TextChanged += new System.EventHandler(this.StudentSearTB_TextChanged);
             // 
-            // TeacherSearCBO
+            // StudentSearCOBO
             // 
-            this.TeacherSearCBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TeacherSearCBO.FormattingEnabled = true;
-            this.TeacherSearCBO.Items.AddRange(new object[] {
+            this.StudentSearCOBO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StudentSearCOBO.FormattingEnabled = true;
+            this.StudentSearCOBO.Items.AddRange(new object[] {
+            "Student ID",
+            "ERN",
             "First Name",
             "Last Name",
-            "Gender",
-            "Status",
-            "Rank"});
-            this.TeacherSearCBO.Location = new System.Drawing.Point(235, 17);
-            this.TeacherSearCBO.Name = "TeacherSearCBO";
-            this.TeacherSearCBO.Size = new System.Drawing.Size(112, 21);
-            this.TeacherSearCBO.TabIndex = 96;
+            "Gender"});
+            this.StudentSearCOBO.Location = new System.Drawing.Point(235, 17);
+            this.StudentSearCOBO.Name = "StudentSearCOBO";
+            this.StudentSearCOBO.Size = new System.Drawing.Size(112, 21);
+            this.StudentSearCOBO.TabIndex = 96;
             // 
             // panel2
             // 
@@ -86,19 +87,19 @@ namespace PrimarySchoolAPP
             // 
             // dataGridViewStudent
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dataGridViewStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
+            this.dataGridViewStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewStudent.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridViewStudent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewStudent.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudent.EnableHeadersVisualStyles = false;
             this.dataGridViewStudent.Location = new System.Drawing.Point(13, 16);
@@ -139,8 +140,8 @@ namespace PrimarySchoolAPP
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox TeacherSearTB;
-        private System.Windows.Forms.ComboBox TeacherSearCBO;
+        private System.Windows.Forms.TextBox StudentSearTB;
+        private System.Windows.Forms.ComboBox StudentSearCOBO;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridViewStudent;
         private System.Windows.Forms.Button editBNT;

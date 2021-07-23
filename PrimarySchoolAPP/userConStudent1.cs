@@ -32,7 +32,7 @@ namespace PrimarySchoolAPP
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Student";
+                cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo FROM Student";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -71,6 +71,102 @@ namespace PrimarySchoolAPP
             this.Dispose(false);
             das.Hide();
             this.Hide();
+        }
+
+        private void StudentSearTB_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+                if (StudentSearCOBO.Text == "Student ID")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo FROM Student where [id] like'" + StudentSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewStudent.DataSource = dt;
+                }
+
+                else if (StudentSearCOBO.Text == "ERN")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo from Student where [ERN] like'" + StudentSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewStudent.DataSource = dt;
+                }
+
+
+                else if (StudentSearCOBO.Text == "First Name")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo FROM Student where [FisrtName] like'" + StudentSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewStudent.DataSource = dt;
+                }
+                else if (StudentSearCOBO.Text == "Last Name")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo FROM Student where [LastName] like'" + StudentSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewStudent.DataSource = dt;
+                }
+
+               
+                else if (StudentSearCOBO.Text == "Gender")
+                {
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo FROM Student where [Gender] like'" + StudentSearTB.Text + "%' ";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+
+                    dataGridViewStudent.DataSource = dt;
+                }
+               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

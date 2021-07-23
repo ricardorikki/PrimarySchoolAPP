@@ -35,7 +35,7 @@ namespace PrimarySchoolAPP
                 }
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Student";
+                cmd.CommandText = "SELECT id[Student ID], ERN, FisrtName[First Name], MiddleName[Middle Name], LastName[Last Name], BirthNum[Birth Cert. #], DOB[Date of Birth], DOReg[Date of Reg.], House, Club, Gender, StudentAddress[Student Address], MotherName[Mother Name], MatherOccupation[Mother Occupation], MotherAddress[Mother Address], MotherTel[Mother Telephone], FatherName[Father Name], FatherOccupation[Father Occupation], FatherAddress[Father Address], FatherTel[Father Telephone], GuardianName[Guardian Name], GuardianOccupation[Guardian Occupation], GuardianAddress[Guardian Address], GuardianTel[Guardian Telephone], Photo FROM Student";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -43,11 +43,12 @@ namespace PrimarySchoolAPP
                 dataGridViewStudent.DataSource = dt;
                 dataGridViewStudent2.DataSource = dt;
                 dataGridViewStudent3.DataSource = dt;
+                dataGridViewStudentHealth.DataSource = dt;
                 da.Update(dt);
                 dataGridViewStudent.AllowUserToAddRows = false;
                 dataGridViewStudent2.AllowUserToAddRows = false;
                 dataGridViewStudent3.AllowUserToAddRows = false;
-
+                dataGridViewStudentHealth.AllowUserToAddRows = false;
             }
             catch (Exception ex)
             {
@@ -72,7 +73,7 @@ namespace PrimarySchoolAPP
 
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT  Student.id[student ID],Student.FisrtName[First Name], Student.MiddleName[Middle Name], Student.LastName[Last Name], Student.DOB[Date of Birth], .Attendance.Yr1_Term1[Grade 1 Term1], Attendance.Yr1_Term2[Grade 1 Term2], Attendance.Yr1_Term3[Grade 1 Term3], Attendance.Yr2_Term1[Grade 2 Term1],Attendance.Yr2_Term2[Grade 2 Term2], Attendance.Yr2_Term3[Grade 2 Term3], Attendance.Yr3_Term1[Grade 3 Term1], Attendance.Yr3_Term2[Grade 3 Term2], Attendance.Yr3_Term3[Grade 3 Term3], Attendance.Yr4_Term1[Grade 4 Term1], Attendance.Yr4_Term2[Grade 4 Term2], Attendance.Yr4_Term3[Grade 4 Term3],Attendance.Yr5_Term1[Grade 5 Term1], Attendance.Yr5_Term2[Grade 5 Term2], Attendance.Yr5_Term3[Grade 5 Term3], Attendance.Yr6_Term1[Grade 6 Term1], Attendance.Yr6_Term2[Grade 6 Term2], Attendance.Yr6_Term3[Grade 6 Term3],Student.Photo FROM Attendance INNER JOIN Student ON Attendance.id_Stu = Student.id";
+                cmd.CommandText = "SELECT  Student.id[Student ID],Student.FisrtName[First Name], Student.MiddleName[Middle Name], Student.LastName[Last Name], Student.DOB[Date of Birth], .Attendance.Yr1_Term1[Grade 1 Term1], Attendance.Yr1_Term2[Grade 1 Term2], Attendance.Yr1_Term3[Grade 1 Term3], Attendance.Yr2_Term1[Grade 2 Term1],Attendance.Yr2_Term2[Grade 2 Term2], Attendance.Yr2_Term3[Grade 2 Term3], Attendance.Yr3_Term1[Grade 3 Term1], Attendance.Yr3_Term2[Grade 3 Term2], Attendance.Yr3_Term3[Grade 3 Term3], Attendance.Yr4_Term1[Grade 4 Term1], Attendance.Yr4_Term2[Grade 4 Term2], Attendance.Yr4_Term3[Grade 4 Term3],Attendance.Yr5_Term1[Grade 5 Term1], Attendance.Yr5_Term2[Grade 5 Term2], Attendance.Yr5_Term3[Grade 5 Term3], Attendance.Yr6_Term1[Grade 6 Term1], Attendance.Yr6_Term2[Grade 6 Term2], Attendance.Yr6_Term3[Grade 6 Term3],Student.Photo FROM Attendance INNER JOIN Student ON Attendance.id_Stu = Student.id";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -107,7 +108,7 @@ namespace PrimarySchoolAPP
 
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT Student.ERN, Student.FisrtName, Student.MiddleName[Middle Name], Student.LastName[Last Name], National_Assessment.GenKnowledge[General Knowledge], National_Assessment.NumberConcepts[Number Concepts], National_Assessment.OralLang[Oral Language], National_Assessment.Reading, National_Assessment.Structure, National_Assessment.Vocab[Vocabulary], National_Assessment.StudySkills[Study Skills], National_Assessment.ComTask[Com. Task], National_Assessment.NumEst[Number Estimation & Measurement], National_Assessment.Geometry, National_Assessment.Algebra, National_Assessment.[Statistics], National_Assessment.LangArtGrade4[Lang. Arts Grade 4], National_Assessment.MathGrade4[Math Grade 4],National_Assessment.LangArtGrade5[Lang. Arts Grade 5], National_Assessment.MathGrade5[Math Grade 5], National_Assessment.LangArtGrade6[Lang. Arts 6], National_Assessment.AbilityTest[Ability Test], National_Assessment.MathGrade6[Math Grade 6],National_Assessment.LangArtGrade6Curri[Lang. Arts Grade 6 Curriculum], National_Assessment.MathGrade6Curri[Math Grade 6 Curriculum], National_Assessment.Science,National_Assessment.SocialStudies[Social Studies], National_Assessment.id_Stu, National_Assessment.WritingDrawing[Writing Drawing] FROM Student INNER JOIN National_Assessment ON Student.id = National_Assessment.id_Stu";
+                cmd.CommandText = "SELECT Student.ERN, Student.FisrtName, Student.MiddleName[Middle Name], Student.LastName[Last Name], National_Assessment.GenKnowledge[General Knowledge], National_Assessment.NumberConcepts[Number Concepts], National_Assessment.OralLang[Oral Language], National_Assessment.Reading, National_Assessment.Structure, National_Assessment.Vocab[Vocabulary], National_Assessment.StudySkills[Study Skills], National_Assessment.ComTask[Com. Task], National_Assessment.NumEst[Number Estimation & Measurement], National_Assessment.Geometry, National_Assessment.Algebra, National_Assessment.[Statistics], National_Assessment.LangArtGrade4[Lang. Arts Grade 4], National_Assessment.MathGrade4[Math Grade 4],National_Assessment.LangArtGrade5[Lang. Arts Grade 5], National_Assessment.MathGrade5[Math Grade 5], National_Assessment.LangArtGrade6[Lang. Arts 6], National_Assessment.AbilityTest[Ability Test], National_Assessment.MathGrade6[Math Grade 6],National_Assessment.LangArtGrade6Curri[Lang. Arts Grade 6 Curriculum], National_Assessment.MathGrade6Curri[Math Grade 6 Curriculum], National_Assessment.Science,National_Assessment.SocialStudies[Social Studies], National_Assessment.id_Stu[Student ID], National_Assessment.WritingDrawing[Writing Drawing] FROM Student INNER JOIN National_Assessment ON Student.id = National_Assessment.id_Stu";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -115,6 +116,41 @@ namespace PrimarySchoolAPP
                 dataGridViewAssessment.DataSource = dt;
                 da.Update(dt);
                 dataGridViewAssessment.AllowUserToAddRows = false;
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        public void displayDataHealth()
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT Stu_Health.id_Student[Student ID], Student.ERN, Student.FisrtName[First Name], Student.MiddleName[Middle Name],Student.LastName[Last Name], Stu_Health.Physical_Defects[Physical Defects], Stu_Health.Asthmatic, Stu_Health.Heart_Problem[Heart Problem], Stu_Health.Urinary_Disorder[Urinary Disorder],  Stu_Health.Ear_Problem[Ear Problem], Stu_Health.Eye_Problem[Eye Problem], Stu_Health.Other, Student.Photo FROM Student INNER JOIN Stu_Health ON Student.id = Stu_Health.id_Student";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridViewHealth.DataSource = dt;
+                da.Update(dt);
+                dataGridViewHealth.AllowUserToAddRows = false;
 
 
 
@@ -166,7 +202,7 @@ namespace PrimarySchoolAPP
             MaximizeBox = false;
             ControlBox = true;
             metroTabPage1.Text = @"Bio";
-            metroTabPage2.Text = @"Personality Record";
+            metroTabPage2.Text = @"Assessment";
             metroTabPage3.Text = @"Health Record";
             metroTabPage4.Text = @"Attendance Record";
            
@@ -194,8 +230,10 @@ namespace PrimarySchoolAPP
             displayDataStudent();
             displayDataAttendance();
             displayDataAssessment();
+            displayDataHealth();
 
-           
+
+
             StuPhoto.Image = Properties.Resources.user;
         }
 
@@ -422,7 +460,7 @@ namespace PrimarySchoolAPP
                 //cmd.Parameters.Add(new SqlParameter("@img", img));
                 int x = cmd.ExecuteNonQuery();
                 displayDataAttendance();
-                MessageBox.Show("Record updated successfully","Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Record updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                // ClearData();
             }
             catch (Exception ex)
@@ -529,10 +567,16 @@ namespace PrimarySchoolAPP
         {
             try
             {
-                if (con.State != ConnectionState.Open)
+
+               
+
+                if (IDStuTB.Text != "")
                 {
                     con.Open();
-                }
+                
+               
+
+                
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "Delete From Student WHERE id='" + IDStuTB.Text + "'";
@@ -544,8 +588,57 @@ namespace PrimarySchoolAPP
                 dataGridViewStudent.DataSource = dt;
                 displayDataStudent();
                 MessageBox.Show("Record Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //ClearData();
+                              
+                    IDStuTB.Text = "";
+                    ERN.Text = "";
+                    FnameStuTB.Text = "";
+                    MiddnameStuTB.Text = "";
+                    LastNameStuTB.Text = ""; ;
+                    BirthNum.Text = "";
+                    DOBStudt.Text = "";
+                    DateRegdt.Text = "";
+                    HousecomboBx.Items.Clear();
+
+                    ClubcomboBx.Items.Clear();
+                    GenderComBx.Items.Clear();
+                    GenderComBx.Items.Add("Male");
+                    GenderComBx.Items.Add("Female");
+                    ClubcomboBx.Items.Add("Computer");
+                    ClubcomboBx.Items.Add("4H");
+                    ClubcomboBx.Items.Add("Builders");
+                    ClubcomboBx.Items.Add("Cub Scout");
+                    ClubcomboBx.Items.Add("Girls Guide");
+                    HousecomboBx.Items.Add("Red-Fullerton");
+                    HousecomboBx.Items.Add("Blue-McLoud");
+                    HousecomboBx.Items.Add("Yellow-Dalass");
+                    HousecomboBx.Items.Add("Purple-AJ'S");
+                    StuAddress.Text = "";
+                    motherName.Text = "";
+                    mothersOccupation.Text = "";
+                    motherAddress.Text = "";
+                    mothersTelephone.Text = "";
+                    fathersName.Text = "";
+                    fathersOccupation.Text = "";
+                    fathersAddress.Text = "";
+                    fathersTelephone.Text = "";
+                    GuardianName.Text = "";
+                    GuardianOccupation.Text = "";
+                    GuardianAddress.Text = "";
+                    GuardianTelephone.Text = "";
+                    StuPhoto.Image = Properties.Resources.user;
+
+                }
+              else if(IDStuTB.Text == "")
+                {
+                    MessageBox.Show("Data Match Error: No data found. Please Check if the Student defails was selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
+               
             }
+
+
+
+
             catch (Exception ex)
             {
 
@@ -554,7 +647,10 @@ namespace PrimarySchoolAPP
             finally
             {
                 con.Close();
-            }
+            } 
+            
+            
+            
         }
  //**************************Students Update**************************************************************
         private void UpdateBNT_Click(object sender, EventArgs e)
@@ -649,15 +745,7 @@ namespace PrimarySchoolAPP
 //**************************Students Save**************************************************************      
         private void SaveBNT_Click(object sender, EventArgs e)
         {
-            //DateTime selectedDate = Convert.ToDateTime(DOBStudt.Value);
-            //DateTime todayDate = Convert.ToDateTime(DateTime.Now);
-            //if (selectedDate == todayDate)
-            //{
-            //    MessageBox.Show("Selected date Must be greater then Today's date");
-            //}DateTime.Now.Date - DateTime.DaysInMonth.)
-
             
-
             try
             {
                
@@ -682,7 +770,6 @@ namespace PrimarySchoolAPP
 
                 SqlCommand cmd = new SqlCommand("SELECT * from Student where ERN =@ERN", con);
                 cmd.Parameters.AddWithValue("@ERN", ERN.Text.ToLower());
-                //con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
@@ -694,7 +781,7 @@ namespace PrimarySchoolAPP
                     MessageBox.Show("Please enter a valid birth date","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DOBStudt.Focus();
                 }
-                else//ERN.Text != "" && FnameStuTB.Text != "" && MiddnameStuTB.Text != "" && LastNameStuTB.Text != "" && BirthNum.Text != "" && DOBStudt.Text != "" && DateRegdt.Text != ""   && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && GenderComBx.Text != "" && StuAddress.Text !=  ""  && motherName.Text != "" && mothersOccupation.Text != "" && motherAddress.Text != "" && mothersTelephone.Text != "" && fathersName.Text != "" && fathersOccupation.Text != "" && fathersAddress.Text != "" && fathersTelephone.Text != ""&& GuardianName.Text != "" && GuardianOccupation.Text != "" && GuardianAddress.Text != "" && GuardianTelephone.Text != "")
+                else
                 {
                     con.Close();
                     con.Open();
@@ -710,12 +797,7 @@ namespace PrimarySchoolAPP
                     MessageBox.Show(x.ToString() + " Record inserted successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                //else
-                //{
-                //    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
-
-               
+                               
             }
 
             catch (Exception ex)
@@ -947,10 +1029,10 @@ namespace PrimarySchoolAPP
         {
             try
             {
-                if (con.State != ConnectionState.Open)
+                if (idAssessment.Text != "")
                 {
                     con.Open();
-                }
+                
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "Delete From National_Assessment WHERE id_Stu='" + idAssessment.Text + "'";
@@ -963,6 +1045,13 @@ namespace PrimarySchoolAPP
                 displayDataAssessment();
                 MessageBox.Show("Record Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clear();
+                }
+                else if (idAssessment.Text == "")
+                {
+                    MessageBox.Show("Data Match Error: No data found. Please Check if the Student Assessment defails was selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
+
             }
             catch (Exception ex)
             {
@@ -1091,6 +1180,245 @@ namespace PrimarySchoolAPP
 
         }
 
-        
+        private void SaveHealthBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                    con.Open();
+
+                byte[] img = null;
+
+                if (StuPhoto.Image != null)
+                {
+                    MemoryStream ms = new MemoryStream();
+                    StuPhoto.Image.Save(ms, StuPhoto.Image.RawFormat);
+                    img = ms.GetBuffer();
+                    ms.Close();
+                }
+
+                if (StuPhoto.Image == null)
+                {
+                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from Stu_Health where id_Student =@id_Student", con);
+                cmd.Parameters.AddWithValue("@id_Student", IDstudentHealth.Text.ToLower());
+                //con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
+                else
+                {
+                    con.Close();
+                    con.Open();
+                    cmd = new SqlCommand("INSERT INTO Stu_Health( Physical_Defects, Asthmatic, Heart_Problem, Urinary_Disorder, Ear_Problem, Eye_Problem, Other, id_Student) VALUES(@Physical_Defects, @Asthmatic, @Heart_Problem, @Urinary_Disorder, @Ear_Problem, @Eye_Problem, @Other, @id_Student)", con);
+                    //cmd = new SqlCommand("INSERT INTO Attendance(id_Stu) VALUES(@id_Stu)", con);
+                    
+                    cmd.Parameters.AddWithValue("@Physical_Defects", PhysicalTB.Text);
+                    cmd.Parameters.AddWithValue("@Asthmatic", AsthmaticTB .Text);
+                    cmd.Parameters.AddWithValue("@Heart_Problem", HeartTB.Text);
+                    cmd.Parameters.AddWithValue("@Urinary_Disorder", UrinaryTB.Text);
+                    cmd.Parameters.AddWithValue("@Ear_Problem", EarTB.Text);
+                    cmd.Parameters.AddWithValue("@Eye_Problem", EyeTB.Text);
+                    cmd.Parameters.AddWithValue("@Other", OtherTB.Text);
+                    cmd.Parameters.AddWithValue("@id_Student", IDstudentHealth.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record was saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    displayDataHealth();
+                }
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        private void UpdateHealthBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+
+                SqlCommand cmd = con.CreateCommand();
+                string Sql = "UPDATE Stu_Health SET Physical_Defects='"+PhysicalTB.Text+ "', Asthmatic='" + AsthmaticTB.Text + "', Heart_Problem='" + HeartTB.Text + "', Urinary_Disorder='" + UrinaryTB.Text + "', Ear_Problem='" + EarTB.Text + "', Eye_Problem='" + EyeTB.Text + "', Other='" + OtherTB.Text + "' WHERE id_Student = '" + IDstudentHealth.Text + "'";
+
+                cmd = new SqlCommand(Sql, con);
+                //cmd.Parameters.Add(new SqlParameter("@img", img));
+                int x = cmd.ExecuteNonQuery();
+                displayDataHealth();
+                MessageBox.Show("Record updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // ClearData();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }
+       
+        private void DeleteHealthBTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+          
+
+                        if (IDstudentHealth.Text != "")
+                        {
+                            con.Open();
+                            SqlCommand cmd = con.CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "Delete From Stu_Health WHERE id_Student='" + IDstudentHealth.Text + "'";
+                            cmd.ExecuteNonQuery();
+                            DataTable dt = new DataTable();
+                            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                            da.Fill(dt);
+                            da.Update(dt);
+                            dataGridViewStudent.DataSource = dt;
+                            displayDataHealth();
+                            MessageBox.Show("Record Deleted successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            IDstudentHealth.Text = "";
+                            FnameHealth.Text = "";
+                            MnameHealth.Text = "";
+                            LnameHealth.Text = "";
+                            PhysicalTB.Text = "";
+                            AsthmaticTB.Text = "";
+                            HeartTB.Text = "";
+                            UrinaryTB.Text = "";
+                            EarTB.Text = "";
+                            EyeTB.Text = "";
+                            OtherTB.Text = "";
+                        } 
+                        
+                        else if (IDstudentHealth.Text == "")
+                        {
+                            MessageBox.Show("Data Match Error: No data found. Please Check if the Student Health defails was selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            con.Close();
+                        }
+                    
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            } 
+            
+
+        }
+
+        private void dataGridViewStudentHealth_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PhysicalTB.Text = "";
+            HeartTB.Text =  "";
+            AsthmaticTB.Text = "";
+            UrinaryTB.Text = "";
+            EarTB.Text = "";
+            EyeTB.Text = "";
+            OtherTB.Text = "";
+
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewStudentHealth.Rows[e.RowIndex];
+                    IDstudentHealth.Text = row.Cells[0].Value.ToString();
+                    FnameHealth.Text = row.Cells[2].Value.ToString();
+                    MnameHealth.Text = row.Cells[3].Value.ToString();
+                    LnameHealth.Text = row.Cells[4].Value.ToString();
+                    var data = (Byte[])(row.Cells[24].Value);
+                    var stream = new MemoryStream(data);
+                    StudenPhotoHealth.Image = Image.FromStream(stream);
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        private void dataGridViewStuHealth_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+
+            {
+
+                if (con.State != ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = this.dataGridViewHealth.Rows[e.RowIndex];
+                    IDstudentHealth.Text = row.Cells[0].Value.ToString();
+                    FnameHealth.Text = row.Cells[2].Value.ToString();
+                    MnameHealth.Text = row.Cells[3].Value.ToString();
+                    LnameHealth.Text = row.Cells[4].Value.ToString();
+                    PhysicalTB.Text = row.Cells[5].Value.ToString();
+                    AsthmaticTB.Text = row.Cells[6].Value.ToString();
+                    HeartTB.Text = row.Cells[7].Value.ToString();
+                    UrinaryTB.Text = row.Cells[8].Value.ToString();
+                    EarTB.Text = row.Cells[9].Value.ToString();
+                    EyeTB.Text = row.Cells[10].Value.ToString();
+                    OtherTB.Text = row.Cells[11].Value.ToString();
+                    var data = (Byte[])(row.Cells[12].Value);
+                    var stream = new MemoryStream(data);
+                    StudenPhotoHealth.Image = Image.FromStream(stream);
+                }
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 }
