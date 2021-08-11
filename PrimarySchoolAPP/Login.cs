@@ -57,81 +57,6 @@ namespace PrimarySchoolAPP
 
 
 
-            //    try
-            //    {
-            //        SqlConnection myConnection = default(SqlConnection);
-            //        myConnection = new SqlConnection(conString);
-
-            //        SqlCommand myCommand = default(SqlCommand);
-
-            //        myCommand = new SqlCommand("SELECT Username,Password FROM login WHERE Username = @Username AND Password = @Password", myConnection);
-
-            //        SqlParameter uName = new SqlParameter("@Username", SqlDbType.VarChar);
-            //        SqlParameter uPassword = new SqlParameter("@Password", SqlDbType.VarChar);
-
-            //        uName.Value = tbUser.Text;
-            //        uPassword.Value = tbPass.Text;
-
-            //        myCommand.Parameters.Add(uName);
-            //        myCommand.Parameters.Add(uPassword);
-
-            //        myCommand.Connection.Open();
-
-            //        SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
-
-            //        if (myReader.Read() == true)
-            //        {
-            //            MessageBox.Show("Login was successful, welcome " + tbUser.Text, "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            this.Hide();
-            //            Dashboard dashboard = new Dashboard();
-            //            dashboard.ShowDialog();
-
-
-            //        }
-
-
-            //        else
-            //        {
-            //            MessageBox.Show("Incorect Username or Password", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            //            tbUser.Clear();
-            //            tbPass.Clear();
-            //            tbUser.Focus();
-            //        }
-
-            //        var role1 = Login.Role.FirstOrDefault();
-            //        var rolename = Role.
-
-
-            //        if (myReader.HasRows)
-            //        {
-            //            myReader.Read();
-            //            if (myReader[6].ToString() == "User")
-            //            {
-            //                Role = "U";
-            //            }
-            //            else if (myReader[6].ToString() == "Admin")
-            //            {
-            //                Role = "A";
-            //            }
-            //        }
-
-
-
-            //        if (myConnection.State == ConnectionState.Open)
-            //        {
-            //            myConnection.Dispose();
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-
-
-
-
             try
             {
                 using (db.con)
@@ -162,7 +87,7 @@ namespace PrimarySchoolAPP
                     }
                     else
                     {
-                        MessageBox.Show("ERROR");
+                        MessageBox.Show("Incorrect Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
 

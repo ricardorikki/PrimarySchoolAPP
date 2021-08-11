@@ -267,22 +267,26 @@ namespace PrimarySchoolAPP
         {
             try
             {
-                if (con.State != ConnectionState.Open)
+                if (MessageBox.Show("You are about to detele the selected record, Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
                 {
-                    con.Open();
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "delete from Watchmen where ID ='" + IDWatchTB.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+                    dataGridViewWatch.DataSource = dt;
+                    displayDataWatch();
+                    MessageBox.Show("Record Deleted successfully");
+                    ClearData();
                 }
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "delete from Watchmen where ID ='" + IDWatchTB.Text + "'";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                da.Update(dt);
-                dataGridViewWatch.DataSource = dt;
-                displayDataWatch();
-                MessageBox.Show("Record Deleted successfully");
-                ClearData();
             }
             catch (Exception ex)
             {

@@ -289,6 +289,7 @@ namespace PrimarySchoolAPP
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Style = MetroFramework.MetroColorStyle.White;
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Login_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

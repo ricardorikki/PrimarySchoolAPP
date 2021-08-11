@@ -173,19 +173,7 @@ namespace PrimarySchoolAPP
         {
 
             try {
-                string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
-                if (Regex.IsMatch(EmailTB.Text, pattern))
-                {
-                    errorProvider1.Clear();
-
-                }
-                else
-                {
-                    MessageBox.Show("Please enter a correct email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    errorProvider1.SetError(this.EmailTB, "Please enter a valid email address");
-                    return;
-                }
+                
 
                 byte[] img = null;
 
@@ -197,15 +185,15 @@ namespace PrimarySchoolAPP
                     ms.Close();
                 }
 
-                if (TeacherPhoto.Image == null)
-                {
-                    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //if (TeacherPhoto.Image == null)
+                //{
+                //    MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
 
 
 
-                if (FnameTB.Text != "" && MiddnameTB.Text != "" && LastNameTB.Text != "" && DOBdt.Text != "" && GenderComBx.Text != "" && DateAppointmentdt.Text != "" && EmailTB.Text != "" && StatcomboBx.Text != "" && RankcomboBx.Text != "" && HousecomboBx.Text != "" && ClubcomboBx.Text != "" && NOKnameTB.Text != "" && NOKconTB.Text != "")
- {
+                if (FnameTB.Text != ""  && LastNameTB.Text != "" && DOBdt.Text != "" && GenderComBx.Text != ""&& EmailTB.Text != "" )
+                    {
                     string sql = "INSERT INTO Teachers(FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,Rank,House,Club,NextKin,NextKinCon,Photo) values('" + FnameTB.Text + "','" + MiddnameTB.Text + "', '" + LastNameTB.Text + "','" + DOBdt.Text + "','" + GenderComBx.Text + "','" + DateAppointmentdt.Text + "','" + EmailTB.Text + "','" + StatcomboBx.Text + "','" + RankcomboBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + NOKnameTB.Text + "','" + NOKconTB.Text + "',@img)";
 
                     if (con.State != ConnectionState.Open)
@@ -225,12 +213,28 @@ namespace PrimarySchoolAPP
                     MessageBox.Show("Please enter a valid birth date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DOBdt.Focus();
                 }
-                else
+                if (FnameTB.Text == "" && LastNameTB.Text == "" && GenderComBx.Text == "")
                 {
-                    MessageBox.Show("Please Provide Details!", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Provide First Name, Last Name and Gender", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    errorProvider1.SetError(this.FnameTB, "Please enter First Name");
+                    errorProvider1.SetError( this.LastNameTB,  "Please enter Last Name");
+                    errorProvider1.SetError(this.GenderComBx, "Please enter Gender");
+                    return;
                 }
 
+                string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
+                if (Regex.IsMatch(EmailTB.Text, pattern))
+                {
+                    errorProvider1.Clear();
 
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a correct email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    errorProvider1.SetError(this.EmailTB, "Please enter a valid email address");
+                    return;
+                }
             }
 
             catch (Exception ex)
@@ -243,53 +247,31 @@ namespace PrimarySchoolAPP
 
 
 
-            if (string.IsNullOrEmpty(FnameTB.Text))
-            {
-                FnameTB.Focus();
-                errorProvider1.SetError(FnameTB, "Please Enter First Name");
-            }
-            if (string.IsNullOrEmpty(MiddnameTB.Text))
-            {
-               MiddnameTB.Focus();
-                errorProvider1.SetError(MiddnameTB, "Please Enter Middle Name");
-            }
-            if (string.IsNullOrEmpty(LastNameTB.Text))
-            {
-                LastNameTB.Focus();
-                errorProvider1.SetError(LastNameTB, "Please Enter Last Name");
-            }
-            
-            if (string.IsNullOrEmpty(EmailTB.Text))
-            {
-                EmailTB.Focus();
-                errorProvider1.SetError(EmailTB, "Please Enter Email Address");
-            }
-           
-            if (string.IsNullOrEmpty(StatcomboBx.Text))
-            {
-                StatcomboBx.Focus();
-                errorProvider1.SetError(StatcomboBx, "Please select a Status");
-            }
-            if (string.IsNullOrEmpty(RankcomboBx.Text))
-            {
-                RankcomboBx.Focus();
-                errorProvider1.SetError(RankcomboBx, "Please select a Rank");
-            }
-            if (string.IsNullOrEmpty(NOKnameTB.Text))
-            {
-                NOKnameTB.Focus();
-                errorProvider1.SetError(NOKnameTB, "Please Enter Next of Kin Name");
-            }
-            if (string.IsNullOrEmpty(NOKconTB.Text))
-            {
-                NOKconTB.Focus();
-                errorProvider1.SetError(NOKconTB, "Please Enter Next of Kin Contact");
-            }
-            if (string.IsNullOrEmpty(GenderComBx.Text))
-            {
-                GenderComBx.Focus();
-                errorProvider1.SetError(GenderComBx, "Please select your gender");
-            }
+            //if (string.IsNullOrEmpty(FnameTB.Text))
+            //{
+            //    FnameTB.Focus();
+            //    errorProvider1.SetError(FnameTB, "Please Enter First Name");
+            //}
+
+            //if (string.IsNullOrEmpty(LastNameTB.Text))
+            //{
+            //    LastNameTB.Focus();
+            //    errorProvider1.SetError(LastNameTB, "Please Enter Last Name");
+            //}
+
+            //if (string.IsNullOrEmpty(EmailTB.Text))
+            //{
+            //    EmailTB.Focus();
+            //    errorProvider1.SetError(EmailTB, "Please Enter Email Address");
+            //}
+
+
+
+            //if (string.IsNullOrEmpty(GenderComBx.Text))
+            //{
+            //    GenderComBx.Focus();
+            //    errorProvider1.SetError(GenderComBx, "Please select your gender");
+            //}
 
 
 
@@ -479,25 +461,29 @@ namespace PrimarySchoolAPP
 
         private void DeleteBNT_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
-                if (con.State != ConnectionState.Open)
+                if (MessageBox.Show("You are about to detele the selected record, Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
                 {
-                    con.Open();
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "delete from Teachers where ID ='" + IDtb.Text + "'";
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                    da.Update(dt);
+                    dataGridViewTeachers.DataSource = dt;
+                    displayDataTeachers();
+                    MessageBox.Show("Record Deleted successfully");
+                    ClearData();
                 }
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "delete from Teachers where ID ='" + IDtb.Text + "'";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                da.Update(dt);
-                dataGridViewTeachers.DataSource = dt;
-                displayDataTeachers();
-                MessageBox.Show("Record Deleted successfully"); 
-                ClearData();
             }
             catch (Exception ex)
             {
