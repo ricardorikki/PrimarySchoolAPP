@@ -13,8 +13,11 @@ namespace PrimarySchoolAPP
         public SqlConnection con;
         public MyConnection()
         {
-            
+
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["CC"].ConnectionString);
+            // con = "Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=EdHardware;Integrated Security=True";
+
+
         }
 
         public static string type;

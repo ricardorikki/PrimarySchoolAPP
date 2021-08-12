@@ -68,12 +68,12 @@ namespace PrimarySchoolAPP
 
             if (MyConnection.type == "A")
             {
-               UsersBNT.Visible = true;
+               UsersBNT.Enabled = true;
                
             }
             else if (MyConnection.type == "U")
             {
-                UsersBNT.Visible = false;
+                UsersBNT.Enabled = false;
                
             }
 

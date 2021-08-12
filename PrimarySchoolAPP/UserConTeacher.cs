@@ -18,7 +18,7 @@ namespace PrimarySchoolAPP
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
 
         // (@"Data Source=DESKTOP-SINTN8E\SQLEXPRESS;Initial Catalog=EdHardware;Integrated Security=True");
-        SqlCommand cmd;
+        //SqlCommand cmd;
         string imgLoc = "";
         public userConTeacher()
         {
@@ -172,8 +172,10 @@ namespace PrimarySchoolAPP
         private void SaveBNT_Click(object sender, EventArgs e)
         {
 
-            try {
-                
+            try
+            {
+                if (con.State != ConnectionState.Open)
+                    con.Open();
 
                 byte[] img = null;
 
@@ -191,49 +193,89 @@ namespace PrimarySchoolAPP
                 //}
 
 
+                if (string.IsNullOrEmpty(FnameTB.Text))
+                {
+                    FnameTB.Focus();
+                    errorProvider1.SetError(FnameTB, "Please Enter First Name");
+                }
 
-                if (FnameTB.Text != ""  && LastNameTB.Text != "" && DOBdt.Text != "" && GenderComBx.Text != ""&& EmailTB.Text != "" )
-                    {
-                    string sql = "INSERT INTO Teachers(FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,Rank,House,Club,NextKin,NextKinCon,Photo) values('" + FnameTB.Text + "','" + MiddnameTB.Text + "', '" + LastNameTB.Text + "','" + DOBdt.Text + "','" + GenderComBx.Text + "','" + DateAppointmentdt.Text + "','" + EmailTB.Text + "','" + StatcomboBx.Text + "','" + RankcomboBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + NOKnameTB.Text + "','" + NOKconTB.Text + "',@img)";
+                if (string.IsNullOrEmpty(LastNameTB.Text))
+                {
+                    LastNameTB.Focus();
+                    errorProvider1.SetError(LastNameTB, "Please Enter Last Name");
+                }
 
-                    if (con.State != ConnectionState.Open)
-                    {
-                        con.Open();
-                    }
-                    cmd = new SqlCommand(sql, con);
-                    cmd.Parameters.Add(new SqlParameter("@img", img));
-                    int x = cmd.ExecuteNonQuery();
-                    con.Close();
-                    displayDataTeachers();
-                    ClearData();
-                    MessageBox.Show(x.ToString() + " Record inserted successfully");
+
+
+
+
+                if (string.IsNullOrEmpty(GenderComBx.Text))
+                {
+                    GenderComBx.Focus();
+                    errorProvider1.SetError(GenderComBx, "Please select your gender");
+                }
+
+                if (string.IsNullOrEmpty(EmailTB.Text))
+                {
+                    EmailTB.Focus();
+                    errorProvider1.SetError(EmailTB, "Please Enter Email Address");
                 }
                 if (DOBdt.Value.Date > DateTime.Now.AddYears(-6))
                 {
                     MessageBox.Show("Please enter a valid birth date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DOBdt.Focus();
+                    errorProvider1.SetError(DOBdt, "error");
                 }
-                if (FnameTB.Text == "" && LastNameTB.Text == "" && GenderComBx.Text == "")
-                {
-                    MessageBox.Show("Please Provide First Name, Last Name and Gender", "Record not save", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    errorProvider1.SetError(this.FnameTB, "Please enter First Name");
-                    errorProvider1.SetError( this.LastNameTB,  "Please enter Last Name");
-                    errorProvider1.SetError(this.GenderComBx, "Please enter Gender");
-                    return;
-                }
-
                 string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
                 if (Regex.IsMatch(EmailTB.Text, pattern))
                 {
-                    errorProvider1.Clear();
+                    // errorProvider1.Clear();
 
                 }
                 else
                 {
                     MessageBox.Show("Please enter a correct email address", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    errorProvider1.SetError(this.EmailTB, "Please enter a valid email address");
+                    // errorProvider1.SetError(this.EmailTB, "Please enter a valid email address");
                     return;
+                }
+
+
+                SqlCommand cmd = new SqlCommand("SELECT * from Teachers where id =@id", con);
+                cmd.Parameters.AddWithValue("@id", IDtb.Text.ToLower());
+                //con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
+                else
+                {
+                    con.Close();
+                    con.Open();
+                    //con.Close();
+                    //if (con.State != ConnectionState.Open)
+                    //{
+                    //    con.Open();
+                    //}
+
+                    if (FnameTB.Text != "" && LastNameTB.Text != "" && DOBdt.Text != "" && GenderComBx.Text != "" && EmailTB.Text != "")
+                    {
+                        string sql = "INSERT INTO Teachers(FirstName,MiddleName,LastName,DOB,Gender,DateAppointment,Email,Status,Rank,House,Club,NextKin,NextKinCon,Photo) values('" + FnameTB.Text + "','" + MiddnameTB.Text + "', '" + LastNameTB.Text + "','" + DOBdt.Text + "','" + GenderComBx.Text + "','" + DateAppointmentdt.Text + "','" + EmailTB.Text + "','" + StatcomboBx.Text + "','" + RankcomboBx.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + NOKnameTB.Text + "','" + NOKconTB.Text + "',@img)";
+
+
+                        cmd = new SqlCommand(sql, con);
+                        cmd.Parameters.Add(new SqlParameter("@img", img));
+                        int x = cmd.ExecuteNonQuery();
+                        con.Close();
+                        displayDataTeachers();
+
+                        MessageBox.Show(x.ToString() + " Record inserted successfully");
+                    }
+
+
+
                 }
             }
 
@@ -243,45 +285,22 @@ namespace PrimarySchoolAPP
                 MessageBox.Show(ex.Message);
             }
 
-
-
-
-
-            //if (string.IsNullOrEmpty(FnameTB.Text))
-            //{
-            //    FnameTB.Focus();
-            //    errorProvider1.SetError(FnameTB, "Please Enter First Name");
-            //}
-
-            //if (string.IsNullOrEmpty(LastNameTB.Text))
-            //{
-            //    LastNameTB.Focus();
-            //    errorProvider1.SetError(LastNameTB, "Please Enter Last Name");
-            //}
-
-            //if (string.IsNullOrEmpty(EmailTB.Text))
-            //{
-            //    EmailTB.Focus();
-            //    errorProvider1.SetError(EmailTB, "Please Enter Email Address");
-            //}
-
-
-
-            //if (string.IsNullOrEmpty(GenderComBx.Text))
-            //{
-            //    GenderComBx.Focus();
-            //    errorProvider1.SetError(GenderComBx, "Please select your gender");
-            //}
+            finally
+            {
+                con.Close();
+            }
+            // ClearData();
 
 
 
 
 
 
+            // ClearData();
+            //errorProvider1.Clear();
 
-
-
-        }
+        } 
+        
         //*****************************************Browse for Pic*****************************************
         private void browseBnt_Click(object sender, EventArgs e)
         {
@@ -313,6 +332,8 @@ namespace PrimarySchoolAPP
         //*****************************************NEW RECORD*****************************************
         private void NewBNT_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
+            errorProvider2.Clear();
             ClearData();
         }
         
@@ -494,6 +515,45 @@ namespace PrimarySchoolAPP
             {
                 con.Close();
             }
+        }
+
+        private void FnameTB_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            errorProvider2.SetError(FnameTB, "Correct");
+        }
+
+        private void LastNameTB_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            errorProvider2.SetError(LastNameTB, "Correct");
+        }
+
+        private void GenderComBx_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            errorProvider2.SetError(GenderComBx, "Correct");
+        }
+
+        private void EmailTB_TextChanged(object sender, EventArgs e)
+        {
+            string pattern = @"^\s*[\w\-\+_']+(\.[\w\-\+_']+)*\@[A-Za-z0-9]([\w\.-]*[A-Za-z0-9])?\.[A-Za-z][A-Za-z\.]*[A-Za-z]$";
+            if (Regex.IsMatch(EmailTB.Text, pattern))
+            {
+               errorProvider2.SetError(EmailTB, "Correct");
+                errorProvider1.Clear();
+            }
+
+                    
+        }
+
+        private void DOBdt_FormatChanged(object sender, EventArgs e)
+        {
+            //if (DOBdt.Value.Date < DateTime.Now.AddYears(-6))
+            //{
+            //    errorProvider1.Clear();
+            //    errorProvider2.SetError(DOBdt, "Correct");
+            //}
         }
     }
 }

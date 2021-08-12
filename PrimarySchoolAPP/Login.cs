@@ -93,9 +93,10 @@ namespace PrimarySchoolAPP
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You have been blocked for too many attempts. Please close the program, wait 30 seconds and try again. ", "Program Shutdown", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
