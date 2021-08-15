@@ -117,6 +117,7 @@ namespace PrimarySchoolAPP
             this.Name = "ForgetPassword";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ForgetPassword_FormClosing);
             this.Load += new System.EventHandler(this.ForgetPassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

@@ -108,7 +108,7 @@ namespace PrimarySchoolAPP
 
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT Student.id[Student ID],Student.ERN, Student.FisrtName[Fisrt Name], Student.MiddleName[Middle Name], Student.LastName[Last Name], National_Assessment.GenKnowledge[General Knowledge], National_Assessment.NumberConcepts[Number Concepts], National_Assessment.OralLang[Oral Language], National_Assessment.Reading, National_Assessment.Structure, National_Assessment.Vocab[Vocabulary], National_Assessment.StudySkills[Study Skills], National_Assessment.ComTask[Com. Task], National_Assessment.NumEst[Number Estimation & Measurement], National_Assessment.Geometry, National_Assessment.Algebra, National_Assessment.[Statistics], National_Assessment.LangArtGrade4[Lang. Arts Grade 4], National_Assessment.MathGrade4[Math Grade 4],National_Assessment.LangArtGrade5[Lang. Arts Grade 5], National_Assessment.MathGrade5[Math Grade 5], National_Assessment.LangArtGrade6[Lang. Arts 6], National_Assessment.AbilityTest[Ability Test], National_Assessment.MathGrade6[Math Grade 6],National_Assessment.LangArtGrade6Curri[Lang. Arts Grade 6 Curriculum], National_Assessment.MathGrade6Curri[Math Grade 6 Curriculum], National_Assessment.Science,National_Assessment.SocialStudies[Social Studies], National_Assessment.id_Stu[Student ID], National_Assessment.WritingDrawing[Writing Drawing] FROM Student INNER JOIN National_Assessment ON Student.id = National_Assessment.id_Stu";
+                cmd.CommandText = "SELECT Student.id[Student ID],Student.ERN, Student.FisrtName[Fisrt Name], Student.MiddleName[Middle Name], Student.LastName[Last Name], National_Assessment.GenKnowledge[General Knowledge], National_Assessment.NumberConcepts[Number Concepts], National_Assessment.OralLang[Oral Language], National_Assessment.Reading, National_Assessment.Structure, National_Assessment.Vocab[Vocabulary], National_Assessment.StudySkills[Study Skills], National_Assessment.ComTask[Com. Task], National_Assessment.NumEst[Number Estimation & Measurement], National_Assessment.Geometry, National_Assessment.Algebra, National_Assessment.[Statistics], National_Assessment.LangArtGrade4[Lang. Arts Grade 4], National_Assessment.MathGrade4[Math Grade 4],National_Assessment.LangArtGrade5[Lang. Arts Grade 5], National_Assessment.MathGrade5[Math Grade 5], National_Assessment.LangArtGrade6[Lang. Arts 6], National_Assessment.AbilityTest[Ability Test], National_Assessment.MathGrade6[Math Grade 6],National_Assessment.LangArtGrade6Curri[Lang. Arts Grade 6 Curriculum], National_Assessment.MathGrade6Curri[Math Grade 6 Curriculum], National_Assessment.Science,National_Assessment.SocialStudies[Social Studies],  National_Assessment.WritingDrawing[Writing Drawing] FROM Student INNER JOIN National_Assessment ON Student.id = National_Assessment.id_Stu";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -206,15 +206,15 @@ namespace PrimarySchoolAPP
             metroTabPage3.Text = @"Health Record";
             metroTabPage4.Text = @"Attendance Record";
 
-            FnameStuTB.Text = "First Name";
-            MiddnameStuTB.Text = "Middle Name";
-            LastNameStuTB.Text = "Last Name";
-            ERN.Text = "Student Reg. Number";
+            //FnameStuTB.Text = "First Name";
+            //MiddnameStuTB.Text = "Middle Name";
+            //LastNameStuTB.Text = "Last Name";
+            //ERN.Text = "Student Reg. Number";
 
-            FnameStuTB.ForeColor = Color.Black;
-            MiddnameStuTB.ForeColor = Color.Black;
-            LastNameStuTB.ForeColor = Color.Black;
-            ERN.ForeColor = Color.Black;
+            //FnameStuTB.ForeColor = Color.Black;
+            //MiddnameStuTB.ForeColor = Color.Black;
+            //LastNameStuTB.ForeColor = Color.Black;
+            //ERN.ForeColor = Color.Black;
 
             GenderComBx.Items.Add("Male");
             GenderComBx.Items.Add("Female");
@@ -236,69 +236,69 @@ namespace PrimarySchoolAPP
             StuPhoto.Image = Properties.Resources.user;
         }
 
-        private void FnameStuTB_Enter(object sender, EventArgs e)
-        {
-            if (FnameStuTB.Text == "First Name")
-            {
-                FnameStuTB.Text = "";
-            }
-        }
+        //private void FnameStuTB_Enter(object sender, EventArgs e)
+        //{
+        //    if (FnameStuTB.Text == "First Name")
+        //    {
+        //        FnameStuTB.Text = "";
+        //    }
+        //}
 
-        private void FnameStuTB_Leave(object sender, EventArgs e)
-        {
-            if (FnameStuTB.Text == "")
-            {
-                FnameStuTB.Text = "First Name";
-            }
-        }
+        //private void FnameStuTB_Leave(object sender, EventArgs e)
+        //{
+        //    if (FnameStuTB.Text == "")
+        //    {
+        //        FnameStuTB.Text = "First Name";
+        //    }
+        //}
 
-        private void MiddnameStuTB_Leave(object sender, EventArgs e)
-        {
-            if (MiddnameStuTB.Text == "")
-            {
-                MiddnameStuTB.Text = "Middle Name";
-            }
-        }
+        //private void MiddnameStuTB_Leave(object sender, EventArgs e)
+        //{
+        //    if (MiddnameStuTB.Text == "")
+        //    {
+        //        MiddnameStuTB.Text = "Middle Name";
+        //    }
+        //}
 
-        private void MiddnameStuTB_Enter(object sender, EventArgs e)
-        {
-            if (MiddnameStuTB.Text == "Middle Name")
-            {
-                MiddnameStuTB.Text = "";
-            }
-        }
+        //private void MiddnameStuTB_Enter(object sender, EventArgs e)
+        //{
+        //    if (MiddnameStuTB.Text == "Middle Name")
+        //    {
+        //        MiddnameStuTB.Text = "";
+        //    }
+        //}
 
-        private void LastNameStuTB_Leave(object sender, EventArgs e)
-        {
-            if (LastNameStuTB.Text == "")
-            {
-                LastNameStuTB.Text = "Last Name";
-            }
-        }
+        //private void LastNameStuTB_Leave(object sender, EventArgs e)
+        //{
+        //    if (LastNameStuTB.Text == "")
+        //    {
+        //        LastNameStuTB.Text = "Last Name";
+        //    }
+        //}
 
-        private void LastNameStuTB_Enter(object sender, EventArgs e)
-        {
-            if (LastNameStuTB.Text == "Last Name")
-            {
-                LastNameStuTB.Text = "";
-            }
-        }
+        //private void LastNameStuTB_Enter(object sender, EventArgs e)
+        //{
+        //    if (LastNameStuTB.Text == "Last Name")
+        //    {
+        //        LastNameStuTB.Text = "";
+        //    }
+        //}
 
-        private void ERN_Leave(object sender, EventArgs e)
-        {
-            if (ERN.Text == "")
-            {
-                ERN.Text = "Student Reg. Number";
-            }
-        }
+        //private void ERN_Leave(object sender, EventArgs e)
+        //{
+        //    if (ERN.Text == "")
+        //    {
+        //        ERN.Text = "Student Reg. Number";
+        //    }
+        //}
 
-        private void ERN_Enter(object sender, EventArgs e)
-        {
-            if (ERN.Text == "Student Reg. Number")
-            {
-                ERN.Text = "";
-            }
-        }
+        //private void ERN_Enter(object sender, EventArgs e)
+        //{
+        //    if (ERN.Text == "Student Reg. Number")
+        //    {
+        //        ERN.Text = "";
+        //    }
+        //}
 
 
         //**************************Attendance Save**************************************************************
@@ -752,7 +752,7 @@ namespace PrimarySchoolAPP
 //**************************Students Save**************************************************************      
         private void SaveBNT_Click(object sender, EventArgs e)
         {
-            
+           
             try
             {
                
@@ -770,26 +770,55 @@ namespace PrimarySchoolAPP
                     ms.Close();
                 }
 
+                if (string.IsNullOrEmpty(FnameStuTB.Text))
+                {
+                    FnameStuTB.Focus();
+                    errorProvider1.SetError(FnameStuTB, "Please Enter First Name");
+                    MessageBox.Show("Please enter First Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (string.IsNullOrEmpty(LastNameStuTB.Text))
+                {
+                    LastNameStuTB.Focus();
+                    errorProvider1.SetError(LastNameStuTB, "Please Enter Last Name");
+                    MessageBox.Show("Please enter Last Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (string.IsNullOrEmpty(ERN.Text))
+                {
+                    ERN.Focus();
+                    errorProvider1.SetError(ERN, "Please Enter ERN");
+                    MessageBox.Show("Please enter ERN", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (string.IsNullOrEmpty(GenderComBx.Text))
+                {
+                    GenderComBx.Focus();
+                    errorProvider1.SetError(GenderComBx, "Please Select Gender");
+                    MessageBox.Show("Please Select Gender", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
                 if (StuPhoto.Image == null)
                 {
                     MessageBox.Show("Please Update Image ", "WARRING NOT SAVE!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                SqlCommand cmd = new SqlCommand("SELECT * from Student where ERN =@ERN", con);
-                cmd.Parameters.AddWithValue("@ERN", ERN.Text.ToLower());
+                SqlCommand cmd = new SqlCommand("SELECT * from Student where id =@id", con);
+                cmd.Parameters.AddWithValue("@id", IDStuTB.Text.ToLower());
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
                     MessageBox.Show("The Record you are attempting to save exists within the Database already.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     con.Close();
                 }
+                
                 if (DOBStudt.Value.Date > DateTime.Now.AddYears(-6))
                 {
                     MessageBox.Show("Please enter a valid birth date","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DOBStudt.Focus();
                 }
-                else
-                {
+
+                if (FnameStuTB.Text != "" && LastNameStuTB.Text != "" && DOBStudt.Text != "" && GenderComBx.Text != "" && ERN.Text != "")
+                    {
                     con.Close();
                     con.Open();
                     string sql = "INSERT INTO Student(ERN,FisrtName,MiddleName,LastName,BirthNum,DOB,DOReg,House,Club,Gender,StudentAddress,MotherName,MatherOccupation,MotherAddress,MotherTel,FatherName,FatherOccupation,FatherAddress,FatherTel,GuardianName,GuardianOccupation,GuardianAddress,GuardianTel,Photo) values('" + ERN.Text + "','" + FnameStuTB.Text + "','" + MiddnameStuTB.Text + "','" + LastNameStuTB.Text + "','" + BirthNum.Text + "','" + DOBStudt.Text + "','" + DateRegdt.Text + "','" + HousecomboBx.Text + "','" + ClubcomboBx.Text + "','" + GenderComBx.Text + "','" + StuAddress.Text + "','" + motherName.Text + "','" + mothersOccupation.Text + "','" + motherAddress.Text + "','" + mothersTelephone.Text + "','" + fathersName.Text + "','" + fathersOccupation.Text + "','" + fathersAddress.Text + "','" + fathersTelephone.Text + "','" + GuardianName.Text + "','" + GuardianOccupation.Text + "','" + GuardianAddress.Text + "','" + GuardianTelephone.Text + "', @img)";
@@ -1087,33 +1116,33 @@ namespace PrimarySchoolAPP
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = this.dataGridViewAssessment.Rows[e.RowIndex];
-                    FnameStudent.Text = row.Cells[1].Value.ToString();
-                    LnameStudent.Text = row.Cells[3].Value.ToString();
-                    idAssessment.Text = row.Cells[27].Value.ToString();
+                    FnameStudent.Text = row.Cells[2].Value.ToString();
+                    LnameStudent.Text = row.Cells[4].Value.ToString();
+                    idAssessment.Text = row.Cells[0].Value.ToString();
                    
-                    GenKnw.Text = row.Cells[4].Value.ToString();
-                    NumCon.Text = row.Cells[5].Value.ToString();
-                    OralLang.Text = row.Cells[6].Value.ToString();
-                    Reading.Text = row.Cells[7].Value.ToString();
-                    Structure.Text = row.Cells[8].Value.ToString();
-                    Vocab.Text = row.Cells[9].Value.ToString();
-                    StudySkills.Text = row.Cells[10].Value.ToString();
-                    ComTask.Text = row.Cells[11].Value.ToString();
-                    NumEst.Text = row.Cells[12].Value.ToString();
-                    Geometry.Text = row.Cells[13].Value.ToString();
-                    Algebra.Text = row.Cells[14].Value.ToString();
-                    Statistics.Text = row.Cells[15].Value.ToString();
-                    LangArtGrade4.Text = row.Cells[16].Value.ToString();
-                    MathGrade4.Text = row.Cells[17].Value.ToString();
-                    LangArtGrade5.Text = row.Cells[18].Value.ToString();
-                    MathGrade5.Text = row.Cells[19].Value.ToString();
-                    LangArtGrade6.Text = row.Cells[20].Value.ToString();
-                    AbilityTest.Text = row.Cells[21].Value.ToString();
-                    MathGrade6.Text = row.Cells[22].Value.ToString();
-                    LangArtCurriGrade6.Text = row.Cells[23].Value.ToString();
-                    MathCurriGrade6.Text = row.Cells[24].Value.ToString();
-                    Science.Text = row.Cells[25].Value.ToString();
-                    SocialStudies.Text = row.Cells[26].Value.ToString();
+                    GenKnw.Text = row.Cells[5].Value.ToString();
+                    NumCon.Text = row.Cells[6].Value.ToString();
+                    OralLang.Text = row.Cells[7].Value.ToString();
+                    Reading.Text = row.Cells[8].Value.ToString();
+                    Structure.Text = row.Cells[9].Value.ToString();
+                    Vocab.Text = row.Cells[10].Value.ToString();
+                    StudySkills.Text = row.Cells[11].Value.ToString();
+                    ComTask.Text = row.Cells[12].Value.ToString();
+                    NumEst.Text = row.Cells[13].Value.ToString();
+                    Geometry.Text = row.Cells[14].Value.ToString();
+                    Algebra.Text = row.Cells[15].Value.ToString();
+                    Statistics.Text = row.Cells[16].Value.ToString();
+                    LangArtGrade4.Text = row.Cells[17].Value.ToString();
+                    MathGrade4.Text = row.Cells[18].Value.ToString();
+                    LangArtGrade5.Text = row.Cells[19].Value.ToString();
+                    MathGrade5.Text = row.Cells[20].Value.ToString();
+                    LangArtGrade6.Text = row.Cells[21].Value.ToString();
+                    AbilityTest.Text = row.Cells[22].Value.ToString();
+                    MathGrade6.Text = row.Cells[23].Value.ToString();
+                    LangArtCurriGrade6.Text = row.Cells[24].Value.ToString();
+                    MathCurriGrade6.Text = row.Cells[25].Value.ToString();
+                    Science.Text = row.Cells[26].Value.ToString();
+                    SocialStudies.Text = row.Cells[27].Value.ToString();
                     WriteDraw.Text = row.Cells[28].Value.ToString();
 
                     
@@ -1432,6 +1461,15 @@ namespace PrimarySchoolAPP
             {
                 con.Close();
             }
+        }
+
+        private void StudentAdd_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dashboard das = new Dashboard();
+            this.Dispose(false);
+            das.Show();
+            this.Hide();
+
         }
     }
 }

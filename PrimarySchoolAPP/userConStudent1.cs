@@ -62,15 +62,18 @@ namespace PrimarySchoolAPP
 
         private void editBNT_Click(object sender, EventArgs e)
         {
+
+            Dashboard DAS =(Dashboard)this.Parent;
+            this.Dispose(false);
+            DAS.Hide();
+
             StudentAdd stu = new StudentAdd();
             this.Dispose(false);
             stu.Show();
             this.Hide();
 
-            Dashboard das = new Dashboard();
-            this.Dispose(false);
-            das.Hide();
-            this.Hide();
+
+
         }
 
         private void StudentSearTB_TextChanged(object sender, EventArgs e)
@@ -168,5 +171,28 @@ namespace PrimarySchoolAPP
                 con.Close();
             }
         }
+
+        private void editBNT_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            //Dashboard DAS = new Dashboard();
+            //DAS.Hide();
+
+            //ForgetPassword fp = new ForgetPassword();
+            //this.Dispose(false);
+            //fp.Show();
+            //this.Hide();
+
+
+
+
+            //StudentAdd stu = new StudentAdd();
+            //this.Dispose(false);
+            //stu.Show();
+            //this.Hide();
+
+        }
+
+        
     }
 }

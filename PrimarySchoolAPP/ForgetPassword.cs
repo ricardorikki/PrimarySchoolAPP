@@ -100,5 +100,13 @@ namespace PrimarySchoolAPP
 
             }
         }
+
+        private void ForgetPassword_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login log = new Login();
+            this.Dispose(false);
+            log.Show();
+            this.Hide();
+        }
     }
 }

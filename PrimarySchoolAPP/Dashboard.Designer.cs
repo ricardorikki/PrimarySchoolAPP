@@ -31,6 +31,7 @@ namespace PrimarySchoolAPP
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.pnSet = new System.Windows.Forms.Panel();
             this.pnWat = new System.Windows.Forms.Panel();
@@ -85,8 +86,8 @@ namespace PrimarySchoolAPP
             this.userConTeacher1 = new PrimarySchoolAPP.userConTeacher();
             this.userControlAdmin1 = new PrimarySchoolAPP.UserControlAdmin();
             this.userConUser1 = new PrimarySchoolAPP.UserConUser();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -104,7 +105,6 @@ namespace PrimarySchoolAPP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -137,6 +137,15 @@ namespace PrimarySchoolAPP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 650);
             this.panel2.TabIndex = 1;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(118, 573);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(33, 31);
+            this.dataGridView4.TabIndex = 42;
+            this.dataGridView4.Visible = false;
             // 
             // dataGridView3
             // 
@@ -731,15 +740,6 @@ namespace PrimarySchoolAPP
             this.userConUser1.Size = new System.Drawing.Size(973, 603);
             this.userConUser1.TabIndex = 38;
             // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(118, 573);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(33, 31);
-            this.dataGridView4.TabIndex = 42;
-            this.dataGridView4.Visible = false;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,6 +769,7 @@ namespace PrimarySchoolAPP
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form2_MouseDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -791,7 +792,6 @@ namespace PrimarySchoolAPP
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -220,7 +220,7 @@ namespace PrimarySchoolAPP
                     EmailTB.Focus();
                     errorProvider1.SetError(EmailTB, "Please Enter Email Address");
                 }
-                if (DOBdt.Value.Date > DateTime.Now.AddYears(-6))
+                if (DOBdt.Value.Date > DateTime.Now.AddYears(-18))
                 {
                     MessageBox.Show("Please enter a valid birth date", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     DOBdt.Focus();
@@ -254,11 +254,7 @@ namespace PrimarySchoolAPP
                 {
                     con.Close();
                     con.Open();
-                    //con.Close();
-                    //if (con.State != ConnectionState.Open)
-                    //{
-                    //    con.Open();
-                    //}
+                   
 
                     if (FnameTB.Text != "" && LastNameTB.Text != "" && DOBdt.Text != "" && GenderComBx.Text != "" && EmailTB.Text != "")
                     {

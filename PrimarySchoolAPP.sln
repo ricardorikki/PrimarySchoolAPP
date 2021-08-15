@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimarySchoolAPP", "PrimarySchoolAPP\PrimarySchoolAPP.csproj", "{54F43528-9C83-4CE3-AC08-F889FF28B898}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "School Management System", "School Management System\School Management System.vdproj", "{B5F58206-7B4B-4C94-8A05-50FBAE38A821}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{54F43528-9C83-4CE3-AC08-F889FF28B898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54F43528-9C83-4CE3-AC08-F889FF28B898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54F43528-9C83-4CE3-AC08-F889FF28B898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F58206-7B4B-4C94-8A05-50FBAE38A821}.Debug|Any CPU.ActiveCfg = Debug
+		{B5F58206-7B4B-4C94-8A05-50FBAE38A821}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

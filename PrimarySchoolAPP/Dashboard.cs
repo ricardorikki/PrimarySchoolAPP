@@ -74,7 +74,10 @@ namespace PrimarySchoolAPP
             else if (MyConnection.type == "U")
             {
                 UsersBNT.Enabled = false;
-               
+               TeacherBTN.Enabled = false;
+                
+
+
             }
 
             userConTeacher1.Hide();   //Users
@@ -264,10 +267,7 @@ namespace PrimarySchoolAPP
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
 
         private void Logout_Click(object sender, EventArgs e)
         {
@@ -402,6 +402,9 @@ namespace PrimarySchoolAPP
             about.Show();
             this.Hide();
         }
+
+     
+        
     }
 
 
