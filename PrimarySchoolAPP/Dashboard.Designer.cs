@@ -57,6 +57,7 @@ namespace PrimarySchoolAPP
             this.userConWatch1 = new PrimarySchoolAPP.UserConWatch();
             this.userControlAdmin1 = new PrimarySchoolAPP.UserControlAdmin();
             this.userConUser1 = new PrimarySchoolAPP.UserConUser();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,7 @@ namespace PrimarySchoolAPP
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.AbtBtn);
             this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -399,6 +401,17 @@ namespace PrimarySchoolAPP
             this.userConUser1.Size = new System.Drawing.Size(973, 603);
             this.userConUser1.TabIndex = 38;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(93, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 19);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "System";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,5 +474,6 @@ namespace PrimarySchoolAPP
         private UserConWatch userConWatch1;
         private userConStudent1 userConStudent1;
         private UserControlDas userControlDas1;
+        private System.Windows.Forms.Label label4;
     }
 }
