@@ -19,18 +19,6 @@ namespace PrimarySchoolAPP
 
 
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-SINTN8E\\SQLEXPRESS;Initial Catalog=School_Mang_System;Integrated Security=True");
-
-
-
-
-        //public const int WM_NCLBUTTONDOWN = 0xA1;
-        //public const int HT_CAPTION = 0x2;
-
-        //[System.Runtime.InteropServices.DllImport("user32.dll")]
-        //public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        //[System.Runtime.InteropServices.DllImport("user32.dll")]
-        //public static extern bool ReleaseCapture();
-
         
         public Dashboard()
         {
@@ -49,22 +37,8 @@ namespace PrimarySchoolAPP
             //MaximizeBox = false;
             //ControlBox = true;
             
-            //btnHome.ForeColor = Color.Black;
-            //teaBtn.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
-            //button1.BackColor = Color.White;
 
-            // metroButton1.FlatAppearance.BorderSize = 0;
-
-
-            
-
-            //label2.Text = Environment.UserName.ToString();
-
-            //teacherStatlab.Text = dataGridView1.RowCount.ToString();
-            displayDataTeachers();
-            displayDataAdmin();
-            displayDataWatch();
-            displayDataStudent();
+           
 
             if (MyConnection.type == "A")
             {
@@ -84,7 +58,7 @@ namespace PrimarySchoolAPP
             userConWatch1.Hide();
             userConUser1.Hide();
             userControlAdmin1.Hide();
-           userConStudent1.Hide();
+            userConStudent1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -99,142 +73,7 @@ namespace PrimarySchoolAPP
         }
 
 
-        public void displayDataStudent()
-        {
-            try
-            {
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Student";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                dataGridView4.DataSource = dt;
-                da.Update(dt);
-                StudentStatlab.Text = dt.Rows.Count.ToString();
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-
-        }
-
-        public void displayDataTeachers()
-        {
-            try
-            {
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Teachers";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                da.Update(dt);
-                teacherStatlab.Text = dt.Rows.Count.ToString();
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-
-        }
-        public void displayDataWatch()
-        {
-            try
-            {
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Watchmen";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                dataGridView3.DataSource = dt;
-                da.Update(dt);
-                WatchStatlab.Text = dt.Rows.Count.ToString();
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-
-        }
-        public void displayDataAdmin()
-        {
-            try
-            {
-                if (con.State != ConnectionState.Open)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM Administrative";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                dataGridView2.DataSource = dt;
-                da.Update(dt);
-               AdminStatlab.Text = dt.Rows.Count.ToString();
-
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-
-        }
-
-
-
+      
         private void Form2_MouseDown(object sender, MouseEventArgs e)
         {
             //if (e.Button == MouseButtons.Left)
@@ -284,6 +123,7 @@ namespace PrimarySchoolAPP
             userControlAdmin1.Hide();
             userConWatch1.Hide();
             userConStudent1.Hide();
+            userControlDas1.Show();
 
             //*****Menu Indicators*******
             pnlHome.Show();
@@ -292,11 +132,7 @@ namespace PrimarySchoolAPP
             pnAd.Hide();
             pnWat.Hide();
             pnSet.Hide();
-            //*****Display*******
-            displayDataAdmin();
-            displayDataTeachers();
-            displayDataWatch();
-            displayDataStudent();
+           
         }
 
         private void stuBTN_Click_1(object sender, EventArgs e)
@@ -308,6 +144,7 @@ namespace PrimarySchoolAPP
             userControlAdmin1.Hide();
             userConWatch1.Hide();
             userConStudent1.Show();
+            userControlDas1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Hide();
@@ -326,6 +163,7 @@ namespace PrimarySchoolAPP
             userControlAdmin1.Hide();
             userConWatch1.Hide();
             userConStudent1.Hide();
+            userControlDas1.Hide();
 
             //*****Menu Indicators*******
             pnlHome.Hide();
@@ -345,9 +183,9 @@ namespace PrimarySchoolAPP
             userControlAdmin1.Show();
             userConWatch1.Hide();
             userConStudent1.Hide();
+            userControlDas1.Hide();
 
             //*****Menu Indicators*******
-            
 
             pnlHome.Hide();
             pnStu.Hide();
@@ -365,6 +203,7 @@ namespace PrimarySchoolAPP
             userControlAdmin1.Hide();
             userConWatch1.Show();
             userConStudent1.Hide();
+            userControlDas1.Hide();
 
             //*****Menu Indicators*******
 
@@ -384,6 +223,7 @@ namespace PrimarySchoolAPP
             userControlAdmin1.Hide();
             userConWatch1.Hide();
             userConStudent1.Hide();
+            userControlDas1.Hide();
 
             //*****Menu Indicators*******
 

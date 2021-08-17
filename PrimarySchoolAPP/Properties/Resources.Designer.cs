@@ -383,6 +383,26 @@ namespace PrimarySchoolAPP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap johnsst {
+            get {
+                object obj = ResourceManager.GetObject("johnsst", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap johnsst2 {
+            get {
+                object obj = ResourceManager.GetObject("johnsst2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lock1 {
             get {
                 object obj = ResourceManager.GetObject("lock1", resourceCulture);
@@ -526,6 +546,16 @@ namespace PrimarySchoolAPP.Properties {
         internal static System.Drawing.Bitmap ss_4 {
             get {
                 object obj = ResourceManager.GetObject("ss-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap St_Johns_1 {
+            get {
+                object obj = ResourceManager.GetObject("St-Johns-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

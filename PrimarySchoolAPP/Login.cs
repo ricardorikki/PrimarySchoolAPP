@@ -36,7 +36,7 @@ namespace PrimarySchoolAPP
             labSMS.BackColor = Color.Transparent;
             labSch.Parent = picBoxBG;
             labSch.BackColor = Color.Transparent;
-            
+            MaximizeBox = false;
         }
 
         private void logBtn_Click(object sender, EventArgs e)

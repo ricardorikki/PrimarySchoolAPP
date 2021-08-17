@@ -285,6 +285,7 @@ namespace PrimarySchoolAPP
             this.Controls.Add(this.tbUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
